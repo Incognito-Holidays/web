@@ -2,12 +2,13 @@
   "name": "next-template",
   "version": "0.1.0",
   "private": true,
-  "author": "Rajdeep Ghosh <rajdeepghosh810@gmail.com>",
+  "author": "Rajdeep Ghosh, Debadyuti Karmakar, Parthib Sarkar",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write --ignore-unknown .",
     "format:check": "prettier --check ./src",
     "prepare": "husky install"
   },
