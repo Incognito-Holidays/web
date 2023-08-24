@@ -17,7 +17,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
