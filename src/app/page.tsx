@@ -1,22 +1,21 @@
 import Image from 'next/image';
-import Banner from '@components/banner';
-
-import g1 from '../images/g1.jpg';
-import g2 from '../images/g2.jpg';
-import g3 from '../images/g3.jpg';
-import g4 from '../images/g4.jpg';
-import g5 from '../images/g5.jpg';
-import g6 from '../images/g6.jpg';
+import HeroBanner from '@components/hero-banner';
+import g1 from '@public/assets/g1.jpg';
+import g2 from '@public/assets/g2.jpg';
+import g3 from '@public/assets/g3.jpg';
+import g4 from '@public/assets/g4.jpg';
+import g5 from '@public/assets/g5.jpg';
+import g6 from '@public/assets/g6.jpg';
 
 const Home: React.FC = () => {
   return (
     <main>
-      <Banner />
+      <HeroBanner />
       <div>
-        <h1 className='p-8 mt-10 text-center font-bold text-3xl text-cyan-700'>
+        <h1 className='mt-10 p-8 text-center text-3xl font-bold text-cyan-700'>
           Best Selling Holiday Packages
         </h1>
-        <div className='grid grid-cols-3 gap-4 p-8 place-items-center'>
+        <div className='grid grid-cols-3 place-items-center gap-4 p-8'>
           <div>
             <Image src={g1} alt='g1' />
           </div>
