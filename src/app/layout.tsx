@@ -1,8 +1,6 @@
 import '@styles/globals.css';
 import { Inter } from 'next/font/google';
-
 import Navbar from '@components/navbar';
-
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 

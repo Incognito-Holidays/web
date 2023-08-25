@@ -1,44 +1,69 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Bars3Icon } from '@heroicons/react/24/outline';
 import logo from '@public/assets/incognito-logo.png';
 
 const Navbar: React.FC = () => {
-  const router = useRouter();
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className='flex items-center space-x-40 bg-gray-100 px-32 py-8'>
-      <Image
-        onClick={(): void => router.push('/')}
-        src={logo}
-        width={180}
-        height={180}
-        alt='logo'
-        className='cursor-pointer'
-      />
-      <div className='flex space-x-12'>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Home
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Holidays
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Hotels
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Flights
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Trains
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          About
-        </p>
-        <p className='cursor-pointer border-b-4 border-transparent pb-1 text-lg font-medium text-blue-950 transition-all duration-200 hover:border-cyan-500 hover:text-cyan-500'>
-          Contact
-        </p>
+    <nav className='bg-gray-100'>
+      <div className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
+        <div className='flex items-center justify-between'>
+          <div>
+            <Image src={logo} width={170} height={170} alt='logo' />
+          </div>
+
+          <div className='hidden items-center space-x-12 md:flex'>
+            <Link
+              href='/'
+              className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
+            >
+              Home
+            </Link>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              Holidays
+            </button>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              Hotels
+            </button>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              Flights
+            </button>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              Trains
+            </button>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              About
+            </button>
+            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+              Contact
+            </button>
+          </div>
+
+          <div className='block md:hidden'>
+            <button onClick={(): void => setShowMobileMenu((prev) => !prev)}>
+              <Bars3Icon className='h-7 w-7' />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`${
+          showMobileMenu ? 'block' : 'hidden'
+        } space-y-2 bg-gray-100 px-4 py-2`}
+      >
+        <button className='block text-sm font-medium'>Home</button>
+        <button className='block text-sm font-medium'>Holidays</button>
+        <button className='block text-sm font-medium'>Hotels</button>
+        <button className='block text-sm font-medium'>Flights</button>
+        <button className='block text-sm font-medium'>Trains</button>
+        <button className='block text-sm font-medium'>About</button>
+        <button className='block text-sm font-medium'>Contact</button>
       </div>
     </nav>
   );
