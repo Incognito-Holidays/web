@@ -5,8 +5,11 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import Image from 'next/image';
-import photo1 from '@public/assets/spiritual.jpg';
-import photo2 from '@public/assets/dubai.jpg';
+import photo1 from '@public/assets/p1.png';
+import photo2 from '@public/assets/p2.png';
+import photo3 from '@public/assets/p3.png';
+import photo4 from '@public/assets/p4.png';
+import photo5 from '@public/assets/p5.png';
 
 const HeroBanner: React.FC = () => {
   const slideData = [
@@ -19,6 +22,21 @@ const HeroBanner: React.FC = () => {
       id: 2,
       src: photo2,
       alt: 'photo2'
+    },
+    {
+      id: 3,
+      src: photo3,
+      alt: 'photo3'
+    },
+    {
+      id: 4,
+      src: photo4,
+      alt: 'photo4'
+    },
+    {
+      id: 5,
+      src: photo5,
+      alt: 'photo5'
     }
   ];
 

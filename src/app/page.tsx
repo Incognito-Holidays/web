@@ -6,11 +6,13 @@ import g3 from '@public/assets/g3.jpg';
 import g4 from '@public/assets/g4.jpg';
 import g5 from '@public/assets/g5.jpg';
 import g6 from '@public/assets/g6.jpg';
+import Search from '@components/search';
 
 const Home: React.FC = () => {
   return (
     <main>
       <HeroBanner />
+      <Search />
       <div>
         <h1 className='mt-10 p-8 text-center text-3xl font-bold text-cyan-700'>
           Best Selling Holiday Packages
