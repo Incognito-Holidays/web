@@ -63,6 +63,11 @@
             "pattern": "@components/**",
             "group": "external",
             "position": "after"
+          },
+          {
+            "pattern": "@public/**",
+            "group": "unknown",
+            "position": "after"
           }
         ],
         "warnOnUnassignedImports": true,

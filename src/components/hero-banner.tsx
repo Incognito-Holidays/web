@@ -52,7 +52,7 @@ const HeroBanner: React.FC = () => {
     >
       {slideData.map((slide) => (
         <SwiperSlide key={slide.id}>
-          <Image src={slide.src} alt={slide.alt} />
+          <Image src={slide.src} alt={slide.alt} placeholder='blur' />
         </SwiperSlide>
       ))}
     </Swiper>

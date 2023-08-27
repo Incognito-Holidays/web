@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Bars3Icon } from '@heroicons/react/24/outline';
+import { HiBars3 } from 'react-icons/hi2';
 import logo from '@public/assets/incognito-logo.png';
 
 const Navbar: React.FC = () => {
@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
     <nav className='bg-gray-100'>
       <div className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
         <div className='flex items-center justify-between'>
-          <div>
+          <Link href='/'>
             <Image src={logo} width={170} height={170} alt='logo' />
-          </div>
+          </Link>
 
           <div className='hidden items-center space-x-12 md:flex'>
             <Link
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
 
           <div className='block md:hidden'>
             <button onClick={(): void => setShowMobileMenu((prev) => !prev)}>
-              <Bars3Icon className='h-7 w-7' />
+              <HiBars3 className='h-7 w-7' />
             </button>
           </div>
         </div>
