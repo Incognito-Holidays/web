@@ -1,9 +1,8 @@
 'use client';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import photo1 from '@public/assets/p1.png';
 import photo2 from '@public/assets/p2.png';
@@ -49,8 +48,7 @@ const HeroBanner: React.FC = () => {
         disableOnInteraction: false
       }}
       loop={true}
-      navigation={true}
-      modules={[Autoplay, Navigation]}
+      modules={[Autoplay]}
     >
       {slideData.map((slide) => (
         <SwiperSlide key={slide.id}>

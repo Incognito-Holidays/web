@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import HeroBanner from '@components/hero-banner';
+import Search from '@components/search';
 import g1 from '@public/assets/g1.jpg';
 import g2 from '@public/assets/g2.jpg';
 import g3 from '@public/assets/g3.jpg';
 import g4 from '@public/assets/g4.jpg';
 import g5 from '@public/assets/g5.jpg';
 import g6 from '@public/assets/g6.jpg';
-import Search from '@components/search';
 
 const Home: React.FC = () => {
   return (
