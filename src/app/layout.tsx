@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Navbar from '@components/navbar';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
+import Footer from '@components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,6 +18,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
