@@ -10,35 +10,39 @@ import g6 from '@public/assets/g6.jpg';
 
 const Home: React.FC = () => {
   return (
-    <main>
-      <HeroBanner />
-      <Search />
-      <div>
-        <h1 className='mt-10 p-8 text-center text-3xl font-bold text-cyan-700'>
-          Best Selling Holiday Packages
-        </h1>
-        <div className='grid grid-cols-3 place-items-center gap-4 p-8'>
-          <div>
-            <Image src={g1} alt='g1' />
-          </div>
-          <div>
-            <Image src={g2} alt='g2' />
-          </div>
-          <div>
-            <Image src={g3} alt='g3' />
-          </div>
-          <div>
-            <Image src={g4} alt='g4' />
-          </div>
-          <div>
-            <Image src={g5} alt='g5' />
-          </div>
-          <div>
-            <Image src={g6} alt='g6' />
+    <>
+      <header>
+        <HeroBanner />
+      </header>
+      <main className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
+        <Search />
+        <div>
+          <h1 className='p-8 text-center text-3xl font-bold text-cyan-700'>
+            Best Selling Holiday Packages
+          </h1>
+          <div className='grid grid-cols-3 place-items-center gap-4 p-8'>
+            <div>
+              <Image src={g1} alt='g1' />
+            </div>
+            <div>
+              <Image src={g2} alt='g2' />
+            </div>
+            <div>
+              <Image src={g3} alt='g3' />
+            </div>
+            <div>
+              <Image src={g4} alt='g4' />
+            </div>
+            <div>
+              <Image src={g5} alt='g5' />
+            </div>
+            <div>
+              <Image src={g6} alt='g6' />
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

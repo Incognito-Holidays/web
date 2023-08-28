@@ -10,11 +10,11 @@ const Navbar: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <nav className='bg-gray-100'>
+    <nav className='border-b-2'>
       <div className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
         <div className='flex items-center justify-between'>
           <Link href='/'>
-            <Image src={logo} width={170} height={170} alt='logo' />
+            <Image src={logo} width={160} height={160} alt='logo' priority />
           </Link>
 
           <div className='hidden items-center space-x-12 md:flex'>

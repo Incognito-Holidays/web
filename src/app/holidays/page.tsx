@@ -1,15 +1,14 @@
-import Card from '@components/card';
+import PackagesCard from '@components/packages-card';
+import g1 from '@public/assets/g1.jpg';
+
 const HolidaysPage: React.FC = () => {
   return (
     <>
-      <h1 className=' p-8 text-center text-3xl font-bold text-cyan-700'>
+      <h1 className='my-4 text-center text-xl font-semibold text-cyan-700 md:text-2xl'>
         Packages for your next vacation
       </h1>
-      <div className='grid place-items-center gap-4 gap-y-7 p-5 md:grid-cols-3 md:gap-y-10'>
-        <Card title='Bali' body='Hello Bali' slug='bali' />
-        <Card title='Bali' body='Hello Bali' slug='/holidays/bali' />
-        <Card title='Bali' body='Hello Bali' slug='/holidays/bali' />
-        <Card title='Bali' body='Hello Bali' slug='/holidays/bali' />
+      <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
+        <PackagesCard title='Bali' startingPrice={10000} img={g1} slug='bali' />
       </div>
     </>
   );
