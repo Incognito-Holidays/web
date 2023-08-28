@@ -60,8 +60,12 @@ const Navbar: React.FC = () => {
           showMobileMenu ? 'block' : 'hidden'
         } space-y-2 bg-gray-100 px-4 py-2`}
       >
-        <button className='block text-sm font-medium'>Home</button>
-        <button className='block text-sm font-medium'>Holidays</button>
+        <Link href='/'>
+          <button className='block text-sm font-medium'>Home</button>
+        </Link>
+        <Link href='/holidays'>
+          <button className='mt-2 block text-sm font-medium'>Holidays</button>
+        </Link>
         <button className='block text-sm font-medium'>Hotels</button>
         <button className='block text-sm font-medium'>Flights</button>
         <button className='block text-sm font-medium'>Trains</button>
