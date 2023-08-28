@@ -11,6 +11,7 @@ const HolidaysPage: React.FC = () => {
         <PackagesCard title='Bali' img={g1} slug='bali' />
         <PackagesCard title='Sri Lanka' img={g1} slug='srilanka' />
         <PackagesCard title='Vietnam' img={g1} slug='vietnam' />
+        <PackagesCard title='Thailand' img={g1} slug='thailand' />
       </div>
     </>
   );
