@@ -25,7 +25,7 @@ const PackageDetailsCard: React.FC<PackageDetailsCardProps> = ({
 }) => {
   return (
     <Link href={`/holidays/bali/${slug}`}>
-      <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 md:hover:scale-105'>
+      <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>
         <div className='space-x-4 md:flex md:pr-2'>
           <Image
             src={img}

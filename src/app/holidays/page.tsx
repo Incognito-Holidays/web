@@ -9,6 +9,8 @@ const HolidaysPage: React.FC = () => {
       </h1>
       <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
         <PackagesCard title='Bali' img={g1} slug='bali' />
+        <PackagesCard title='Sri Lanka' img={g1} slug='srilanka' />
+        <PackagesCard title='Vietnam' img={g1} slug='vietnam' />
       </div>
     </>
   );

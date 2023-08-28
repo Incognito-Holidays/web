@@ -1,21 +1,19 @@
 import { AiOutlineLine } from 'react-icons/ai';
 import PackageDetailsCard from '@components/package-details-card';
 import type { Metadata } from 'next';
-import g1 from '@public/assets/g1.jpg';
+import g1 from '@public/assets/g4.jpg';
 
 export const metadata: Metadata = {
-  title: 'Bali Packages | Incognito Holidays'
+  title: 'Srilanka Packages | Incognito Holidays'
 };
-
-const BaliPackages: React.FC = () => {
+const VietnamPackages: React.FC = () => {
   const desc =
-    'Bali Indonesia. Also known as the Land of the Gods, Bali appeals through its sheer natural beauty of looming volcanoes and lush terraced rice fields that exude peace and serenity. It is also famous for surfers paradise!';
-
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magni cupiditate, optio asperiores molestias, voluptas voluptates praesentium animi obcaecati vero, vitae ipsa unde quae ex sunt libero iure odio eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi, iusto laboriosam id impedit voluptatibus incidunt nam eius, blanditiis repellendus laborum, aperiam magni omnis tempora tempore vel sapiente nihil repudiandae.';
   return (
     <>
       <section className='items-center space-y-1 md:flex md:space-x-4'>
         <h1 className='text-xl font-semibold capitalize text-gray-700 md:text-2xl'>
-          Bali Tour Packages
+          Vietnam Tour Packages
         </h1>
         <AiOutlineLine className='hidden h-5 w-5 rotate-90 text-gray-700 md:block' />
         <h3 className='text-sm'>4 Packages</h3>
@@ -23,20 +21,21 @@ const BaliPackages: React.FC = () => {
 
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Bali Package 4 Nignt, 5 Days'
+          title='Best Of Vietnam With Cambodia 4 Nignt, 5 Days'
           desc={desc}
           rating={3.4}
-          startingPrice={29845}
+          startingPrice={25149}
           img={g1}
           slug='#'
         />
       </section>
+
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Bali Package 3 Nignt, 4 Days | Price incomplete'
+          title='Vietnam Laos Cambodia 11 Nignt, 12 Days'
           desc={desc}
-          rating={2.8}
-          startingPrice={10000}
+          rating={3.4}
+          startingPrice={95600}
           img={g1}
           slug='#'
         />
@@ -45,4 +44,4 @@ const BaliPackages: React.FC = () => {
   );
 };
 
-export default BaliPackages;
+export default VietnamPackages;
