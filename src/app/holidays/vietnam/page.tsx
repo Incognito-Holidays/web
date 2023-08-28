@@ -21,23 +21,23 @@ const VietnamPackages: React.FC = () => {
 
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Best Of Vietnam With Cambodia 4 Nignt, 5 Days'
+          title='Best Of Vietnam With Cambodia, 4 Nights & 5 Days'
           desc={desc}
           rating={3.4}
           startingPrice={25149}
           img={g1}
-          slug='#'
+          slug='vietnam'
         />
       </section>
 
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Vietnam Laos Cambodia 11 Nignt, 12 Days'
+          title='Vietnam Laos Cambodia, 11 Nights & 12 Days'
           desc={desc}
           rating={3.4}
           startingPrice={95600}
           img={g1}
-          slug='#'
+          slug='vietnam'
         />
       </section>
     </>

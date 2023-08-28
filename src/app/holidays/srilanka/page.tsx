@@ -13,7 +13,7 @@ const SrilankaPackages: React.FC = () => {
     <>
       <section className='items-center space-y-1 md:flex md:space-x-4'>
         <h1 className='text-xl font-semibold capitalize text-gray-700 md:text-2xl'>
-          Srilanka Tour Packages
+          Sri Lanka Tour Packages
         </h1>
         <AiOutlineLine className='hidden h-5 w-5 rotate-90 text-gray-700 md:block' />
         <h3 className='text-sm'>4 Packages</h3>
@@ -21,23 +21,23 @@ const SrilankaPackages: React.FC = () => {
 
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Sri Lanka Package 4 Nignt, 5 Days'
+          title='Sri Lanka Package, 4 Nights & 5 Days'
           desc={desc}
           rating={3.4}
           startingPrice={26300}
           img={g1}
-          slug='#'
+          slug='srilanka'
         />
       </section>
 
       <section className='mt-8'>
         <PackageDetailsCard
-          title='Sri Lanka Package 3 Nignt, 4 Days'
+          title='Sri Lanka Package, 3 Nights & 4 Days'
           desc={desc}
           rating={3.4}
           startingPrice={21500}
           img={g1}
-          slug='#'
+          slug='srilanka'
         />
       </section>
 
@@ -48,7 +48,7 @@ const SrilankaPackages: React.FC = () => {
           rating={3.4}
           startingPrice={21500}
           img={g1}
-          slug='#'
+          slug='srilanka'
         />
       </section>
     </>
