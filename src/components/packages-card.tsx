@@ -16,6 +16,7 @@ const PackagesCard: React.FC<CardProps> = ({ title, img, slug }) => {
           src={img}
           width={300}
           height={300}
+          quality={95}
           alt='bali'
           placeholder='blur'
         />

@@ -19,15 +19,15 @@ const TravelBlogs: React.FC = () => {
   const slideData = [
     {
       id: 1,
-      src: g1,
-      alt: 'g1',
+      src: g3,
+      alt: 'g3',
       heading: 'Thailand',
       desc: "With our all-inclusive package, discover Thailand's beauty! Explore historic temples, unwind on stunning beaches, and indulge in genuine Thai food. A memorable journey is guaranteed by experienced guides, flawless planning, and custom itineraries. Reserve your ideal trip to Thailand today!"
     },
     {
       id: 2,
-      src: g2,
-      alt: 'g2',
+      src: g4,
+      alt: 'g4',
       heading: 'Vietnam',
       desc:
         "Flee to Vietnam's captivating beauty! Explore the rich tapestry of cuisine and culture, from frantic Hanoi to tranquil Ha Long Bay. Spend time in Hoi An's historic streets and enjoy the friendliness of the people there. Discover the unusual. " +
@@ -35,30 +35,36 @@ const TravelBlogs: React.FC = () => {
     },
     {
       id: 3,
-      src: g3,
-      alt: 'g3',
+      src: g2,
+      alt: 'g2',
       heading: 'Sri Lanka',
       desc: "Explore Sri Lanka's wonderland! Enjoy the gorgeous surroundings, which range from golden beaches to misty tea fields. Experience Sigiriya's rich history while indulging in mouthwatering cuisine. Witness the remarkable benevolence of locals. Explore Sri Lanka, a place where tranquilly and adventure coexist."
     },
     {
       id: 4,
-      src: g4,
-      alt: 'g4',
+      src: g1,
+      alt: 'g1',
       heading: 'Bali',
       desc: "In Bali's wonderland, let your wanderlust loose! Give in to the temptation of the bustling nightlife, picturesque rice terraces, and sun-kissed beaches. Enjoy every mouthful of the finest Balinese flavors, experience the magical aura of historic temples, and rejuvenate tranquilly at opulent resorts."
     }
   ];
   return (
-    <div className='mt-8'>
-      <div className=' rounded-lg bg-white p-4 shadow-xl ring-1 ring-slate-900/5'>
+    <div className='bg-slate-100 pb-2 pt-2'>
+      <div className='m-10 rounded-lg bg-white p-4 shadow-xl ring-1 ring-slate-900/5'>
         <h1 className='text-center text-3xl font-bold text-cyan-700'>
           Travel Stories
         </h1>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={1}
           spaceBetween={10}
           pagination={{
             clickable: true
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10
+            }
           }}
           navigation={true}
           modules={[Pagination, Navigation]}

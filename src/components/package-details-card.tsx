@@ -12,6 +12,7 @@ type PackageDetailsCardProps = {
   rating: number;
   startingPrice: number;
   img: StaticImageData;
+  id: string;
   slug: string;
 };
 
@@ -21,10 +22,11 @@ const PackageDetailsCard: React.FC<PackageDetailsCardProps> = ({
   rating,
   startingPrice,
   img,
+  id,
   slug
 }) => {
   return (
-    <Link href={`/holidays/${slug}`}>
+    <Link href={`/holidays/${slug}/${id}`}>
       <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>
         <div className='space-x-4 md:flex md:pr-2'>
           <Image
@@ -32,6 +34,7 @@ const PackageDetailsCard: React.FC<PackageDetailsCardProps> = ({
             width={280}
             height={280}
             alt={title}
+            quality={95}
             className='aspect-auto w-full rounded-l-lg'
           />
           <div className='space-y-2 py-4'>

@@ -1,5 +1,8 @@
 import PackagesCard from '@components/packages-card';
 import g1 from '@public/assets/g1.jpg';
+import g2 from '@public/assets/g2.jpg';
+import g3 from '@public/assets/g3.jpg';
+import g4 from '@public/assets/g4.jpg';
 
 const HolidaysPage: React.FC = () => {
   return (
@@ -9,9 +12,9 @@ const HolidaysPage: React.FC = () => {
       </h1>
       <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
         <PackagesCard title='Bali' img={g1} slug='bali' />
-        <PackagesCard title='Sri Lanka' img={g1} slug='srilanka' />
-        <PackagesCard title='Vietnam' img={g1} slug='vietnam' />
-        <PackagesCard title='Thailand' img={g1} slug='thailand' />
+        <PackagesCard title='Sri Lanka' img={g2} slug='srilanka' />
+        <PackagesCard title='Thailand' img={g3} slug='thailand' />
+        <PackagesCard title='Vietnam' img={g4} slug='vietnam' />
       </div>
     </>
   );
