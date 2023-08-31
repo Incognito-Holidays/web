@@ -26,6 +26,7 @@ const VietnamPackages: React.FC = () => {
           rating={3.4}
           startingPrice={25149}
           img={g1}
+          id='vietnam'
           slug='vietnam'
         />
       </section>
@@ -37,6 +38,7 @@ const VietnamPackages: React.FC = () => {
           rating={3.4}
           startingPrice={95600}
           img={g1}
+          id='vietnam'
           slug='vietnam'
         />
       </section>

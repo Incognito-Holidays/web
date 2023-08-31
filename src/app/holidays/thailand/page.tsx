@@ -28,6 +28,7 @@ const BaliPackages: React.FC = () => {
           rating={4.2}
           startingPrice={19990}
           img={g1}
+          id='thailand'
           slug='thailand'
         />
       </section>
@@ -38,6 +39,7 @@ const BaliPackages: React.FC = () => {
           rating={3.8}
           startingPrice={38579}
           img={g1}
+          id='thailand'
           slug='thailand'
         />
       </section>
