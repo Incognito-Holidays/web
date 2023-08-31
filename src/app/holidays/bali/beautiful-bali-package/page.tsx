@@ -371,7 +371,7 @@ const Page: React.FC = () => {
           <div className='mt-8 md:mt-0'>
             <h1 className='text-lg font-semibold'>Price Details:</h1>
             <div className='relative mt-4 overflow-x-auto'>
-              <table className='w-full border-2 border-gray-300 text-left text-sm text-gray-800'>
+              <table className='w-full border-2 border-gray-300 text-center text-sm text-gray-800'>
                 <thead className='bg-gray-50 text-xs uppercase text-gray-800'>
                   <tr>
                     <th scope='col' className='px-6 py-3'>
