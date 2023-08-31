@@ -26,6 +26,7 @@ const SrilankaPackages: React.FC = () => {
           rating={3.4}
           startingPrice={26300}
           img={g1}
+          id='srilanka'
           slug='srilanka'
         />
       </section>
@@ -37,6 +38,7 @@ const SrilankaPackages: React.FC = () => {
           rating={3.4}
           startingPrice={21500}
           img={g1}
+          id='srilanka'
           slug='srilanka'
         />
       </section>
@@ -48,6 +50,7 @@ const SrilankaPackages: React.FC = () => {
           rating={3.4}
           startingPrice={21500}
           img={g1}
+          id='srilanka'
           slug='srilanka'
         />
       </section>
