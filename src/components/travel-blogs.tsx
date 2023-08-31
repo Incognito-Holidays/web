@@ -56,11 +56,18 @@ const TravelBlogs: React.FC = () => {
         </h1>
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
           pagination={{
             clickable: true
           }}
           breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
             1024: {
               slidesPerView: 3,
               spaceBetween: 10
@@ -71,8 +78,6 @@ const TravelBlogs: React.FC = () => {
         >
           {slideData.map((slide) => (
             <SwiperSlide key={slide.id} className='flex flex-auto gap-2 p-8'>
-              {/* <Image src={slide.src} alt={slide.alt} placeholder='blur' /> */}
-
               <div className='max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
                 <a href='#'>
                   <Image
