@@ -27,21 +27,7 @@ const Page: React.FC = () => {
         <div className='space-y-8'>
           {/* Tour overview/summary */}
           <h2 className='text-2xl font-bold'>Tour Overview</h2>
-          <p className='text-justify'>
-            Bali Island stands as a captivating and compact landmass within
-            Indonesia&apos;s expansive archipelago. It has gained global
-            recognition as the most renowned Indonesian destination for tourism.
-            This is primarily due to its stunning vistas and distinct cultural
-            heritage, setting it apart from other locations. Nestled in a
-            tropical setting, Bali is often regarded as a dreamlike paradise for
-            vacations. Known as the &quot;Island of the Gods,&quot; Bali boasts
-            diverse topography featuring hills, mountains, rugged coastlines,
-            and sandy beaches. The lush terraced rice fields and volcanic slopes
-            contribute to a mesmerizing backdrop that beautifully complements
-            its vibrant, profoundly spiritual, and one-of-a-kind culture.
-            It&apos;s no exaggeration to consider Bali a slice of heaven on
-            earth.
-          </p>
+          <p className='text-justify'></p>
 
           <Tab.Group>
             <Tab.List className='flex space-x-1 rounded-xl bg-blue-950 p-1'>
