@@ -26,7 +26,7 @@ const SrilankaPackages: React.FC = () => {
           rating={3.4}
           startingPrice={26300}
           img={g1}
-          id='srilanka'
+          id='srilanka-4n-5d-package'
           slug='srilanka'
         />
       </section>
