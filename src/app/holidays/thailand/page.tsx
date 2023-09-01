@@ -36,10 +36,10 @@ const BaliPackages: React.FC = () => {
         <PackageDetailsCard
           title='Best of Thailand, 6 Nights & 7 Days'
           desc={desc}
-          rating={3.8}
+          rating={3.4}
           startingPrice={38579}
           img={g1}
-          id='thailand'
+          id='best-of-thailand'
           slug='thailand'
         />
       </section>
