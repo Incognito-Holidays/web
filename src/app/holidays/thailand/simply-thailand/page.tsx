@@ -343,13 +343,13 @@ const Page: React.FC = () => {
                 <thead className='bg-gray-50 text-xs uppercase text-gray-800'>
                   <tr>
                     <th scope='col' className='px-6 py-3'>
-                      Economy/Standard
-                    </th>
-                    <th scope='col' className='px-6 py-3'>
                       Deluxe
                     </th>
                     <th scope='col' className='px-6 py-3'>
                       Luxury
+                    </th>
+                    <th scope='col' className='px-6 py-3'>
+                      Premium
                     </th>
                   </tr>
                 </thead>

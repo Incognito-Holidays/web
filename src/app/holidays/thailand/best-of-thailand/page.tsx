@@ -395,7 +395,7 @@ const Page: React.FC = () => {
                 <thead className='bg-gray-50 text-xs uppercase text-gray-800'>
                   <tr>
                     <th scope='col' className='px-6 py-3'>
-                      Delux
+                      Deluxe
                     </th>
                     <th scope='col' className='px-6 py-3'>
                       Luxury
