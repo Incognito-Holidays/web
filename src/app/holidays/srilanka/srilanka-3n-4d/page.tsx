@@ -181,7 +181,7 @@ const Page: React.FC = () => {
                 )}
               >
                 <div className='space-y-2'>
-                  <h1 className='text-base font-semibold '>
+                  <h1 className='text-lg font-semibold underline '>
                     Terms & Conditions applied
                   </h1>
                 </div>

@@ -25,23 +25,7 @@ const Page: React.FC = () => {
       <div className='mt-12 flex flex-col gap-x-10 md:flex-row'>
         <div className='space-y-8'>
           <h2 className='text-2xl font-bold'>Tour Overview</h2>
-          <p className='text-justify'>
-            Thailand officially the Kingdom of Thailand and historically known
-            as Siam is a country in Southeast Asia on the Indochinese Peninsula.
-            With a population of almost 70 million, it spans 513,120 square
-            kilometres (198,120 sq mi). Thailand is bordered to the north by
-            Myanmar and Laos, to the east by Laos and Cambodia, to the south by
-            the Gulf of Thailand and Malaysia, and to the west by the Andaman
-            Sea; it also shares maritime borders with Vietnam to the southeast,
-            and Indonesia and India to the southwest. Bangkok is the nation's
-            capital and largest city. Thailand is a middle power in global
-            affairs and a founding member of Asian, and ranks very high in the
-            Human Development Index. It has the second-largest economy in
-            Southeast Asia and the 24th-largest in the world by PPP and ranks
-            85th by nominal GDP per capital. Thailand is classified as a newly
-            industrialised economy, with manufacturing, agriculture, and tourism
-            as leading sectors.
-          </p>
+          <p className='text-justify'>{/* Overview */}</p>
 
           <Tab.Group>
             <Tab.List className='flex space-x-1 rounded-xl bg-blue-950 p-1'>
@@ -106,7 +90,7 @@ const Page: React.FC = () => {
                 </div>
                 <div className='space-y-2'>
                   <h1 className='text-lg font-semibold text-gray-900'>
-                    Day 2: Kandy-Nuwara Eliya
+                    Day 2: Kandy - Nuwara Eliya
                   </h1>
                   <h2 className='text-gray-800'>
                     <p className='text-justify'>
@@ -117,7 +101,7 @@ const Page: React.FC = () => {
                 </div>
                 <div className='space-y-2'>
                   <h1 className='text-lg font-semibold text-gray-900'>
-                    Day 3: Nuwara Eliya -Bentota
+                    Day 3: Nuwara Eliya - Bentota
                   </h1>
                   <h2 className='text-gray-800'>
                     <p>
@@ -183,7 +167,7 @@ const Page: React.FC = () => {
 
                 <div className='space-y-2'>
                   <h1 className='text-lg font-semibold underline'>
-                    Supplement cost for Entrance Fees ( Per person)
+                    Supplement cost for Entrance Fees (Per person)
                   </h1>
                   <ul className='ml-6 list-disc'>
                     <li>US$ 10 Pinnawala Elephant Orphanage.</li>
@@ -198,7 +182,7 @@ const Page: React.FC = () => {
                     <li>
                       US$ 20 water sports ( 01 banana boat ride and 01 jetski)
                     </li>
-                    <li>US$ 02Gangarama Tempe</li>
+                    <li>US$ 02 Gangarama Tempe</li>
                   </ul>
                 </div>
               </Tab.Panel>
@@ -209,7 +193,7 @@ const Page: React.FC = () => {
                 )}
               >
                 <div className='space-y-2'>
-                  <h1 className='text-lg font-semibold underline'>
+                  <h1 className='text-lg font-semibold underline '>
                     Terms & Conditions applied
                   </h1>
                 </div>
