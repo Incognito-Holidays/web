@@ -48,9 +48,9 @@ const SrilankaPackages: React.FC = () => {
           title='Best Of Sri Lanka and Maldives (9 Days) | Price incomplate'
           desc={desc}
           rating={3.4}
-          startingPrice={21500}
+          startingPrice={89999}
           img={g1}
-          id='srilanka'
+          id='best-of-srilanka'
           slug='srilanka'
         />
       </section>
