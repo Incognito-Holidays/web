@@ -43,6 +43,17 @@ const BaliPackages: React.FC = () => {
           slug='thailand'
         />
       </section>
+      <section className='mt-8'>
+        <PackageDetailsCard
+          title='Phuket with Krabi, 4 Nights & 5 Days'
+          desc={desc}
+          rating={3.4}
+          startingPrice={25100}
+          img={g1}
+          id='phuket-with-krabi'
+          slug='thailand'
+        />
+      </section>
     </>
   );
 };
