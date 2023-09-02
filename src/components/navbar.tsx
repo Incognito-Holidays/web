@@ -42,9 +42,12 @@ const Navbar: React.FC = () => {
             <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
               About
             </button>
-            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+            <Link
+              href='/contact'
+              className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
+            >
               Contact
-            </button>
+            </Link>
           </div>
 
           <div className='block md:hidden'>
@@ -70,7 +73,9 @@ const Navbar: React.FC = () => {
         <button className='block text-sm font-medium'>Flights</button>
         <button className='block text-sm font-medium'>Trains</button>
         <button className='block text-sm font-medium'>About</button>
-        <button className='block text-sm font-medium'>Contact</button>
+        <Link href='/contact' className='block text-sm font-medium'>
+          Contact
+        </Link>
       </div>
     </nav>
   );
