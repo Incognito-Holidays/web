@@ -1,18 +1,60 @@
-import FormCard from '@components/form-card';
-const Page: React.FC = () => {
+'use client';
+
+import { useState } from 'react';
+import Form from '@components/form';
+
+const ContactPage: React.FC = () => {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
   return (
-    <div>
-      <FormCard
-        title='Contact'
-        description='Contact form'
-        name='Name'
-        phone_number='Phone Number'
-        email_id='Email Id'
-        subject='Subject'
-        your_message='Your Message'
-      />
-    </div>
+    <Form
+      title='Contact Us'
+      description='Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.'
+      name={name}
+      setName={setName}
+      phone={phone}
+      setPhone={setPhone}
+      email={email}
+      setEmail={setEmail}
+    >
+      <div>
+        <label
+          htmlFor='subject'
+          className='mb-2 block text-sm font-medium text-gray-900'
+        >
+          Subject
+        </label>
+        <input
+          id='subject'
+          type='text'
+          value={subject}
+          onChange={(e): void => setSubject(e.target.value)}
+          placeholder='Let us know your Enquiry'
+          className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+        />
+      </div>
+      <div className='sm:col-span-2'>
+        <label
+          htmlFor='message'
+          className='mb-2 block text-sm font-medium text-gray-900'
+        >
+          Your message
+        </label>
+        <textarea
+          id='message'
+          rows={6}
+          value={message}
+          onChange={(e): void => setMessage(e.target.value)}
+          placeholder='Leave a comment...'
+          className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+        />
+      </div>
+    </Form>
   );
 };
 
-export default Page;
+export default ContactPage;
