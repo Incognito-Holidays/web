@@ -1,9 +1,21 @@
-const Formcard = ({
+type FormCardProps = {
+  title: string;
+  description: string;
+  name: string;
+  phone: string;
+  email: string;
+  subject: string;
+  your_message: string;
+};
+const Formcard: React.FC<FormCardProps> = ({
   title,
   description,
   name,
-  phone_number,
-  email_id,
+  setName,
+  phone,
+  setPhone,
+  email,
+  setEmail,
   subject,
   your_message
 }) => {
@@ -23,12 +35,14 @@ const Formcard = ({
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                {name}
+                Name
               </label>
               <input
                 type='text'
                 id='name'
-                className='focus:ring-primary-500 focus:border-primary-500    block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm    '
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm    '
                 placeholder='John Doe'
                 required
               />
@@ -39,11 +53,13 @@ const Formcard = ({
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                {phone_number}
+                Phone
               </label>
               <input
                 type='number'
-                id='phone_number'
+                id='phone'
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className='focus:ring-primary-500 focus:border-primary-500    block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm    '
                 placeholder='+91 00000-00000'
                 required
@@ -55,14 +71,17 @@ const Formcard = ({
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                {email_id}
+                Email
               </label>
               <input
                 type='email'
                 id='email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className='focus:ring-primary-500 focus:border-primary-500    block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm    '
                 placeholder='name@flowbite.com'
               />
+              ~
             </div>
             <div>
               <label

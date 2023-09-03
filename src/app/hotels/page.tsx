@@ -1,5 +1,5 @@
 import FormCard from '@components/form-card';
-const Page = () => {
+const Page: React.FC = () => {
   return (
     <div>
       <FormCard
