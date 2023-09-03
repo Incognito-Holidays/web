@@ -3,12 +3,12 @@ const Page = () => {
   return (
     <div>
       <FormCard
-        title='Contact'
-        description='Contact form'
+        title='Contact For Hotel Booking'
+        description='Contact us for booking hotel'
         name='Name'
         phone_number='Phone Number'
         email_id='Email Id'
-        subject='Subject'
+        subject='Region, City, Area'
         your_message='Your Message'
       />
     </div>

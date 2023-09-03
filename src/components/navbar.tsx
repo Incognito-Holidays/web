@@ -30,9 +30,12 @@ const Navbar: React.FC = () => {
             >
               Holidays
             </Link>
-            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+            <Link
+              href='/hotels'
+              className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
+            >
               Hotels
-            </button>
+            </Link>
             <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
               Flights
             </button>
@@ -63,13 +66,15 @@ const Navbar: React.FC = () => {
           showMobileMenu ? 'block' : 'hidden'
         } space-y-2 bg-gray-100 px-4 py-2`}
       >
-        <Link href='/'>
-          <button className='block text-sm font-medium'>Home</button>
+        <Link href='/' className='block text-sm font-medium'>
+          Home
         </Link>
-        <Link href='/holidays'>
-          <button className='mt-2 block text-sm font-medium'>Holidays</button>
+        <Link href='/holidays' className='block text-sm font-medium'>
+          Holidays
         </Link>
-        <button className='block text-sm font-medium'>Hotels</button>
+        <Link href='/hotels' className='block text-sm font-medium'>
+          Hotels
+        </Link>
         <button className='block text-sm font-medium'>Flights</button>
         <button className='block text-sm font-medium'>Trains</button>
         <button className='block text-sm font-medium'>About</button>

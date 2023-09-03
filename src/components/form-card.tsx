@@ -1,14 +1,21 @@
-const Formcard = () => {
+const Formcard = ({
+  title,
+  description,
+  name,
+  phone_number,
+  email_id,
+  subject,
+  your_message
+}) => {
   return (
     <div>
       <section className='bg-white '>
         <div className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
           <h2 className='mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900'>
-            Contact Us
+            {title}
           </h2>
           <p className='mb-8 text-center font-light text-gray-500  sm:text-xl lg:mb-16'>
-            Got a technical issue? Want to send feedback about a beta feature?
-            Need details about our Business plan? Let us know.
+            {description}
           </p>
           <form action='#' className='space-y-8'>
             <div>
@@ -16,7 +23,7 @@ const Formcard = () => {
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                Name
+                {name}
               </label>
               <input
                 type='text'
@@ -32,7 +39,7 @@ const Formcard = () => {
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                Phone Number
+                {phone_number}
               </label>
               <input
                 type='number'
@@ -48,7 +55,7 @@ const Formcard = () => {
                 htmlFor='email'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                Email Id
+                {email_id}
               </label>
               <input
                 type='email'
@@ -62,13 +69,13 @@ const Formcard = () => {
                 htmlFor='subject'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                Subject
+                {subject}
               </label>
               <input
                 type='text'
                 id='subject'
                 className='focus:ring-primary-500 focus:border-primary-500  block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm '
-                placeholder='Let us know how we can help you'
+                placeholder='Let us know your Enquery'
               />
             </div>
             <div className='sm:col-span-2'>
@@ -76,7 +83,7 @@ const Formcard = () => {
                 htmlFor='message'
                 className='mb-2 block text-sm font-medium text-gray-900 '
               >
-                Your message
+                {your_message}
               </label>
               <textarea
                 id='message'
