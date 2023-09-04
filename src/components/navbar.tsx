@@ -39,9 +39,12 @@ const Navbar: React.FC = () => {
             <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
               Flights
             </button>
-            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+            <Link
+              href='/trains'
+              className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
+            >
               Trains
-            </button>
+            </Link>
             <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
               About
             </button>
@@ -76,7 +79,9 @@ const Navbar: React.FC = () => {
           Hotels
         </Link>
         <button className='block text-sm font-medium'>Flights</button>
-        <button className='block text-sm font-medium'>Trains</button>
+        <Link href='/trains' className='block text-sm font-medium'>
+          Trains
+        </Link>
         <button className='block text-sm font-medium'>About</button>
         <Link href='/contact' className='block text-sm font-medium'>
           Contact
