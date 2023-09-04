@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiBars3 } from 'react-icons/hi2';
+import { HiBars3, HiXMark } from 'react-icons/hi2';
 import logo from '@public/assets/incognito-logo.png';
 
 const Navbar: React.FC = () => {
@@ -58,7 +58,11 @@ const Navbar: React.FC = () => {
 
           <div className='block md:hidden'>
             <button onClick={(): void => setShowMobileMenu((prev) => !prev)}>
-              <HiBars3 className='h-7 w-7' />
+              {showMobileMenu ? (
+                <HiXMark className='h-7 w-7' />
+              ) : (
+                <HiBars3 className='h-7 w-7' />
+              )}
             </button>
           </div>
         </div>
