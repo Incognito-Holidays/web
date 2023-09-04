@@ -48,9 +48,12 @@ const Navbar: React.FC = () => {
             >
               Trains
             </Link>
-            <button className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'>
+            <Link
+              href='/about'
+              className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
+            >
               About
-            </button>
+            </Link>
             <Link
               href='/contact'
               className='border-b-4 border-transparent pb-1 font-medium text-blue-950 transition duration-200 hover:border-cyan-500 hover:text-cyan-500'
