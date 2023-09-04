@@ -10,7 +10,7 @@ const Search: React.FC = () => {
     <div className='ml-11 mr-11 flex items-center  space-x-5 py-6'>
       <select
         className='w-full appearance-none rounded-md border bg-white p-4 text-blue-950 shadow-sm outline-none focus:border-blue-950'
-        onChange={(e) => setHolidayDest(e.target.value)}
+        onChange={(e): void => setHolidayDest(e.target.value)}
       >
         <option value=''>Choose Package</option>
         <option value='srilanka'>Srilanka Package</option>
