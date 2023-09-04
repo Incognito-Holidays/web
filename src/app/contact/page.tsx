@@ -20,6 +20,10 @@ const ContactPage: React.FC = () => {
       setPhone={setPhone}
       email={email}
       setEmail={setEmail}
+      showMessageBox
+      messageBoxLabel='Your message'
+      message={message}
+      setMessage={setMessage}
     >
       <div>
         <label
@@ -35,22 +39,6 @@ const ContactPage: React.FC = () => {
           onChange={(e): void => setSubject(e.target.value)}
           placeholder='Let us know your Enquiry'
           className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
-        />
-      </div>
-      <div className='sm:col-span-2'>
-        <label
-          htmlFor='message'
-          className='mb-2 block text-sm font-medium text-gray-900'
-        >
-          Your message
-        </label>
-        <textarea
-          id='message'
-          rows={6}
-          value={message}
-          onChange={(e): void => setMessage(e.target.value)}
-          placeholder='Leave a comment...'
-          className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
         />
       </div>
     </Form>

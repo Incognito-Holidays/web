@@ -1,6 +1,6 @@
 import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
 
-type FormProps = PropsWithChildren & {
+type FormPropsBase = PropsWithChildren & {
   title: string;
   description?: string;
   name: string;
@@ -11,6 +11,22 @@ type FormProps = PropsWithChildren & {
   setEmail: Dispatch<SetStateAction<string>>;
 };
 
+type FormPropsWithMessage = FormPropsBase & {
+  showMessageBox: true;
+  messageBoxLabel: string;
+  message: string;
+  setMessage: Dispatch<SetStateAction<string>>;
+};
+
+type FormPropsWithoutMessage = FormPropsBase & {
+  showMessageBox?: false;
+  messageBoxLabel?: string;
+  message?: string;
+  setMessage?: Dispatch<SetStateAction<string>>;
+};
+
+type FormProps = FormPropsWithMessage | FormPropsWithoutMessage;
+
 const Form: React.FC<FormProps> = ({
   children,
   title,
@@ -20,7 +36,11 @@ const Form: React.FC<FormProps> = ({
   phone,
   setPhone,
   email,
-  setEmail
+  setEmail,
+  showMessageBox,
+  messageBoxLabel,
+  message,
+  setMessage
 }) => {
   return (
     <section className='bg-white'>
@@ -83,9 +103,27 @@ const Form: React.FC<FormProps> = ({
             />
           </div>
           {children}
+          {showMessageBox && (
+            <div className='sm:col-span-2'>
+              <label
+                htmlFor='message'
+                className='mb-2 block text-sm font-medium text-gray-900'
+              >
+                {messageBoxLabel}
+              </label>
+              <textarea
+                id='message'
+                rows={6}
+                value={message}
+                onChange={(e): void => setMessage(e.target.value)}
+                placeholder='Your message'
+                className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+              />
+            </div>
+          )}
           <button
             type='submit'
-            className='hover:bg-primary-800 focus:ring-primary-300 rounded-lg bg-cyan-600 px-5 py-3 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 sm:w-fit'
+            className='rounded-lg bg-cyan-600 px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-opacity-80 focus:outline-none focus:ring-4 focus:ring-cyan-300 sm:w-fit'
           >
             Send message
           </button>

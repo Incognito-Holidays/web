@@ -25,6 +25,10 @@ const HotelsPage: React.FC = () => {
       setPhone={setPhone}
       email={email}
       setEmail={setEmail}
+      showMessageBox
+      messageBoxLabel='Want to share something more? Let us know your Enquiry'
+      message={message}
+      setMessage={setMessage}
     >
       <div className='flex flex-col gap-8 sm:flex-row sm:items-center'>
         <div className='grow'>
@@ -128,22 +132,6 @@ const HotelsPage: React.FC = () => {
             className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
-      </div>
-      <div className='sm:col-span-2'>
-        <label
-          htmlFor='message'
-          className='mb-2 block text-sm font-medium text-gray-900'
-        >
-          Want to share something more? Let us know your Enquiry
-        </label>
-        <textarea
-          id='message'
-          rows={6}
-          value={message}
-          onChange={(e): void => setMessage(e.target.value)}
-          placeholder='Your message'
-          className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
-        />
       </div>
     </Form>
   );
