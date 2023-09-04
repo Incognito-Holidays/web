@@ -4,6 +4,7 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+
 import photo1 from '@public/assets/p1.png';
 import photo2 from '@public/assets/p2.png';
 import photo3 from '@public/assets/p3.png';
@@ -52,7 +53,12 @@ const HeroBanner: React.FC = () => {
     >
       {slideData.map((slide) => (
         <SwiperSlide key={slide.id}>
-          <Image src={slide.src} alt={slide.alt} placeholder='blur' />
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            placeholder='blur'
+            className='h-[20rem] w-full object-cover sm:h-[22rem] md:h-[27rem]'
+          />
         </SwiperSlide>
       ))}
     </Swiper>

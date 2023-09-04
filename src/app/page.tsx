@@ -64,7 +64,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <header>
+      <header className='relative'>
         <HeroBanner />
         <Search />
       </header>
