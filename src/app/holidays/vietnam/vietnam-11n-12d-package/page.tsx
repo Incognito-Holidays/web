@@ -1,10 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { Tab } from '@headlessui/react';
+import Modal from '@components/modal';
 import vietnam1 from '@public/assets/package.jpeg';
 
 const Page: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   function classNames(...classes: string[]): string {
     return classes.filter(Boolean).join(' ');
   }
@@ -13,7 +17,7 @@ const Page: React.FC = () => {
     <section className='max-w-6xl'>
       {/* Heading */}
       <h1 className='text-center text-3xl font-bold text-cyan-600'>
-        VIETNAM - LAOS - COMBODIA
+        VIETNAM - LAOS - CAMBODIA
       </h1>
 
       {/* Banner image */}
@@ -441,11 +445,20 @@ const Page: React.FC = () => {
           </div>
 
           {/* Book button */}
-          <button className='w-full rounded-md bg-cyan-600 p-3 text-white'>
+
+          <button
+            onClick={(): void => setIsModalOpen(true)}
+            className='w-full rounded-md bg-cyan-600 p-3 text-white'
+          >
             Book now
           </button>
         </div>
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        selectedPackage='Vietnam-Laos-Cambodia (11 nights 12 days)'
+      />
     </section>
   );
 };

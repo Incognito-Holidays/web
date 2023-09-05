@@ -40,7 +40,7 @@ const BaliPackages: React.FC = () => {
           slug='bali'
           id='bali-java-indonesia-package'
         />
-        <PackageDetailsCard
+        {/* <PackageDetailsCard
           title='Bali Package, 3 Nights & 4 Days | Price incomplete'
           desc={desc}
           rating={2.8}
@@ -48,7 +48,7 @@ const BaliPackages: React.FC = () => {
           img={g1}
           slug='bali'
           id='bali-3n-4d-package'
-        />
+        />  */}
       </section>
     </>
   );
