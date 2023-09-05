@@ -2,11 +2,16 @@
 
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { Tab } from '@headlessui/react';
+import Modal from '@components/modal';
+
 import bali1 from '@public/assets/package.jpeg';
 
 const Page: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   function classNames(...classes: string[]): string {
     return classes.filter(Boolean).join(' ');
   }
@@ -396,11 +401,20 @@ const Page: React.FC = () => {
             </div>
           </div>
 
-          <button className='w-full rounded-md bg-cyan-600 p-3 text-white'>
+          <button
+            onClick={(): void => setIsModalOpen(true)}
+            className='w-full rounded-md bg-cyan-600 p-3 text-white'
+          >
             Book now
           </button>
         </div>
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        selectedPackage='Beautiful Bali'
+      />
     </section>
   );
 };
