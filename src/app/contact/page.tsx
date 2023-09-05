@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
           value={subject}
           onChange={(e): void => setSubject(e.target.value)}
           placeholder='Let us know your Enquiry'
-          className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+          className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
         />
       </div>
     </Form>

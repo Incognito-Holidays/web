@@ -42,7 +42,7 @@ const TrainsPage: React.FC = () => {
             onChange={(e): void => setOriginPlace(e.target.value)}
             placeholder='Kolkata'
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ const TrainsPage: React.FC = () => {
             onChange={(e): void => setDestinationPlace(e.target.value)}
             placeholder='Bangkok'
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div className='grow'>
@@ -75,7 +75,7 @@ const TrainsPage: React.FC = () => {
             value={travelDate}
             onChange={(e): void => setTravelDate(e.target.value)}
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
       </div>

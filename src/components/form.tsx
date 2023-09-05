@@ -54,7 +54,7 @@ const Form: React.FC<FormProps> = ({
         <form className='space-y-8'>
           <div>
             <label
-              htmlFor='email'
+              htmlFor='name'
               className='mb-2 block text-sm font-medium text-gray-900'
             >
               Name
@@ -66,7 +66,7 @@ const Form: React.FC<FormProps> = ({
               onChange={(e): void => setName(e.target.value)}
               placeholder='John Doe'
               required
-              className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+              className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
             />
           </div>
           <div>
@@ -83,7 +83,7 @@ const Form: React.FC<FormProps> = ({
               onChange={(e): void => setPhone(e.target.value)}
               placeholder='+91 XXXXX XXXXX'
               required
-              className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+              className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
             />
           </div>
           <div>
@@ -99,7 +99,7 @@ const Form: React.FC<FormProps> = ({
               value={email}
               onChange={(e): void => setEmail(e.target.value)}
               placeholder='name@example.com'
-              className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+              className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
             />
           </div>
           {children}
@@ -117,7 +117,7 @@ const Form: React.FC<FormProps> = ({
                 value={message}
                 onChange={(e): void => setMessage(e.target.value)}
                 placeholder='Your message'
-                className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+                className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
               />
             </div>
           )}

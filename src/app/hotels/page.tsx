@@ -45,7 +45,7 @@ const HotelsPage: React.FC = () => {
             onChange={(e): void => setPlace(e.target.value)}
             placeholder='Select destination'
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ const HotelsPage: React.FC = () => {
             value={checkIn}
             onChange={(e): void => setCheckIn(e.target.value)}
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div>
@@ -77,7 +77,7 @@ const HotelsPage: React.FC = () => {
             value={checkOut}
             onChange={(e): void => setCheckOut(e.target.value)}
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
       </div>
@@ -96,7 +96,7 @@ const HotelsPage: React.FC = () => {
             onChange={(e): void => setRooms(e.target.value)}
             placeholder='1'
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div className='grow'>
@@ -113,7 +113,7 @@ const HotelsPage: React.FC = () => {
             onChange={(e): void => setAdults(e.target.value)}
             placeholder='1'
             required
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
         <div>
@@ -129,7 +129,7 @@ const HotelsPage: React.FC = () => {
             value={children}
             onChange={(e): void => setChildren(e.target.value)}
             placeholder='0'
-            className='focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
+            className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
           />
         </div>
       </div>
