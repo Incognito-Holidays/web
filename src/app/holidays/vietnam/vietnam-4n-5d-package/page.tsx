@@ -86,32 +86,32 @@ const Page: React.FC = () => {
                   </h1>
                   <h2 className='text-gray-800'>
                     <p>
-                      Arrive in Ho Chi Minh city(Saigon),pickup and transfer to
-                      the city center & check in hotel with breakfast, relax and
-                      refresh after flight. Today you will visit half day Saigon
-                      city tour, the first place is The Independence Palace
-                      symbolizes Vietnam&apos;s victory, peace, and territorial
-                      integrity.This place has a glamorous design, hundreds of
-                      rooms equipped with luxurious furnishings and decorations,
-                      and an enormous and gorgeous exterior space; next is War
-                      Remnants Museum:Formerly known as the Museum of American
-                      War Crimes, this is a poignant display of the futility of
-                      war, the museum is a call for peace and hopes that history
-                      does not repeat itself; continue toNotre Dame Cathedral
-                      and Old Post Office: Built between 1877 and 1883 this is
-                      one of the best examples of classical French colonial
-                      architecture. End of the tour is Ben Thanh Market: This
-                      bustling market is very popular with tourists, primarily
-                      due to its central location. It has a wide selection of
-                      goods ranging from fake Nike shoes to beautiful silk Ao
-                      Dais.Overnight in Ho Chi Minh city.
+                      Arrive in Ho Chi Minh city (Saigon), pickup and transfer
+                      to the city center & check in hotel with breakfast, relax
+                      and refresh after flight. Today you will visit half day
+                      Saigon city tour, the first place is The Independence
+                      Palace symbolizes Vietnam's victory, peace, and
+                      territorial integrity. This place has a glamorous design,
+                      hundreds of rooms equipped with luxurious furnishings and
+                      decorations, and an enormous and gorgeous exterior space;
+                      next is War Remnants Museum: Formerly known as the Museum
+                      of American War Crimes, this is a poignant display of the
+                      futility of war, the museum is a call for peace and hopes
+                      that history does not repeat itself; continue to Notre
+                      Dame Cathedral and Old Post Office: Built between 1877 and
+                      1883 this is one of the best examples of classical French
+                      colonial architecture. End of the tour is Ben Thanh
+                      Market: This bustling market is very popular with
+                      tourists, primarily due to its central location. It has a
+                      wide selection of goods ranging from fake Nike shoes to
+                      beautiful silk Ao Dais. Overnight in Ho Chi Minh city.
                     </p>
                   </h2>
                 </div>
                 <div className='space-y-2'>
                   <h1 className='text-lg font-semibold text-gray-900'>
                     Day 2: Ho Chi Minh city – Cu Chi Tunnel & Mekong Delta – Ho
-                    Chi Minh city ( B) - SIC
+                    Chi Minh city (B) - SIC
                   </h1>
                   <h2 className='text-gray-800'>
                     <p className='text-justify'>
@@ -119,29 +119,29 @@ const Page: React.FC = () => {
                       incredible underground network constructed by Vietnamese
                       guerrillas to protect the region against the American
                       attacks during the Vietnam War. The tunnels were used by
-                      viet Cong soldiers as hiding spots during combat,as well
+                      Viet Cong soldiers as hiding spots during combat, as well
                       as serving as communication and supply routes, hospitals,
                       food and weapon caches and living quarters for numerous
                       North Vietnamese fighters. The tunnel systems were of
-                      great importance to the viet Cong in their resistance to
+                      great importance to the Viet Cong in their resistance to
                       American forces, and helped to counter the growing
                       American military effort. We can even crawl a part inside
-                      the tunnel, visit their infirmary,kitchen to discover how
-                      people had survived hereby.Then,we will visit toMekong
+                      the tunnel, visit their infirmary, kitchen to discover how
+                      people had survived hereby. Then, we will visit to Mekong
                       Delta. Mekong delta is known as The Nine Dragon River
-                      delta since it is formed by nine rivers.The background of
+                      delta since it is formed by nine rivers. The background of
                       this area is the largest site of endless paddy fields,
                       coconut farms, tropical gardens. Morning, drive to My Tho,
-                      known as the "rice basket" in Vietnam. Upon
-                      arrivalCruising through Mekong River, passing a fishing
-                      village. Visiting some small islets as
-                      Turtle,Dragon,PhoenixIsland,under a green canopy of water
-                      coconut trees.Walking through some villages to a fruit
-                      garden. Taste tropical fruits, while having live
-                      traditional music. Have honey tea. Short rowing boat ride,
-                      enjoy the nice boat ride through natural island and canals
-                      in BenTre under the shadow of the water coconut trees
-                      Return and Over night in Ho chi Minh city.
+                      known as the "rice basket" in Vietnam. Upon arrival
+                      cruising through Mekong River, passing a fishing village.
+                      Visiting some small islets such as Turtle, Dragon, Phoenix
+                      Island, under a green canopy of water coconut
+                      trees.Walking through some villages to a fruit garden.
+                      Taste tropical fruits, while having live traditional
+                      music. Have honey tea. Short rowing boat ride, enjoy the
+                      nice boat ride through natural island and canals in BenTre
+                      under the shadow of the water coconut trees Return and
+                      Over night in Ho Chi Minh city.
                     </p>
                   </h2>
                 </div>
@@ -155,13 +155,13 @@ const Page: React.FC = () => {
                       Free at leisure on beach till transfer to airport for
                       flight to your next destination. Fly into Phnom Penh, our
                       driver picks you up and transfer to hotel (check in time:
-                      2pm). Then,relax and free by your own way. Phnom Penh is a
-                      city that retains its traditional Khmer andcolonial charm.
-                      French villas along tree-lined boulevards remind the
-                      visitor that the city was onceconsidered the ‘pearl’ of
-                      Southeast Asia. Recent political changes have triggered an
-                      economic boom,with new hotels, restaurants,
-                      barsandnightclubsspringing upacrossthe city.
+                      2pm). Then, relax and free by your own way. Phnom Penh is
+                      a city that retains its traditional Khmer andcolonial
+                      charm. French villas along tree-lined boulevards remind
+                      the visitor that the city was onceconsidered the ‘pearl’
+                      of Southeast Asia. Recent political changes have triggered
+                      an economic boom, with new hotels, restaurants, bars and
+                      night clubs springing up across the city.
                     </p>
                   </h2>
                 </div>
@@ -172,47 +172,46 @@ const Page: React.FC = () => {
                   <h2 className='text-gray-800'>
                     <p>
                       Visit the Royal Palace compound build in 1866 by the
-                      Predecessors of King Norodom, it is themost conspicuous
+                      predecessors of King Norodom, it is themost conspicuous
                       feature and also one of the impressive colorful
-                      Khmer-style Palaces.
-                      NearsidetheRoyalPalaceSilverPagoda(The
-                      EmeraldBuddhatemple),displaysplentyofBuddhaStatues that
-                      are decorated and made by diamond, emerald, gold and
-                      silver. Travelers will proceedto visit Independence
-                      Monument which was constructed in 1954 after Cambodian
-                      took
-                      theircountrybackfromFrenchcolony,continuingtoNationalMuseum,thedistinctiveredbuildingwith
-                      a beautiful Khmer architecture was built in 1917 and
-                      contains more than 5000 art objectsmadeof sandstone,
-                      bronze,silver,copper,wood and others.This afternoon we
-                      will learn about the dark side of Cambodia – Its more
-                      recent turbulent andharrowing history. Initially you visit
-                      the Toul Sleng Genocide Museum (also known as
-                      S21),ironically a former school, located in a quiet Phnom
+                      Khmer-style Palaces. Near side the Royal Palace Silver
+                      Pagoda (The Emerald Buddha temple), displays plenty of
+                      Buddha statues that are decorated and made by diamond,
+                      emerald, gold and silver. Travelers will proceedto visit
+                      Independence Monument which was constructed in 1954 after
+                      Cambodian took their country back from French colony,
+                      continuing to National Museum, the distinctive red
+                      building with a beautiful Khmer architecture was built in
+                      1917 and contains more than 5000 art objects made of
+                      sandstone, bronze, silver, copper, wood and others. This
+                      afternoon we will learn about the dark side of Cambodia –
+                      Its more recent turbulent and harrowing history. Initially
+                      you visit the Toul Sleng Genocide Museum (also known as
+                      S21), ironically a former school, located in a quiet Phnom
                       Penh suburb, this was the infamous KhmerRouge prison /
-                      torture center. Once you havegained an initialinsight of
-                      the brutalityof theKhmer Rouge regime you will be driven
-                      15 km from Phnom Penh to visit the ‘Killing Fields’.This
+                      torture center. Once you have gained an initial insight of
+                      the brutality of the Khmer Rouge regime you will be driven
+                      15 km from Phnom Penh to visit the ‘Killing Fields’. This
                       is where Toul Sleng prisoners were forcibly marched and
-                      then executed; it is now amemorialsitelocated in
-                      abeautifultranquil setting.Visit the Wat Phnom “hill of
-                      Pagoda”, central market and walking a long bank of
-                      Mekongriverside connecting with Tonle sap lake during
-                      sunset tour in front of the Royal Palace. Then,backto
-                      hoteland overnight.
+                      then executed; it is now a memorial site located in a
+                      beautiful tranquil setting. Visit the Wat Phnom “hill of
+                      Pagoda”, central market and walking a long bank of Mekong
+                      riverside connecting with Tonle sap lake during sunset
+                      tour in front of the Royal Palace. Then, back to hotel and
+                      overnight stay.
                     </p>
                   </h2>
                 </div>
                 <div className='space-y-2'>
                   <h1 className='text-lg font-semibold text-gray-900'>
-                    Day 5: PhnomPenh–Departure (B)
+                    Day 5: PhnomPenh – Departure (B)
                   </h1>
                   <h2 className='text-gray-800'>
                     <p>
                       Breakfast at hotel. Transfer to Phnom Penh airport for
-                      departure to next destination. It’s time
-                      tosaygoodbye,wethankyou fortravelingwithusand
-                      warmlywelcomeyou tocomeagain.
+                      departure to next destination. It’s time to say goodbye,
+                      we thank you for traveling with us and warmly welcome you
+                      to come again.
                     </p>
                   </h2>
                 </div>
@@ -228,34 +227,41 @@ const Page: React.FC = () => {
                     Inclusions
                   </h1>
                   <ul className='ml-6 list-disc'>
-                    <li>AllroadtransportationinAir-conditionalvehicle</li>
                     <li>
-                      Airporttransferineverycitybyprivate vehicle (noguide)
+                      All road transportation in Air - conditional vehicle
                     </li>
                     <li>
-                      4nightshotelaccommodationon Twin/double
-                      sharingwithdailybreakfast.
+                      Airport transfer in every city by private vehicle
+                      (noguide)
                     </li>
-                    <li>BoattripinMekongDelta</li>
-                    <li>Entrancefeesasperaboveprogram</li>
-                    <li>Englishspeakingguideduringsightseeing</li>
                     <li>
-                      2Drinkingwaterbottleof500ml duringthe tour/person/day
+                      4 nights hotel accommodation on Twin/double sharing with
+                      daily breakfast.
+                    </li>
+                    <li>Boat trip in Mekong Delta</li>
+                    <li>Entrance fees as per above program</li>
+                    <li>English speaking guide during sight seeing</li>
+                    <li>
+                      2 drinking water bottle of 500ml during the
+                      tour/person/day
                     </li>
                   </ul>
                   <h1 className='text-lg font-semibold underline'>
                     Exclusions
                   </h1>
                   <ul className='ml-6 list-disc'>
-                    <li>All flights/airporttax.</li>
-                    <li>Vietnam tourist visa </li>
-                    <li>Cambodiatourist visa </li>
-                    <li>Other meals&Beveragesnotmentionedabove.</li>
-                    <li>Earlycheck-in/Latecheck-out</li>
+                    <li>All flights / airport tax.</li>
+                    <li>Vietnam tourist visa</li>
+                    <li>Cambodia tourist visa</li>
+                    <li>Other meals & beverages not mentioned above.</li>
+                    <li>Earlycheck-in / Latecheck-out</li>
                     <li>
-                      Personalexpensesuchaslaundry,mealsordrinksduring,etc.
+                      Personal expense such as laundry, meals or drinks during,
+                      etc.
                     </li>
-                    <li>Allmealsarementioned intheprogram(Lunch,Dinner)</li>
+                    <li>
+                      All meals are mentioned in the program (Lunch, Dinner)
+                    </li>
                   </ul>
                 </div>
               </Tab.Panel>
@@ -340,7 +346,7 @@ const Page: React.FC = () => {
                 <tbody>
                   <tr className='border-b bg-white'>
                     <td className='px-6 py-4'>Ho Chi Minh City</td>
-                    <td className='px-6 py-4'>Victory Hotel </td>
+                    <td className='px-6 py-4'>Victory Hotel</td>
                   </tr>
                   <tr className='border-b bg-white'>
                     <td className='px-6 py-4'>Phnompenh</td>
@@ -371,9 +377,9 @@ const Page: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr className='border-b bg-white'>
-                    <td className='px-6 py-4'></td>
+                    <td className='px-6 py-4'>-</td>
                     <td className='px-6 py-4'>Rs. 25149/- per person</td>
-                    <td className='px-6 py-4'></td>
+                    <td className='px-6 py-4'>-</td>
                   </tr>
                 </tbody>
               </table>
