@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint --max-warnings 0",
     "format:check": "prettier --check ./src",
+    "type:check": "tsc --noEmit",
     "prepare": "husky install"
   },
   "lint-staged": {

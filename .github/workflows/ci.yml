@@ -5,10 +5,9 @@ name: CI
 
 on:
   push:
-    branches: ['main']
-
+    branches-ignore: ['main']
   pull_request:
-    branches: ['main']
+    branches: ['main', 'dev']
 
 jobs:
   prettier:
@@ -22,7 +21,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Format
-        run: yarn format:check
+        run: yarn run format:check
 
   eslint:
     name: ESLint
@@ -35,4 +34,17 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lint
-        run: yarn lint
+        run: yarn run lint
+
+  type-check:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download deps
+        run: yarn install --frozen-lockfile
+
+      - name: Check types
+        run: yarn run type:check
