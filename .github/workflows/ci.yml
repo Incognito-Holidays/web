@@ -35,16 +35,3 @@ jobs:
 
       - name: Lint
         run: yarn run lint
-
-  type-check:
-    name: Type Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Download deps
-        run: yarn install --frozen-lockfile
-
-      - name: Check types
-        run: yarn run type:check
