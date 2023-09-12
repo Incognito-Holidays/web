@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import bannerbg from '@public/assets/bg-banner.jpg';
 import Container from './layout/container';
 
 const Banner = () => {
