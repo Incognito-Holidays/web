@@ -11,7 +11,7 @@ const Banner = () => {
           quality={95}
           width={1470}
           height={500}
-          className=' h-96 w-full rounded-2xl object-cover object-center'
+          className=' h-[26rem] w-full rounded-2xl object-cover object-center'
         />
       </Container>
     </div>
