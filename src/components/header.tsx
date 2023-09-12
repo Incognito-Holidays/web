@@ -4,7 +4,7 @@ import Container from './layout/container';
 
 const Header = () => {
   return (
-    <header className='border-b p-6'>
+    <header className='p-6'>
       <Container>
         <div className='flex items-center justify-between'>
           <div>
