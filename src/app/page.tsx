@@ -1,5 +1,6 @@
 import Banner from '@components/banner';
 import Card from '@components/card';
+import Categories from '@components/categories';
 
 const HomePage = () => {
   return (
@@ -56,6 +57,9 @@ const HomePage = () => {
           <Card />
           <Card />
         </div>
+      </div>
+      <div className='mt-20 pl-10 pr-10'>
+        <Categories />
       </div>
     </div>
   );
