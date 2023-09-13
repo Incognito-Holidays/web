@@ -21,25 +21,25 @@ const Header = () => {
           <nav className='flex items-center gap-20'>
             <Link
               href='/'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-blue-950 hover:font-medium hover:text-blue-950'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Home
             </Link>
             <Link
               href='/'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-blue-950 hover:font-medium hover:text-blue-950'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Blog
             </Link>
             <Link
               href='/'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-blue-950 hover:font-medium hover:text-blue-950'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               About
             </Link>
             <Link
               href='/'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-blue-950 hover:font-medium hover:text-blue-950'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Contact
             </Link>
