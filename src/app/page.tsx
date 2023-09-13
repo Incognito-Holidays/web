@@ -1,8 +1,9 @@
 import Banner from '@components/banner';
+import Card from '@components/card';
 
 const HomePage = () => {
   return (
-    <div className='relative'>
+    <div>
       <Banner />
       <div
         className='absolute -bottom-16 left-1/2 w-[55rem] -translate-x-1/2 rounded-2xl border bg-white
@@ -41,6 +42,19 @@ const HomePage = () => {
               Search
             </button>
           </div>
+        </div>
+      </div>
+      <div className='mt-36'>
+        <h1 className='text-center text-3xl font-bold text-blue-950'>
+          Guides for your next vacation
+        </h1>
+        <div className='mt-14 grid place-items-center gap-y-14 sm:grid-cols-2 md:grid-cols-3'>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </div>
