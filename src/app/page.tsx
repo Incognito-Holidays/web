@@ -15,7 +15,7 @@ const HomePage = () => {
           </h1>
           <div className='mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-5'>
             <select
-              className='h-10 w-full rounded-md border pl-2 text-gray-900 shadow-sm outline-none focus:border-blue-950 md:h-12'
+              className='h-10 w-full rounded-md border pl-2 text-gray-900 shadow-sm outline-none focus:border-purple-700 md:h-12'
               // onChange={(e): void => setHolidayDest(e.target.value)}
             >
               <option value='' className='text-sm'>
