@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+
 import HeroBanner from '@components/hero-banner';
 import Search from '@components/search';
 import TravelBlogs from '@components/travel-blogs';
@@ -68,7 +69,7 @@ const Home: React.FC = () => {
         <HeroBanner />
         <Search />
       </header>
-      <main className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
+      <main className='mx-auto w-full max-w-6.5xl space-y-8 px-4 py-5 md:px-6'>
         <div>
           <h1 className='p-8 text-center text-3xl font-bold text-cyan-700'>
             Best Selling Holiday Packages
@@ -90,8 +91,8 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
+        <TravelBlogs />
       </main>
-      <TravelBlogs />
       <Subscribe />
     </>
   );

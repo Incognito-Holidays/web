@@ -1,9 +1,10 @@
 'use client';
 
 import 'swiper/css';
+
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import Image from 'next/image';
 
 import photo1 from '@public/assets/p1.png';
 import photo2 from '@public/assets/p2.png';
