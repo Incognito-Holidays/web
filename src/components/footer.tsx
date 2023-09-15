@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className='w-full px-3 lg:w-6/12'>
-            <div className='items-top mb-3 flex flex-wrap'>
+            <div className='items-top flex flex-wrap'>
               <div className='mb-4 ml-auto w-full px-4 lg:w-5/12'>
                 <span className='mb-2 block text-sm font-semibold uppercase'>
                   Address (Main branch)
@@ -35,6 +35,9 @@ const Footer: React.FC = () => {
                   New no 15 Old no 149, Montieth Road, Alsa Mall Complex, Shop
                   No. T5, 3rd Floor, Egmore, Chennai-600008, Tamil Nadu.
                 </p>
+                <p className='mt-2 text-sm font-semibold'>
+                  Email: chennai@incognitoholidays.com
+                </p>
               </div>
               <div className='ml-auto w-full px-4 lg:w-5/12'>
                 <span className='mb-2 block text-sm font-semibold uppercase'>
@@ -42,7 +45,10 @@ const Footer: React.FC = () => {
                 </span>
                 <p className='text-sm font-semibold'>
                   8 Ho Chi Minh Sarani, 3rd Floor, Suit no 28/6, Opposite to US
-                  Consulate, Kolkata
+                  Consulate, Kolkata.
+                </p>
+                <p className='mt-6 text-sm font-semibold'>
+                  Email: kolkata@incognitoholidays.com
                 </p>
               </div>
             </div>
