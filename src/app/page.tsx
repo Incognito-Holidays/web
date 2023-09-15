@@ -4,7 +4,7 @@ import Image from 'next/image';
 import HeroBanner from '@components/hero-banner';
 import Search from '@components/search';
 import TravelBlogs from '@components/travel-blogs';
-import Subscribe from '@components/subscribe';
+// import Subscribe from '@components/subscribe';
 
 import g1 from '@public/assets/g1.jpg';
 import g2 from '@public/assets/g2.jpg';
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
         </div>
         <TravelBlogs />
       </main>
-      <Subscribe />
+      {/* <Subscribe /> */}
     </>
   );
 };
