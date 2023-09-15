@@ -60,6 +60,12 @@ const Home: React.FC = () => {
       href: '/holidays/thailand/simply-thailand',
       img: g3,
       alt: 'simply-thailand'
+    },
+    {
+      id: 9,
+      href: '/holidays/vietnam/vietnam-4n-5d-package',
+      img: g4,
+      alt: 'vietnam-4n-5d'
     }
   ];
 
