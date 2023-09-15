@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable react/no-unescaped-entities */
 
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import ToastMsg from 'react-hot-toast';
+
+import { sendEmail } from '@lib/actions/send-email';
+import SubmitBtn from './submit-btn';
+
 import type { Dispatch, SetStateAction } from 'react';
 
 type ModalProps = {
@@ -56,7 +62,25 @@ const Modal: React.FC<ModalProps> = ({
                       Welcome, let's get started
                     </Dialog.Title>
                     <div className='mt-6'>
-                      <form className='space-y-4'>
+                      <form
+                        action={async (formData) => {
+                          const error = await sendEmail(
+                            formData,
+                            'Holiday Booking Request',
+                            window.location.href
+                          );
+                          if (error) {
+                            ToastMsg.error(error.error, {
+                              position: 'bottom-center'
+                            });
+                            return;
+                          }
+                          ToastMsg.success('Request sent successfully', {
+                            position: 'bottom-center'
+                          });
+                        }}
+                        className='space-y-4'
+                      >
                         <div>
                           <label
                             htmlFor='name'
@@ -66,6 +90,7 @@ const Modal: React.FC<ModalProps> = ({
                           </label>
                           <input
                             id='name'
+                            name='name'
                             type='text'
                             value={name}
                             onChange={(e): void => setName(e.target.value)}
@@ -83,6 +108,7 @@ const Modal: React.FC<ModalProps> = ({
                           </label>
                           <input
                             id='phone'
+                            name='phone'
                             type='number'
                             value={phone}
                             onChange={(e): void => setPhone(e.target.value)}
@@ -100,10 +126,12 @@ const Modal: React.FC<ModalProps> = ({
                           </label>
                           <input
                             id='email'
+                            name='email'
                             type='email'
                             value={email}
                             onChange={(e): void => setEmail(e.target.value)}
                             placeholder='name@example.com'
+                            required
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
                           />
                         </div>
@@ -116,6 +144,7 @@ const Modal: React.FC<ModalProps> = ({
                           </label>
                           <input
                             id='selectedPackage'
+                            name='selectedPackage'
                             type='text'
                             value={selectedPackage}
                             readOnly
@@ -131,6 +160,7 @@ const Modal: React.FC<ModalProps> = ({
                           </label>
                           <textarea
                             id='message'
+                            name='message'
                             rows={3}
                             value={message}
                             onChange={(e): void => setMessage(e.target.value)}
@@ -138,25 +168,19 @@ const Modal: React.FC<ModalProps> = ({
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
                           />
                         </div>
+                        <div className='flex flex-col gap-4 sm:flex-row-reverse'>
+                          <SubmitBtn />
+                          <button
+                            type='button'
+                            onClick={(): void => setIsOpen(false)}
+                            className='w-full rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:w-auto'
+                          >
+                            Cancel
+                          </button>
+                        </div>
                       </form>
                     </div>
                   </div>
-                </div>
-                <div className='bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6'>
-                  <button
-                    type='button'
-                    className='inline-flex w-full justify-center rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 sm:ml-3 sm:w-auto'
-                    // onClick={(): void => setIsOpen(false)}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    type='button'
-                    onClick={(): void => setIsOpen(false)}
-                    className='mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto'
-                  >
-                    Cancel
-                  </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
