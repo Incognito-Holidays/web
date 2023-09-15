@@ -1,6 +1,3 @@
-import { ImFacebook, ImTwitter, ImYoutube } from 'react-icons/im';
-import Link from 'next/link';
-
 const Footer: React.FC = () => {
   return (
     <footer className='relative bg-blue-950 pb-5 pt-8 text-white'>
