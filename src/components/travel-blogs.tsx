@@ -8,9 +8,9 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 
-import g1 from '@public/assets/g1.jpg';
+import g1 from '@public/assets/bali2.jpg';
 import g2 from '@public/assets/g2.jpg';
-import g3 from '@public/assets/g3.jpg';
+import g3 from '@public/assets/thailand2.jpg';
 import g4 from '@public/assets/g4.jpg';
 
 const TravelBlogs: React.FC = () => {
