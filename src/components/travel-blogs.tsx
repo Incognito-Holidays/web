@@ -48,51 +48,64 @@ const TravelBlogs: React.FC = () => {
   ];
 
   return (
-    <div>
-      <h1 className='mb-8 p-5 text-center text-3xl font-bold text-cyan-700'>
-        Travel Stories
-      </h1>
-      <Swiper
-        pagination={{
-          clickable: true
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 10
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 10
-          }
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-      >
-        {slideData.map((slide) => (
-          <SwiperSlide key={slide.id} className='mb-12'>
-            <div className='rounded-lg border border-gray-200 bg-white shadow'>
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                className='w-full rounded-t-lg'
-              />
-              <div className='p-5'>
-                <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900'>
-                  {slide.heading}
-                </h5>
-                <p className='mb-3 text-sm text-gray-800'>
-                  {slide.desc.substring(0, 205)}...
-                </p>
+    <div className='bg-slate-100 pb-2 pt-2'>
+      <div className='m-10 rounded-lg bg-white p-4 shadow-xl ring-1 ring-slate-900/5'>
+        <h1 className='text-center text-3xl font-bold text-cyan-700'>
+          Travel Stories
+        </h1>
+        <Swiper
+          slidesPerView={1}
+          pagination={{
+            clickable: true
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10
+            }
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          {slideData.map((slide) => (
+            <SwiperSlide key={slide.id} className='flex flex-auto gap-2 p-8'>
+              <div className='max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+                <a href='#'>
+                  <Image
+                    src={slide.src}
+                    className='rounded-t-lg'
+                    alt={slide.alt}
+                  />
+                </a>
+                <div className='p-5'>
+                  <a href='#'>
+                    <h5 className='mb-2 text-xl font-bold tracking-tight text-black '>
+                      {slide.heading}
+                    </h5>
+                  </a>
+                  <p className='mb-3 text-sm font-normal text-gray-900'>
+                    {slide.desc.substring(0, 205)}...
+                  </p>
+                  {/* <a href='#' className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
+            Read more
+             <svg className='w-3.5 h-3.5 ml-2' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 10'>
+                <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M1 5h12m0 0L9 1m4 4L9 9'/>
+            </svg>
+        </a> */}
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
