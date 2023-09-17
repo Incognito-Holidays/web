@@ -6,10 +6,10 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import photo1 from '@public/assets/p1.png';
-import photo2 from '@public/assets/p2.png';
-import photo3 from '@public/assets/p3.png';
-import photo4 from '@public/assets/p4.png';
+import photo1 from '@public/assets/p2.png';
+import photo2 from '@public/assets/bali/bali1.jpg';
+import photo3 from '@public/assets/p1.png';
+import photo4 from '@public/assets/srilanka/sri3.jpg';
 import photo5 from '@public/assets/p5.png';
 
 const HeroBanner: React.FC = () => {
