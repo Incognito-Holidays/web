@@ -2,11 +2,11 @@
 
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import { useState } from 'react';
 import Modal from '@components/modal';
-import bali1 from '@public/assets/package.jpeg';
+// import bali1 from '@public/assets/package.jpeg';
 
 const Page: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,17 +18,21 @@ const Page: React.FC = () => {
   return (
     <section className='max-w-6xl'>
       {/* Heading */}
-      <h1 className='text-center text-3xl font-bold text-cyan-600'>
+      {/* <h1 className='text-center text-3xl font-bold text-cyan-600'>
         BALI JAVA INDONESIA
-      </h1>
-
+      </h1> */}
+      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/p2.png')]  bg-cover">
+        <h1 className='text-bold w-full rounded-xl bg-neutral-800 bg-opacity-70 p-8 text-center text-5xl text-white'>
+          BALI JAVA INDONESIA
+        </h1>
+      </div>
       {/* Banner image */}
-      <Image
+      {/* <Image
         src={bali1}
         alt='bali1'
         quality={95}
         className='mt-6 h-96 w-full rounded-lg object-cover object-bottom'
-      />
+      /> */}
       <div className='mt-12 flex flex-col gap-x-10 md:flex-row'>
         <div className='space-y-8'>
           {/* Tour overview/summary */}
@@ -273,10 +277,10 @@ const Page: React.FC = () => {
         </div>
         <div className='space-y-8'>
           {/* Price details */}
-          <div className='mt-8 md:mt-0'>
+          <div className='mt-8 md:mt-0 '>
             <h1 className='text-lg font-semibold'>Price Details:</h1>
-            <div className='relative mt-4 overflow-x-auto'>
-              <table className='w-full border-2 border-gray-300 text-center text-sm text-gray-800'>
+            <div className='relative mt-4 overflow-x-auto '>
+              <table className='w-full border-2 border-gray-300 text-center text-sm text-gray-800 '>
                 <thead className='bg-gray-50 text-xs uppercase text-gray-800'>
                   <tr>
                     <th scope='col' className='px-6 py-3'>

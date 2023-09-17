@@ -1,7 +1,7 @@
 import { AiOutlineLine } from 'react-icons/ai';
 import PackageDetailsCard from '@components/package-details-card';
 import type { Metadata } from 'next';
-import g1 from '@public/assets/g1.jpg';
+import g1 from '@public/assets/g3.jpg';
 
 export const metadata: Metadata = {
   title: 'Bali Packages | Incognito Holidays'

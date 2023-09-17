@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import Modal from '@components/modal';
-import vietnam1 from '@public/assets/package.jpeg';
+// import vietnam1 from '@public/assets/package.jpeg';
 
 const Page: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,17 +16,23 @@ const Page: React.FC = () => {
   return (
     <section className='max-w-6xl'>
       {/* Heading */}
-      <h1 className='text-center text-3xl font-bold text-cyan-600'>
+      {/* <h1 className='text-center text-3xl font-bold text-cyan-600'>
         VIETNAM - LAOS - CAMBODIA
-      </h1>
+      </h1> */}
 
       {/* Banner image */}
-      <Image
+      {/* <Image
         src={vietnam1}
         alt='vietnam_laos_cambodia'
         quality={95}
         className='mt-6 h-96 w-full rounded-lg object-cover object-bottom'
-      />
+      /> */}
+      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/p2.png')]  bg-cover">
+        <h1 className='text-bold w-full rounded-xl bg-neutral-800 bg-opacity-70 p-8 text-center text-5xl text-white'>
+          BEST OF VIETNAM WITH CAMBODIA 4N/5D
+        </h1>
+      </div>
+
       <div className='mt-12 flex flex-col gap-x-10 md:flex-row'>
         <div className='space-y-8'>
           {/* Tour overview/summary */}
