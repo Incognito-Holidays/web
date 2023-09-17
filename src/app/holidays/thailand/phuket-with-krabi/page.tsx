@@ -27,7 +27,7 @@ const Page: React.FC = () => {
         className='mt-6 h-96 w-full rounded-lg object-cover object-bottom'
       /> */}
 
-      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/p2.png')]  bg-cover">
+      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/thailand/img22.jpg')]  bg-cover">
         <h1 className='text-bold w-full rounded-xl bg-neutral-800 bg-opacity-70 p-8 text-center text-5xl text-white'>
           PHUKET WITH KRABI
         </h1>
