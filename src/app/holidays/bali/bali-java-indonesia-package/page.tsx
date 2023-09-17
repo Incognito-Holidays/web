@@ -21,7 +21,7 @@ const Page: React.FC = () => {
       {/* <h1 className='text-center text-3xl font-bold text-cyan-600'>
         BALI JAVA INDONESIA
       </h1> */}
-      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/p2.png')]  bg-cover">
+      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/bali/bali1.jpg')]  bg-cover">
         <h1 className='text-bold w-full rounded-xl bg-neutral-800 bg-opacity-70 p-8 text-center text-5xl text-white'>
           BALI JAVA INDONESIA
         </h1>

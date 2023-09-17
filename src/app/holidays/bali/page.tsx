@@ -1,7 +1,8 @@
 import { AiOutlineLine } from 'react-icons/ai';
 import PackageDetailsCard from '@components/package-details-card';
 import type { Metadata } from 'next';
-import g1 from '@public/assets/g1.jpg';
+import g1 from '@public/assets/bali/bali2.jpg';
+import g2 from '@public/assets/bali/bali3.jpg';
 
 export const metadata: Metadata = {
   title: 'Bali Packages | Incognito Holidays'
@@ -27,7 +28,7 @@ const BaliPackages: React.FC = () => {
           desc={desc}
           rating={3.4}
           startingPrice={29845}
-          img={g1}
+          img={g2}
           slug='bali'
           id='beautiful-bali-package'
         />
