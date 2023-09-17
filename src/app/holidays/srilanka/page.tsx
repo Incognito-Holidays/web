@@ -1,8 +1,9 @@
 import { AiOutlineLine } from 'react-icons/ai';
 import PackageDetailsCard from '@components/package-details-card';
 import type { Metadata } from 'next';
-import g1 from '@public/assets/g2.jpg';
-
+import g1 from '@public/assets/srilanka/sri1.jpg';
+import g2 from '@public/assets/srilanka/sri2.jpg';
+import g3 from '@public/assets/srilanka/sri4.jpg';
 export const metadata: Metadata = {
   title: 'Srilanka Packages | Incognito Holidays'
 };
@@ -37,7 +38,7 @@ const SrilankaPackages: React.FC = () => {
           desc={desc}
           rating={3.4}
           startingPrice={21500}
-          img={g1}
+          img={g2}
           id='srilanka-3n-4d'
           slug='srilanka'
         />
@@ -49,7 +50,7 @@ const SrilankaPackages: React.FC = () => {
           desc={desc}
           rating={3.4}
           startingPrice={89999}
-          img={g1}
+          img={g3}
           id='best-of-srilanka'
           slug='srilanka'
         />

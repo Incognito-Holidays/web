@@ -26,7 +26,7 @@ const Page: React.FC = () => {
         quality={95}
         className='mt-6 h-96 w-full rounded-lg object-cover object-bottom'
       /> */}
-      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/p2.png')]  bg-cover">
+      <div className="flex h-96 items-end rounded-xl bg-[url('/assets/srilanka/sri3.jpg')]  bg-cover">
         <h1 className='text-bold w-full rounded-xl bg-neutral-800 bg-opacity-70 p-8 text-center text-5xl text-white'>
           BEST OF SRI LANKA AND MALDIVES (9 DAYS)
         </h1>
