@@ -1,20 +1,66 @@
+'use client';
 import Image from 'next/image';
-import Container from './layout/container';
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import photo1 from '@public/assets/b1.png';
+import photo2 from '@public/assets/p2.png';
+import photo3 from '@public/assets/p4.png';
+import photo4 from '@public/assets/p1.png';
+import photo5 from '@public/assets/p5.png';
 
 const Banner = () => {
+  const slideData = [
+    {
+      id: 1,
+      src: photo1,
+      alt: 'photo1'
+    },
+    {
+      id: 2,
+      src: photo2,
+      alt: 'photo2'
+    },
+    {
+      id: 3,
+      src: photo3,
+      alt: 'photo3'
+    },
+    {
+      id: 4,
+      src: photo4,
+      alt: 'photo4'
+    },
+    {
+      id: 5,
+      src: photo5,
+      alt: 'photo5'
+    }
+  ];
   return (
-    <div className='pl-10 pr-10'>
-      <Container>
-        <Image
-          src='https://images.unsplash.com/photo-1694383440533-4bd1660c97e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
-          alt='banner'
-          quality={95}
-          width={1470}
-          height={500}
-          className=' h-[30rem] w-full rounded-2xl object-cover object-center'
-        />
-      </Container>
-    </div>
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false
+      }}
+      loop={true}
+      modules={[Autoplay]}
+    >
+      {slideData.map((slide) => (
+        <SwiperSlide key={slide.id}>
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            quality={95}
+            width={1800}
+            height={500}
+            className=' h-[30rem] w-full  object-cover object-center'
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

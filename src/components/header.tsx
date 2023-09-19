@@ -4,7 +4,7 @@ import Container from './layout/container';
 
 const Header = () => {
   return (
-    <header className='pb-6 pl-10 pr-10 pt-6'>
+    <header className='pb-6  pt-6'>
       <Container>
         <div className='flex items-center justify-between'>
           <div>
@@ -18,12 +18,36 @@ const Header = () => {
               />
             </Link>
           </div>
-          <nav className='flex items-center gap-20'>
+          <nav className='flex items-center gap-10'>
             <Link
               href='/'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Home
+            </Link>
+            <Link
+              href='/'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
+            >
+              Holidays
+            </Link>
+            <Link
+              href='/'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
+            >
+              Hotel
+            </Link>
+            <Link
+              href='/'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
+            >
+              Flight
+            </Link>
+            <Link
+              href='/'
+              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
+            >
+              Train
             </Link>
             <Link
               href='/'
@@ -43,12 +67,12 @@ const Header = () => {
             >
               Contact
             </Link>
-            <button
+            {/* <button
               type='button'
               className='mb-2 rounded-lg bg-purple-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900'
             >
               📞 +91 1234567890
-            </button>
+            </button> */}
           </nav>
         </div>
       </Container>

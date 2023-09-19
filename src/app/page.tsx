@@ -7,8 +7,8 @@ const HomePage = () => {
     <div>
       <Banner />
       <div
-        className='absolute -bottom-16 left-1/2 w-[55rem] -translate-x-1/2 rounded-2xl border bg-white
-      p-12 shadow-lg
+        className='absolute -bottom-16 left-1/2 z-10 w-[55rem] -translate-x-1/2 rounded-2xl border
+      bg-white p-12 shadow-lg
       '
       >
         <div className='mx-auto max-w-5xl'>
@@ -49,7 +49,9 @@ const HomePage = () => {
         <h1 className='text-center text-3xl font-bold text-blue-950'>
           Guides for your next vacation
         </h1>
-        <div className='mt-14 grid place-items-center gap-y-14 sm:grid-cols-2 md:grid-cols-3'>
+        <div className='mt-14 grid place-items-center gap-y-10 sm:grid-cols-2 md:grid-cols-4'>
+          <Card />
+          <Card />
           <Card />
           <Card />
           <Card />

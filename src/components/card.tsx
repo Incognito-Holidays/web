@@ -3,7 +3,7 @@ import bali from '@public/assets/bali2.jpg';
 
 const Card = () => {
   return (
-    <div className='w-80 overflow-hidden rounded-2xl shadow-lg'>
+    <div className='w-64 overflow-hidden rounded-2xl shadow-lg'>
       <Image className='w-full' src={bali} alt='Sunset in the mountains' />
       <div className='px-4 py-2'>
         <div className='mb-2 text-xl font-bold'>The Coldest Sunset</div>
