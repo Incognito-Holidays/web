@@ -2,7 +2,7 @@
 const About: React.FC = () => {
   return (
     <div>
-      <div className="flex h-96 items-end bg-[url('/assets/p2.png')] bg-cover">
+      {/* <div className="flex h-96 items-end bg-[url('/assets/p2.png')] bg-cover">
         <h1 className='text-bold w-full bg-neutral-800 bg-opacity-70 p-8 text-center text-6xl text-white'>
           About Us
         </h1>
@@ -37,7 +37,7 @@ const About: React.FC = () => {
         cities, the organization is well-positioned to continue its mission of
         offering top-notch leisure and vacation services to visitors from all
         across the nation.
-      </p>
+      </p> */}
     </div>
   );
 };
