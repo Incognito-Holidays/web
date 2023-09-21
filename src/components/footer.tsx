@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          {/* <div className='w-full px-3 lg:w-6/12'>
+          <div className='w-full px-3 lg:w-6/12'>
             <div className='items-top flex flex-wrap'>
               <div className='mb-4 ml-auto w-full px-4 lg:w-5/12'>
                 <span className='mb-2 block text-sm font-semibold uppercase'>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         <hr className='border-blueGray-300 my-6' />
         <div className='flex flex-wrap items-center justify-center md:justify-between'>
