@@ -1,16 +1,16 @@
 'use client';
 
-import { useState } from 'react';
-import Form from '@components/form';
+// import { useState } from 'react';
+// import Form from '@components/form';
 
 const TrainsPage: React.FC = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [originPlace, setOriginPlace] = useState('');
-  const [destinationPlace, setDestinationPlace] = useState('');
-  const [travelDate, setTravelDate] = useState('');
-  const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [originPlace, setOriginPlace] = useState('');
+  // const [destinationPlace, setDestinationPlace] = useState('');
+  // const [travelDate, setTravelDate] = useState('');
+  // const [message, setMessage] = useState('');
 
   return (
     // <Form

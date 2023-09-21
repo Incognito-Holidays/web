@@ -1,19 +1,19 @@
 'use client';
 
-import { useState } from 'react';
-import Form from '@components/form';
+// import { useState } from 'react';
+// import Form from '@components/form';
 
 const HotelsPage: React.FC = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [place, setPlace] = useState('');
-  const [checkIn, setCheckIn] = useState('');
-  const [checkOut, setCheckOut] = useState('');
-  const [rooms, setRooms] = useState('');
-  const [adults, setAdults] = useState('');
-  const [children, setChildren] = useState('');
-  const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [place, setPlace] = useState('');
+  // const [checkIn, setCheckIn] = useState('');
+  // const [checkOut, setCheckOut] = useState('');
+  // const [rooms, setRooms] = useState('');
+  // const [adults, setAdults] = useState('');
+  // const [children, setChildren] = useState('');
+  // const [message, setMessage] = useState('');
 
   return (
     // <Form
