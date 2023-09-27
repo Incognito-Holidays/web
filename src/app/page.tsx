@@ -60,7 +60,7 @@ const HomePage = () => {
           <Card />
         </div>
       </div>
-      <div className='mt-20 pl-10 pr-10'>
+      <div className='mt-20 pb-10 pt-10'>
         <Categories />
       </div>
     </div>

@@ -3,6 +3,9 @@ import '@styles/global.css';
 import { Inter } from 'next/font/google';
 
 import Header from '@components/header';
+import Footer from '@components/footer';
+import TravelBlogs from '@components/travel-blogs';
+import Whychose from '@components/whychose';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 
@@ -19,6 +22,9 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
       <body className={`${inter.className} bg-gray-50`}>
         <Header />
         {children}
+        <TravelBlogs />
+        <Whychose />
+        <Footer />
       </body>
     </html>
   );
