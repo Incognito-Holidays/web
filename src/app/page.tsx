@@ -1,6 +1,8 @@
 import Banner from '@components/banner';
 import Card from '@components/card';
 import Categories from '@components/categories';
+import TravelBlogs from '@components/travel-blogs';
+import Whychose from '@components/whychose';
 
 const HomePage = () => {
   return (
@@ -63,6 +65,8 @@ const HomePage = () => {
       <div className='mt-20 pb-10 pt-10'>
         <Categories />
       </div>
+      <TravelBlogs />
+      <Whychose />
     </div>
   );
 };

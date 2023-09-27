@@ -26,43 +26,43 @@ const Header = () => {
               Home
             </Link>
             <Link
-              href='/'
+              href='/holidays'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Holidays
             </Link>
             <Link
-              href='/'
+              href='/hotels'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Hotel
             </Link>
             <Link
-              href='/'
+              href='/flights'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Flight
             </Link>
             <Link
-              href='/'
+              href='/trains'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Train
             </Link>
             <Link
-              href='/'
+              href='/trains'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Blog
             </Link>
             <Link
-              href='/'
+              href='/about'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               About
             </Link>
             <Link
-              href='/'
+              href='/contact'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
               Contact
