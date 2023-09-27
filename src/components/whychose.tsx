@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 const Whychose: React.FC = () => {
   return (
-    <div className='h-auto bg-violet-200 '>
+    <div className='bg-violet-200 '>
       <div className='pl-16 pr-16 pt-6 text-center text-3xl font-bold text-cyan-700 '>
         Why Incognito Holidays?
       </div>
-      <div className='grid h-auto grid-cols-4 gap-4 rounded-xl pb-16 pl-16 pr-16 pt-6'>
+      <div className='grid h-full gap-4 rounded-lg text-center sm:grid-cols-2 md:grid-cols-4 lg:p-10'>
         <div>
           <a
             href='#'
