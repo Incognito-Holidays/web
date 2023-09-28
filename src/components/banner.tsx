@@ -56,7 +56,7 @@ const Banner = () => {
             quality={95}
             width={1800}
             height={500}
-            className=' h-[30rem] w-full  object-cover object-center'
+            className=' h-[35rem] w-full  object-cover object-center sm:h-[22rem] md:h-[27rem]'
           />
         </SwiperSlide>
       ))}
