@@ -1,24 +1,23 @@
-import Link from 'next/link';
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import Container from './layout/container';
+import Link from 'next/link';
+import { HiBars3, HiXMark } from 'react-icons/hi2';
+import logo from '@public/assets/incognito-logo.png';
 
 const Header = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   return (
-    <header className='pb-6  pt-6'>
-      <Container>
+    <nav className='border-b-2'>
+      <div className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
         <div className='flex items-center justify-between'>
-          <div>
-            <Link href='/'>
-              <Image
-                src='/assets/incognito-logo.png'
-                width={160}
-                height={160}
-                alt='logo'
-                priority
-              />
-            </Link>
-          </div>
-          <nav className='flex items-center gap-10'>
+          <Link href='/'>
+            <Image src={logo} width={160} height={160} alt='logo' priority />
+          </Link>
+
+          <div className='hidden items-center space-x-12 md:flex'>
             <Link
               href='/'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
@@ -35,25 +34,25 @@ const Header = () => {
               href='/hotels'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
-              Hotel
+              Hotels
             </Link>
             <Link
               href='/flights'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
-              Flight
+              Flights
             </Link>
             <Link
               href='/trains'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
-              Train
+              Trains
             </Link>
             <Link
-              href='/trains'
+              href='/contact'
               className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
             >
-              Blog
+              Blogs
             </Link>
             <Link
               href='/about'
@@ -67,16 +66,49 @@ const Header = () => {
             >
               Contact
             </Link>
-            {/* <button
-              type='button'
-              className='mb-2 rounded-lg bg-purple-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900'
-            >
-              📞 +91 1234567890
-            </button> */}
-          </nav>
+          </div>
+
+          <div className='block md:hidden'>
+            <button onClick={(): void => setShowMobileMenu((prev) => !prev)}>
+              {showMobileMenu ? (
+                <HiXMark className='h-7 w-7' />
+              ) : (
+                <HiBars3 className='h-7 w-7' />
+              )}
+            </button>
+          </div>
         </div>
-      </Container>
-    </header>
+      </div>
+
+      <div
+        className={`${
+          showMobileMenu ? 'block' : 'hidden'
+        } space-y-2 bg-gray-100 px-4 py-2`}
+      >
+        <Link href='/' className='block text-sm font-medium'>
+          Home
+        </Link>
+        <Link href='/holidays' className='block text-sm font-medium'>
+          Holidays
+        </Link>
+        <Link href='/hotels' className='block text-sm font-medium'>
+          Hotels
+        </Link>
+        <button className='block text-sm font-medium'>Flights</button>
+        <Link href='/trains' className='block text-sm font-medium'>
+          Trains
+        </Link>
+        <Link href='/' className='block text-sm font-medium'>
+          Blogs
+        </Link>
+        <Link href='/about' className='block text-sm font-medium'>
+          About
+        </Link>
+        <Link href='/contact' className='block text-sm font-medium'>
+          Contact
+        </Link>
+      </div>
+    </nav>
   );
 };
 
