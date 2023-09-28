@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 import Modal from '@components/modal';
 
-import bali1 from '@public/assets/package.jpeg';
+import bali1 from '@public/assets/g1.jpg';
 
 const Page: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,15 +18,94 @@ const Page: React.FC = () => {
 
   return (
     <section className='max-w-6xl'>
-      <h1 className='text-center text-3xl font-bold text-cyan-600'>
+      <h1 className='text-left text-3xl font-bold text-cyan-600'>
         BEAUTIFUL BALI
       </h1>
-      <Image
-        src={bali1}
-        alt='bali1'
-        quality={95}
-        className='mt-6 h-96 w-full rounded-lg object-cover object-bottom'
-      />
+      <div className='grid grid-cols-3 gap-x-6'>
+        <div className='mt-10 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+          <Image
+            src={bali1}
+            alt='bali1'
+            quality={95}
+            className='h-full rounded-lg object-cover'
+          />
+        </div>
+        <div className='mt-10 max-w-sm'>
+          <div className='grid grid-cols-2 grid-rows-2 gap-4'>
+            <Image
+              src={bali1}
+              alt='bali1'
+              quality={95}
+              className=' h-52 rounded-lg object-cover'
+            />
+            <Image
+              src={bali1}
+              alt='bali1'
+              quality={95}
+              className='h-52 rounded-lg object-cover'
+            />
+            <Image
+              src={bali1}
+              alt='bali1'
+              quality={95}
+              className='h-52 rounded-lg object-cover'
+            />
+            <Image
+              src={bali1}
+              alt='bali1'
+              quality={95}
+              className='h-52 rounded-lg object-cover'
+            />
+          </div>
+        </div>
+        <div className='mt-10 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+          {/* <div className='ml-10 rounded-xl text-end text-white'>
+            <button className='rounded-lg bg-blue-500 p-1'>Popular</button>
+          </div> */}
+          <div className='ml-4'>
+            <div className='flex justify-between'>
+              <p className='mt-4 text-2xl font-semibold'>5 days - 4 nigths</p>
+              <button className='h-8 rounded-bl-lg rounded-tr-lg bg-blue-500 p-1 text-end text-sm text-white'>
+                Popular
+              </button>
+            </div>
+          </div>
+          <div className='ml-4 mt-2'>
+            <p>From</p>
+            <div className='flex gap-x-28'>
+              <p className='mt-1 text-2xl font-bold'>₹ 29845</p>
+              <p className='mt-2 font-semibold'>STANDARD</p>
+            </div>
+            <div>per person</div>
+          </div>
+          <div className='ml-4 mt-2'>
+            <p>From</p>
+            <div className='flex gap-x-28'>
+              <p className='mt-1 text-2xl font-bold'>₹ 33652</p>
+              <p className='mt-2 font-semibold'>DELUXE</p>
+            </div>
+            <div>per person</div>
+          </div>
+          <div className='ml-4 mt-2'>
+            <p>From</p>
+            <div className='flex gap-x-28'>
+              <p className='mt-1 text-2xl font-bold'>₹ 46899</p>
+              <p className='mt-2 font-semibold'>LUXURY</p>
+            </div>
+            <div>per person</div>
+          </div>
+          <div>
+            <div className='m-6'>
+              <button
+                onClick={(): void => setIsModalOpen(true)}
+                className='h-10 w-full rounded-3xl bg-blue-500 text-white'
+              >
+                BOOK NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='mt-12 flex flex-col gap-x-10 md:flex-row'>
         <div className='space-y-8'>
           <h2 className='text-2xl font-bold'>Tour Overview</h2>
@@ -400,13 +479,6 @@ const Page: React.FC = () => {
               </table>
             </div>
           </div>
-
-          <button
-            onClick={(): void => setIsModalOpen(true)}
-            className='w-full rounded-md bg-cyan-600 p-3 text-white'
-          >
-            Book now
-          </button>
         </div>
       </div>
 
