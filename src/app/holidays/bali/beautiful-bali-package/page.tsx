@@ -18,11 +18,14 @@ const Page: React.FC = () => {
 
   return (
     <section className='max-w-6xl'>
-      <h1 className='text-left text-3xl font-bold text-cyan-600'>
+      <h1 className='text-left text-3xl font-bold text-neutral-700'>
         BEAUTIFUL BALI
       </h1>
+      <p className='mt-3 text-sm font-semibold lg:text-base'>
+        🏴󠁶󠁵󠁭󠁡󠁰󠁿 Bali,Indonesia &nbsp; &nbsp; 🏷️Adventure,Culture/Nature
+      </p>
       <div className='grid grid-cols-1 gap-x-6 md:grid-cols-3'>
-        <div className='mt-10 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+        <div className='mt-6 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
           <Image
             src={bali1}
             alt='bali1'
@@ -30,7 +33,7 @@ const Page: React.FC = () => {
             className='h-full rounded-lg object-cover'
           />
         </div>
-        <div className='mt-10 max-w-sm'>
+        <div className='mt-6 max-w-sm'>
           <div className='grid grid-cols-2 grid-rows-2 gap-4'>
             <Image
               src={bali1}
@@ -58,19 +61,19 @@ const Page: React.FC = () => {
             />
           </div>
         </div>
-        <div className='mt-10 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+        <div className='mt-6 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
           {/* <div className='ml-10 rounded-xl text-end text-white'>
             <button className='rounded-lg bg-blue-500 p-1'>Popular</button>
           </div> */}
-          <div className='ml-4'>
+          <div className='ml-6'>
             <div className='flex justify-between'>
               <p className='mt-4 text-2xl font-semibold'>5 days - 4 nigths</p>
-              <button className='h-8 rounded-bl-lg rounded-tr-lg bg-blue-500 p-1 text-end text-sm text-white'>
+              <button className='h-8 rounded-bl-lg rounded-tr-lg bg-blue-500 p-2 text-sm text-white'>
                 Popular
               </button>
             </div>
           </div>
-          <div className='ml-4 mt-2'>
+          <div className='ml-6 mt-2'>
             <p>From</p>
             <div className='flex gap-x-28'>
               <p className='mt-1 text-2xl font-bold'>₹ 29845</p>
@@ -78,7 +81,7 @@ const Page: React.FC = () => {
             </div>
             <div>per person</div>
           </div>
-          <div className='ml-4 mt-2'>
+          <div className='ml-6 mt-2'>
             <p>From</p>
             <div className='flex gap-x-28'>
               <p className='mt-1 text-2xl font-bold'>₹ 33652</p>
@@ -86,7 +89,7 @@ const Page: React.FC = () => {
             </div>
             <div>per person</div>
           </div>
-          <div className='ml-4 mt-2'>
+          <div className='ml-6 mt-2'>
             <p>From</p>
             <div className='flex gap-x-28'>
               <p className='mt-1 text-2xl font-bold'>₹ 46899</p>
