@@ -44,7 +44,7 @@ const Form: React.FC<FormProps> = ({
 }) => {
   return (
     <section className='bg-white'>
-      <div className='mx-auto max-w-screen-md px-4 py-8 lg:py-16'>
+      <div className='mx-auto mb-6 mt-4 max-w-screen-md lg:mb-8'>
         <h2 className='mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900'>
           {title}
         </h2>
