@@ -1,114 +1,67 @@
-'use client';
-
-import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { HiBars3, HiXMark } from 'react-icons/hi2';
-import logo from '@public/assets/incognito-logo.png';
+import Image from 'next/image';
+import { LuMenu } from 'react-icons/lu';
+import Container from './layout/container';
+import { Button } from './ui/button';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 const Header = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const routes = [
+    { href: '/', label: 'Home' },
+    { href: '/holidays', label: 'Holidays' },
+    { href: '/hotels', label: 'Hotels' },
+    { href: '/flights', label: 'Flights' },
+    { href: '/trains', label: 'Trains' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' }
+  ];
 
   return (
-    <nav className='border-b-2'>
-      <div className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
+    <header className='p-4 md:py-6'>
+      <Container>
         <div className='flex items-center justify-between'>
+          <div className='md:hidden'>
+            <Sheet>
+              <SheetTrigger>
+                <LuMenu className='h-6 w-6' />
+              </SheetTrigger>
+              <SheetContent side='left' className='w-52 sm:w-72'>
+                <nav className='flex flex-col gap-4'>
+                  {routes.map((route) => (
+                    <Link
+                      key={route.href}
+                      href={route.href}
+                      className='px-2 py-1 text-sm'
+                    >
+                      {route.label}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
           <Link href='/'>
-            <Image src={logo} width={160} height={160} alt='logo' priority />
+            <Image
+              src='/assets/incognito-logo.png'
+              width={130}
+              height={40}
+              alt='incognito-logo'
+              quality={95}
+              priority
+            />
           </Link>
-
-          <div className='hidden items-center space-x-12 md:flex'>
-            <Link
-              href='/'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Home
-            </Link>
-            <Link
-              href='/holidays'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Holidays
-            </Link>
-            <Link
-              href='/hotels'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Hotels
-            </Link>
-            <Link
-              href='/flights'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Flights
-            </Link>
-            <Link
-              href='/trains'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Trains
-            </Link>
-            <Link
-              href='/contact'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Blogs
-            </Link>
-            <Link
-              href='/about'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              About
-            </Link>
-            <Link
-              href='/contact'
-              className='border-b-4 border-transparent text-gray-600 transition duration-200 hover:border-violet-800 hover:font-medium hover:text-violet-800'
-            >
-              Contact
-            </Link>
-          </div>
-
-          <div className='block md:hidden'>
-            <button onClick={(): void => setShowMobileMenu((prev) => !prev)}>
-              {showMobileMenu ? (
-                <HiXMark className='h-7 w-7' />
-              ) : (
-                <HiBars3 className='h-7 w-7' />
-              )}
-            </button>
-          </div>
+          <nav className='hidden items-center md:flex md:gap-2 lg:gap-6'>
+            {routes.map((route) => (
+              <Button key={route.href} asChild variant='ghost'>
+                <Link href={route.href}>{route.label}</Link>
+              </Button>
+            ))}
+          </nav>
+          <div className='md:hidden' />
         </div>
-      </div>
-
-      <div
-        className={`${
-          showMobileMenu ? 'block' : 'hidden'
-        } space-y-2 bg-gray-100 px-4 py-2`}
-      >
-        <Link href='/' className='block text-sm font-medium'>
-          Home
-        </Link>
-        <Link href='/holidays' className='block text-sm font-medium'>
-          Holidays
-        </Link>
-        <Link href='/hotels' className='block text-sm font-medium'>
-          Hotels
-        </Link>
-        <button className='block text-sm font-medium'>Flights</button>
-        <Link href='/trains' className='block text-sm font-medium'>
-          Trains
-        </Link>
-        <Link href='/' className='block text-sm font-medium'>
-          Blogs
-        </Link>
-        <Link href='/about' className='block text-sm font-medium'>
-          About
-        </Link>
-        <Link href='/contact' className='block text-sm font-medium'>
-          Contact
-        </Link>
-      </div>
-    </nav>
+      </Container>
+    </header>
   );
 };
 
