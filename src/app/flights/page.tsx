@@ -28,7 +28,7 @@ const TrainsPage: React.FC = () => {
         />
       </div>
       <div
-        className='absolute relative -bottom-16 -top-24 left-1/2 z-10 w-[55rem] -translate-x-1/2
+        className='relative -bottom-16 -top-24 left-1/2 z-10 w-[55rem] -translate-x-1/2
       rounded-2xl border bg-white p-2 shadow-lg '
       >
         <Form
