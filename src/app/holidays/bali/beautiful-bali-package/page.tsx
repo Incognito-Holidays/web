@@ -21,7 +21,7 @@ const Page: React.FC = () => {
       <h1 className='text-left text-3xl font-bold text-cyan-600'>
         BEAUTIFUL BALI
       </h1>
-      <div className='grid grid-cols-3 gap-x-6'>
+      <div className='grid grid-cols-1 gap-x-6 md:grid-cols-3'>
         <div className='mt-10 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
           <Image
             src={bali1}
@@ -106,7 +106,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className='mt-12 flex flex-col gap-x-10 md:flex-row'>
+      <div className='mt-12 md:pr-96'>
         <div className='space-y-8'>
           <h2 className='text-2xl font-bold'>Tour Overview</h2>
           <p className='text-justify'>
@@ -445,35 +445,6 @@ const Page: React.FC = () => {
                     <td className='px-6 py-4'>
                       Bali Dynasty Resort Kuta / Anvaya Beach Resort / Similar
                     </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div className='space-y-8'>
-          <div className='mt-8 md:mt-0'>
-            <h1 className='text-lg font-semibold'>Price Details:</h1>
-            <div className='relative mt-4 overflow-x-auto'>
-              <table className='w-full border-2 border-gray-300 text-center text-sm text-gray-800'>
-                <thead className='bg-gray-50 text-xs uppercase text-gray-800'>
-                  <tr>
-                    <th scope='col' className='px-6 py-3'>
-                      Economy/Standard
-                    </th>
-                    <th scope='col' className='px-6 py-3'>
-                      Deluxe
-                    </th>
-                    <th scope='col' className='px-6 py-3'>
-                      Luxury
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className='border-b bg-white'>
-                    <td className='px-6 py-4'>Rs. 29845/- per person</td>
-                    <td className='px-6 py-4'>Rs. 33652/- per person</td>
-                    <td className='px-6 py-4'>Rs. 46899/- per person</td>
                   </tr>
                 </tbody>
               </table>
