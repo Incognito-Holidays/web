@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const HolidaysLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <main className='mx-auto w-full max-w-6.5xl px-4 py-5 md:px-6'>
+    <main className='max-w-6.5xl mx-auto w-full px-4 py-5 md:px-6'>
       {children}
     </main>
   );
