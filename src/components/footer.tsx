@@ -60,14 +60,14 @@ const Footer: React.FC = () => {
             <h1>
               Copyright ©<span id='get-current-year'>2023</span> Incognito
               Holidays Private Limited. Site Developed & Maintained by
-              <span>
+              <span className='font-semibold'>
                 <a
-                  href='https://www.instagram.com/sigma3labs/'
+                  href='https://linktr.ee/sigma3labs'
                   target='blank'
                   className='cursor-pointer hover:text-red-600'
                 >
                   {' '}
-                  Sigma 3 Labs.
+                  Sigma3Labs.
                 </a>
               </span>
             </h1>
