@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import Whychose from '@components/whychose';
+
 const About: React.FC = () => {
   return (
     <div>
@@ -38,6 +40,7 @@ const About: React.FC = () => {
         offering top-notch leisure and vacation services to visitors from all
         across the nation.
       </p>
+      <Whychose />
     </div>
   );
 };
