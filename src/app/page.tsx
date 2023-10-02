@@ -1,4 +1,4 @@
-import Banner from '@components/banner';
+import Hero from '@components/hero';
 import Card from '@components/card';
 import Categories from '@components/categories';
 import TravelBlogs from '@components/travel-blogs';
@@ -6,8 +6,8 @@ import Whychose from '@components/whychose';
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner />
+    <main>
+      <Hero />
       <div
         className='absolute -bottom-16 left-1/2 z-10 w-[55rem] -translate-x-1/2 rounded-2xl border
       bg-white p-12 shadow-lg
@@ -67,7 +67,7 @@ const HomePage = () => {
       </div>
       <TravelBlogs />
       <Whychose />
-    </div>
+    </main>
   );
 };
 
