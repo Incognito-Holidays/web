@@ -14,7 +14,7 @@ const Whychose: React.FC = () => {
             <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-red-500 dark:text-white'>
               Convenience
             </h5>
-            <p className='text-center font-normal text-gray-700 dark:text-gray-400'>
+            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
               Your travel agency can handle all aspects of your trip planning,
               from booking your flights and accommodations to arranging for
               ground transportation and activities. This can save you a lot of
@@ -30,7 +30,7 @@ const Whychose: React.FC = () => {
             <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-yellow-500 dark:text-white'>
               Expertise
             </h5>
-            <p className='text-center font-normal text-gray-700 dark:text-gray-400 '>
+            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
               Your travel agents are experts in the travel industry and have a
               deep knowledge of a wide range of destinations. They have years of
               experience planning trips to all corners of the globe, and they
@@ -46,7 +46,7 @@ const Whychose: React.FC = () => {
             <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-green-500 dark:text-white'>
               Competitive prices
             </h5>
-            <p className='text-center font-normal text-gray-700 dark:text-gray-400'>
+            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
               Your travel agency may be able to get you better deals on flights,
               hotels, and other travel arrangements than you could find on your
               own. This is because they have relationships with a variety of
@@ -62,7 +62,7 @@ const Whychose: React.FC = () => {
             <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-blue-500 dark:text-white'>
               Personalized service
             </h5>
-            <p className='text-center font-normal text-gray-700 dark:text-gray-400'>
+            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
               We take the time to get to know you and your travel needs, and we
               create a custom itinerary that's perfect for you. We'll handle all
               the details, from booking your flights and accommodations to
