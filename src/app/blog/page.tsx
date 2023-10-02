@@ -1,134 +1,88 @@
+/* eslint-disable curly */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+'use client';
+import { useLayoutEffect, useRef, useState } from 'react';
+
+const useTruncateElement = ({ ref }) => {
+  const [isTruncated, setIsTruncated] = useState(false);
+  const [isShowingMore, setIsShowingMore] = useState(false);
+
+  useLayoutEffect(() => {
+    const { offsetHeight, scrollHeight } = ref.current || {};
+
+    if (offsetHeight && scrollHeight && offsetHeight < scrollHeight) {
+      setIsTruncated(true);
+    } else {
+      setIsTruncated(false);
+    }
+  }, [ref]);
+
+  const toggleIsShowingMore = () => {
+    setIsShowingMore((prev) => !prev);
+  };
+
+  return {
+    isTruncated,
+    isShowingMore,
+    toggleIsShowingMore
+  };
+};
 const page = () => {
+  const ref = useRef(null);
+  const { isTruncated, isShowingMore, toggleIsShowingMore } =
+    useTruncateElement({ ref });
   return (
-    <div>
-      <section className='bg-white dark:bg-gray-900'>
-        <div className='mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16'>
-          <div className='mx-auto mb-8 max-w-screen-sm text-center lg:mb-16'>
-            <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl'>
-              Our Blog
-            </h2>
-            <p className='font-light text-gray-500 dark:text-gray-400 sm:text-xl'>
-              We use an agile approach to test assumptions and connect with the
-              needs of your audience early and often.
-            </p>
-          </div>
-          <div className='grid gap-8 lg:grid-cols-2'>
-            <article className='rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800'>
-              <div className='mb-5 flex items-center justify-between text-gray-500'>
-                <span className='bg-primary-100 text-primary-800 dark:bg-primary-200 dark:text-primary-800 inline-flex items-center rounded px-2.5 py-0.5 text-xs font-medium'>
-                  <svg
-                    className='mr-1 h-3 w-3'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path d='M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z'></path>
-                  </svg>
-                  Tutorial
-                </span>
-                <span className='text-sm'>14 days ago</span>
-              </div>
-              <h2 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                <a href='#'>How to quickly deploy a static website</a>
-              </h2>
-              <p className='mb-5 font-light text-gray-500 dark:text-gray-400'>
-                Static websites are now used to bootstrap lots of websites and
-                are becoming the basis for a variety of tools that even
-                influence both web designers and developers influence both web
-                designers and developers.
-              </p>
-              <div className='flex items-center justify-between'>
-                <div className='flex items-center space-x-4'>
-                  <img
-                    className='h-7 w-7 rounded-full'
-                    src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png'
-                    alt='Jese Leos avatar'
-                  />
-                  <span className='font-medium dark:text-white'>Jese Leos</span>
-                </div>
-                <a
-                  href='#'
-                  className='text-primary-600 dark:text-primary-500 inline-flex items-center font-medium hover:underline'
-                >
-                  Read more
-                  <svg
-                    className='ml-2 h-4 w-4'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fill-rule='evenodd'
-                      d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                      clip-rule='evenodd'
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-            <article className='rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800'>
-              <div className='mb-5 flex items-center justify-between text-gray-500'>
-                <span className='bg-primary-100 text-primary-800 dark:bg-primary-200 dark:text-primary-800 inline-flex items-center rounded px-2.5 py-0.5 text-xs font-medium'>
-                  <svg
-                    className='mr-1 h-3 w-3'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fill-rule='evenodd'
-                      d='M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z'
-                      clip-rule='evenodd'
-                    ></path>
-                    <path d='M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z'></path>
-                  </svg>
-                  Article
-                </span>
-                <span className='text-sm'>14 days ago</span>
-              </div>
-              <h2 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                <a href='#'>Our first project with React</a>
-              </h2>
-              <p className='mb-5 font-light text-gray-500 dark:text-gray-400'>
-                Static websites are now used to bootstrap lots of websites and
-                are becoming the basis for a variety of tools that even
-                influence both web designers and developers influence both web
-                designers and developers.
-              </p>
-              <div className='flex items-center justify-between'>
-                <div className='flex items-center space-x-4'>
-                  <img
-                    className='h-7 w-7 rounded-full'
-                    src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png'
-                    alt='Bonnie Green avatar'
-                  />
-                  <span className='font-medium dark:text-white'>
-                    Bonnie Green
-                  </span>
-                </div>
-                <a
-                  href='#'
-                  className='text-primary-600 dark:text-primary-500 inline-flex items-center font-medium hover:underline'
-                >
-                  Read more
-                  <svg
-                    className='ml-2 h-4 w-4'
-                    fill='currentColor'
-                    viewBox='0 0 20 20'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      fill-rule='evenodd'
-                      d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                      clip-rule='evenodd'
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+    <div className='content-center p-6'>
+      <div className='p-5 text-3xl font-bold'># Travel Vlogs</div>
+      <div className='w-full  rounded-lg border border-gray-200 bg-white p-4  shadow dark:border-gray-700 dark:bg-gray-800 sm:p-8'>
+        <h5 className='mb-2 text-3xl font-bold text-gray-900 dark:text-white'>
+          Andaman: A paradise for nature lovers and adventure seekers
+        </h5>
+        <p
+          ref={ref}
+          className={`break-words text-xl ${!isShowingMore && 'line-clamp-4'}`}
+        >
+          Andaman: A paradise for nature lovers and adventure seekers The
+          Andaman and Nicobar Islands, a union territory of India, are a chain
+          of islands located in the Bay of Bengal. The islands are known for
+          their stunning beaches, crystal-clear waters, lush forests, and
+          diverse marine life. If you're looking for a vacation that combines
+          relaxation with adventure, the Andamans are the perfect destination
+          for you. Here are a few of the things you can do on your trip: Spend
+          your days sunbathing on pristine beaches like Radhanagar Beach, which
+          is often ranked among the best beaches in the world. Go snorkeling or
+          diving in the crystal-clear waters of the Andaman Sea. Take a boat
+          trip to one of the many uninhabited islands in the archipelago. Go
+          trekking in the lush forests of Mount Harriet National Park. Visit the
+          ruins of Ross Island, a former British settlement. Learn about the
+          unique culture and traditions of the indigenous people of the
+          Andamans. Here is a possible itinerary for a 3-day trip to the
+          Andamans: Day 1: Arrive in Port Blair, the capital of the Andaman and
+          Nicobar Islands. Check into your hotel and spend the afternoon
+          relaxing on Radhanagar Beach. Day 2: Take a boat trip to North Bay
+          Island, a popular spot for water sports such as snorkeling and diving.
+          In the evening, visit the Cellular Jail, a former British prison that
+          is now a popular tourist attraction. Day 3: Visit Mount Harriet
+          National Park for a day of trekking and enjoying the scenic views. In
+          the afternoon, take a cooking class to learn how to make some of the
+          delicious local dishes. The Andamans are a truly special place, and no
+          matter what your interests are, you're sure to find something to love
+          on your trip. So pack your bags and start planning your adventure
+          today!
+        </p>
+        {isTruncated && (
+          <button
+            onClick={toggleIsShowingMore}
+            className='text-blue-500 hover:text-blue-700'
+          >
+            {isShowingMore ? 'Show less' : 'Show more'}
+          </button>
+        )}
+      </div>
     </div>
   );
 };
