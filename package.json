@@ -18,7 +18,6 @@
     "@headlessui/react": "^1.7.17",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
-    "@tailwindcss/line-clamp": "^0.4.4",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
