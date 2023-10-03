@@ -1,18 +1,21 @@
 /* eslint-disable curly */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @next/next/no-img-element */
-'use client';
-import { useLayoutEffect, useRef, useState } from 'react';
 
-const useTruncateElement = ({ ref }) => {
+'use client';
+
+import { useLayoutEffect, useRef, useState } from 'react';
+import type { MutableRefObject } from 'react';
+
+const useTruncateElement = ({
+  ref
+}: {
+  ref: MutableRefObject<HTMLParagraphElement | null>;
+}) => {
   const [isTruncated, setIsTruncated] = useState(false);
   const [isShowingMore, setIsShowingMore] = useState(false);
 
   useLayoutEffect(() => {
-    const { offsetHeight, scrollHeight } = ref.current || {};
+    const { offsetHeight, scrollHeight } = ref.current ?? {};
 
     if (offsetHeight && scrollHeight && offsetHeight < scrollHeight) {
       setIsTruncated(true);
@@ -31,8 +34,9 @@ const useTruncateElement = ({ ref }) => {
     toggleIsShowingMore
   };
 };
-const page = () => {
-  const ref = useRef(null);
+
+const BlogPage = () => {
+  const ref = useRef<HTMLParagraphElement | null>(null);
   const { isTruncated, isShowingMore, toggleIsShowingMore } =
     useTruncateElement({ ref });
   return (
@@ -87,4 +91,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPage;
