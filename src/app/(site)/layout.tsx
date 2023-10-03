@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Your travel companion'
 };
 
-const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
+const SiteRootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang='en'>
       <body className={inter.className}>
@@ -24,4 +24,4 @@ const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
-export default RootLayout;
+export default SiteRootLayout;
