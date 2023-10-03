@@ -1,14 +1,16 @@
-import Banner from '@components/banner';
+import Hero from '@components/hero';
 import Card from '@components/card';
 import Categories from '@components/categories';
+import TravelBlogs from '@components/travel-blogs';
+import Whychose from '@components/whychose';
 
 const HomePage = () => {
   return (
-    <div>
-      <Banner />
+    <main>
+      <Hero />
       <div
-        className='absolute -bottom-16 left-1/2 w-[55rem] -translate-x-1/2 rounded-2xl border bg-white
-      p-12 shadow-lg
+        className='absolute -bottom-16 left-1/2 z-10 w-[55rem] -translate-x-1/2 rounded-2xl border
+      bg-white p-12 shadow-lg
       '
       >
         <div className='mx-auto max-w-5xl'>
@@ -49,7 +51,9 @@ const HomePage = () => {
         <h1 className='text-center text-3xl font-bold text-blue-950'>
           Guides for your next vacation
         </h1>
-        <div className='mt-14 grid place-items-center gap-y-14 sm:grid-cols-2 md:grid-cols-3'>
+        <div className='mt-14 grid place-items-center gap-y-10 sm:grid-cols-2 md:grid-cols-4'>
+          <Card />
+          <Card />
           <Card />
           <Card />
           <Card />
@@ -58,10 +62,12 @@ const HomePage = () => {
           <Card />
         </div>
       </div>
-      <div className='mt-20 pl-10 pr-10'>
+      <div className='mt-20 pb-10 pt-10'>
         <Categories />
       </div>
-    </div>
+      <TravelBlogs />
+      <Whychose />
+    </main>
   );
 };
 

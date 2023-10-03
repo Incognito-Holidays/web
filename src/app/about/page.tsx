@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import Whychose from '@components/whychose';
+
 const About: React.FC = () => {
   return (
     <div>
@@ -7,7 +9,7 @@ const About: React.FC = () => {
           About Us
         </h1>
       </div>
-      <p className='mx-auto max-w-6.5xl px-4 py-8 text-justify'>
+      <p className='max-w-6.5xl mx-auto px-4 py-8 text-justify'>
         In the travel and leisure sector, Incognito Leisure Holiday Private
         Limited is a reputable organization. The business has made a name for
         itself in the market with a team of 26 devoted workers. Incognito
@@ -38,6 +40,7 @@ const About: React.FC = () => {
         offering top-notch leisure and vacation services to visitors from all
         across the nation.
       </p>
+      <Whychose />
     </div>
   );
 };
