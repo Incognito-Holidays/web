@@ -19,16 +19,23 @@ export default defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
+      name: 'coverImage',
+      title: 'Cover Image',
       type: 'image',
       options: { hotspot: true },
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'string',
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'text',
+      validation: (rule) => rule.required()
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'array',
+      of: [{ type: 'block' }],
       validation: (rule) => rule.required()
     })
   ]

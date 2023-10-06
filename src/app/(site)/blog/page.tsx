@@ -1,10 +1,29 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import BlogsCard from '@components/blog-card';
+import { groq } from 'next-sanity';
+import { sanityFetch } from '@lib/sanity/fetch';
 
-const BlogPage = () => {
-  const description =
-    ' Andaman: A paradise for nature lovers and adventure seekers The Andaman and Nicobar Islands, a nion territory of India, are a chain   of islands located in the Bay of Bengal. The islands are known for  their tunning beaches,';
+type BlogProps = {
+  title: string;
+  subtitle: string;
+  // slug: string;
+};
 
+const query = groq`
+*[_type == 'blog']{
+  title,
+  subtitle,
+  "slug": slug.current,
+  'coverImage': coverImage.asset->{
+    url,
+    "lqip":metadata.lqip
+  }
+}
+`;
+
+const BlogPage = async () => {
+  const data = await sanityFetch<BlogProps[]>({ query, tags: ['blog'] });
+  console.log(data[0]);
   return (
     <div>
       <div className=''>
@@ -12,7 +31,11 @@ const BlogPage = () => {
           # Travel Blogs
         </h1>
         <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
-          <BlogsCard title='Andaman' desc={description} slug='/andaman' />
+          <BlogsCard
+            title={data[0].title}
+            desc={data[0].subtitle}
+            slug='/andaman'
+          />
         </div>
       </div>
     </div>
