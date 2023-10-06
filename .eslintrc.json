@@ -23,7 +23,6 @@
   },
   "rules": {
     "semi": ["error", "always"],
-    "curly": ["warn", "multi"],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "jsx-quotes": ["error", "prefer-single"],
     "no-console": "warn",
