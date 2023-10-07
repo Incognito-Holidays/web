@@ -1,50 +1,32 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-import { PortableText } from '@portabletext/react';
-import { groq } from 'next-sanity';
 import Image from 'next/image';
-import { sanityFetch } from '@lib/sanity/fetch';
-import type { PortableTextBlock } from 'sanity';
+import { PortableText } from '@portabletext/react';
+import { getBlog } from '@lib/functions/blog';
 
-type BlogProps = {
-  title: string;
-  subtitle: string;
-  coverImage: { url: string; lqip: string };
-  slug: string;
-  body: PortableTextBlock[];
+type BlogPageProps = {
+  params: {
+    slug: string;
+  };
 };
 
-const query = groq`
-*[_type == 'blog' && slug.current == $slug][0]{
-  title,
-  subtitle,
-  "slug": slug.current,
-  'coverImage': coverImage.asset->{
-    url,
-    "lqip":metadata.lqip
-  },
-    body
-}
-`;
-const Page = async ({ params }: { params: { slug: string } }) => {
+const BlogPage = async ({ params }: BlogPageProps) => {
   const { slug } = params;
-  const data = await sanityFetch<BlogProps>({
-    query,
-    params: { slug },
-    tags: ['blog']
-  });
+  const data = await getBlog(slug);
+
   return (
-    <div>
+    <main>
       <h1>{data.title}</h1>
       <Image
-        src={data.coverImage.url}
-        alt='coverImage'
+        src={data.coverImage.asset.url}
+        alt={data.coverImage.alt}
         width={1000}
         height={1000}
-      ></Image>
+        placeholder='blur'
+        blurDataURL={data.coverImage.asset.lqip}
+      />
       <h3>{data.subtitle}</h3>
       <PortableText value={data.body} />
-    </div>
+    </main>
   );
 };
 
-export default Page;
+export default BlogPage;

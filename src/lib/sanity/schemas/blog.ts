@@ -1,9 +1,9 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  type: 'document',
   name: 'blog',
   title: 'Blogs',
+  type: 'document',
   fields: [
     defineField({
       name: 'title',
@@ -20,9 +20,17 @@ export default defineType({
     }),
     defineField({
       name: 'coverImage',
-      title: 'Cover Image',
+      title: 'Cover image',
       type: 'image',
       options: { hotspot: true },
+      fields: [
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alt text',
+          validation: (rule) => rule.required()
+        })
+      ],
       validation: (rule) => rule.required()
     }),
     defineField({
@@ -35,7 +43,7 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'block' }, { type: 'image' }],
       validation: (rule) => rule.required()
     })
   ]
