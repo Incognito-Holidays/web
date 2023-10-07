@@ -104,8 +104,8 @@ export default defineType({
             { type: 'number', name: 'rating' }
           ]
         })
-      ],
-      validation: (rule) => rule.required()
+      ]
+      // validation: (rule) => rule.required()
     })
   ]
 });
