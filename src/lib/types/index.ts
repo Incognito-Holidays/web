@@ -27,3 +27,14 @@ export type Blog = {
   };
   body: PortableTextBlock[];
 };
+
+export type Cards = {
+  _id: string;
+  title: string;
+  description: string;
+  slug: string;
+  image: {
+    url: string;
+    lqip: string;
+  };
+};

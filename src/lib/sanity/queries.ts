@@ -30,3 +30,17 @@ export const blogQuery = groq`
     body
   }
 `;
+
+export const cardQuery = groq`
+* [_type == "holiday"] {
+  _id,
+    title,
+    description,
+    "slug":slug.current,
+    "image": image[0].asset -> {
+      url,
+      "lqip": metadata.lqip
+    }
+    
+}
+`;
