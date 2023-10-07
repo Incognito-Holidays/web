@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import BlogsCard from '@components/blog-card';
 import { groq } from 'next-sanity';
 import { sanityFetch } from '@lib/sanity/fetch';
+import BlogsCard from '@components/blog-card';
 
 type BlogProps = {
   title: string;
   subtitle: string;
-  // slug: string;
+  coverImage: { url: string; lqip: string };
+  slug: string;
 };
 
 const query = groq`
@@ -23,7 +24,7 @@ const query = groq`
 
 const BlogPage = async () => {
   const data = await sanityFetch<BlogProps[]>({ query, tags: ['blog'] });
-  console.log(data[0]);
+  // console.log(data[0]);
   return (
     <div>
       <div className=''>
@@ -31,11 +32,17 @@ const BlogPage = async () => {
           # Travel Blogs
         </h1>
         <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
-          <BlogsCard
-            title={data[0].title}
-            desc={data[0].subtitle}
-            slug='/andaman'
-          />
+          {data.map((item, idx) => {
+            return (
+              <BlogsCard
+                key={idx}
+                coverImage={item.coverImage}
+                title={item.title}
+                desc={item.subtitle}
+                slug={item.slug}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
