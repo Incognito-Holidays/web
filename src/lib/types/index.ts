@@ -38,3 +38,16 @@ export type Cards = {
     lqip: string;
   };
 };
+
+export type Destination = {
+  _id: string;
+  slug: string;
+  name: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  };
+};

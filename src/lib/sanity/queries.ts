@@ -44,3 +44,16 @@ export const cardQuery = groq`
     
 }
 `;
+
+export const destinationQuery = groq`
+* [_type == "location"] {
+  _id,
+    "slug": slug.current,
+    name,
+    image{
+      alt,asset -> {
+        url,"lqip":metadata.lqip
+      }
+    }
+}
+`;

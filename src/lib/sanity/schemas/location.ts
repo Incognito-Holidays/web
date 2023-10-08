@@ -23,6 +23,14 @@ export default defineType({
       title: 'Image',
       type: 'image',
       options: { hotspot: true },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt text',
+          type: 'string',
+          validation: (rule) => rule.required()
+        })
+      ],
       validation: (rule) => rule.required()
     })
   ]
