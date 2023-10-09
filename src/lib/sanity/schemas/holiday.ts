@@ -1,9 +1,9 @@
 import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export default defineType({
-  type: 'document',
   name: 'holiday',
   title: 'Holidays',
+  type: 'document',
   fields: [
     defineField({
       name: 'title',
@@ -21,23 +21,53 @@ export default defineType({
     defineField({
       name: 'destination',
       title: 'Destination',
-      type: 'string',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'reference',
+          to: [{ type: 'location' }]
+        })
+      ],
+      validation: (rule) => rule.min(1).required()
+    }),
+    // defineField({
+    //   name: 'category',
+    //   title: 'Category',
+    //   type: 'string',
+    //   validation: (rule) => rule.required()
+    // }),
+    defineField({
+      name: 'coverImage',
+      title: 'Cover image',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt text',
+          type: 'string',
+          validation: (rule) => rule.required()
+        })
+      ],
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      validation: (rule) => rule.required()
-    }),
-    defineField({
-      name: 'image',
-      title: 'Image',
+      name: 'gallery',
+      title: 'Gallery images',
       type: 'array',
       of: [
         defineArrayMember({
           type: 'image',
-          options: { hotspot: true }
+          options: { hotspot: true },
+          fields: [
+            defineField({
+              name: 'alt',
+              title: 'Alt text',
+              type: 'string',
+              validation: (rule) => rule.required()
+            })
+          ],
+          validation: (rule) => rule.required()
         })
       ],
       validation: (rule) => rule.required().max(5)
@@ -45,32 +75,42 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'text',
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'days_nights',
-      title: 'Days-Nights',
-      type: 'string',
+      name: 'daysNights',
+      title: 'Days & Nights',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'days',
+          type: 'number'
+        }),
+        defineField({
+          name: 'nights',
+          type: 'number'
+        })
+      ],
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'iternary',
-      title: 'Iternary',
+      name: 'itinerary',
+      title: 'Itinerary',
       type: 'array',
       of: [{ type: 'block' }],
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'incl_excl',
-      title: 'Inclusion-Exclusion',
+      name: 'inclusionExclusion',
+      title: 'Inclusion & Exclusion',
       type: 'array',
       of: [{ type: 'block' }],
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'terms_conditions',
-      title: 'Terms-Conditions',
+      name: 'termsConditions',
+      title: 'Terms & Conditions',
       type: 'array',
       of: [{ type: 'block' }],
       validation: (rule) => rule.required()
@@ -82,10 +122,9 @@ export default defineType({
       of: [
         defineArrayMember({
           type: 'object',
-          name: 'price',
           fields: [
-            { type: 'string', name: 'types' },
-            { type: 'number', name: 'price' }
+            { name: 'type', type: 'string' },
+            { name: 'rate', type: 'number' }
           ]
         })
       ],
@@ -98,14 +137,12 @@ export default defineType({
       of: [
         defineArrayMember({
           type: 'object',
-          name: 'hotel',
           fields: [
-            { type: 'string', name: 'hotel_name' },
-            { type: 'number', name: 'rating' }
+            { name: 'hotelName', type: 'string' },
+            { name: 'rating', type: 'number' }
           ]
         })
-      ],
-      validation: (rule) => rule.required()
+      ]
     })
   ]
 });

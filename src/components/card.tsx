@@ -1,26 +1,33 @@
 import Image from 'next/image';
-import bali from '@public/assets/bali2.jpg';
+import Link from 'next/link';
+import type { Cards } from '@lib/types';
 
-const Card = () => {
+const Card = ({
+  title,
+  coverImage,
+  description,
+  destinationSlug,
+  packageSlug
+}: Omit<Cards, '_id'>) => {
   return (
-    <div className='w-64 overflow-hidden rounded-2xl shadow-lg'>
-      <Image className='w-full' src={bali} alt='Sunset in the mountains' />
-      <div className='px-4 py-2'>
-        <div className='mb-2 text-xl font-bold'>The Coldest Sunset</div>
-        <p className='text-sm text-gray-700'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque
-        </p>
+    <Link href={`holidays/${destinationSlug}/${packageSlug}`}>
+      <div className='h-full w-64 overflow-hidden rounded-2xl shadow-lg'>
+        <div className=' relative h-32 w-full'>
+          <Image
+            src={coverImage.asset.url}
+            alt={coverImage.alt}
+            fill
+            placeholder='blur'
+            blurDataURL={coverImage.asset.lqip}
+          />
+          )
+        </div>
+        <div className='px-4 py-2'>
+          <div className='mb-2 text-xl font-bold'>{title}</div>
+          <p className='line-clamp-5 text-sm text-gray-700'>{description}</p>
+        </div>
       </div>
-      <div className='px-4 pb-2 pt-2'>
-        <span className='mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700'>
-          #photography
-        </span>
-        <span className='mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700'>
-          #travel
-        </span>
-      </div>
-    </div>
+    </Link>
   );
 };
 

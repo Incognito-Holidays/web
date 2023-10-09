@@ -1,17 +1,19 @@
+import { getAllCards } from '@lib/functions/card';
 import Hero from '@components/hero';
 import Card from '@components/card';
 import Categories from '@components/categories';
 import TravelBlogs from '@components/travel-blogs';
 import Whychose from '@components/whychose';
 
-const HomePage = () => {
+const HomePage = async () => {
+  const data = await getAllCards();
+
   return (
     <main>
       <Hero />
       <div
-        className='absolute -bottom-16 left-1/2 z-10 w-[55rem] -translate-x-1/2 rounded-2xl border
-      bg-white p-12 shadow-lg
-      '
+        className='absolute -bottom-16 left-1/2 z-10 hidden w-[55rem] -translate-x-1/2 rounded-2xl
+      border bg-white p-12 shadow-lg'
       >
         <div className='mx-auto max-w-5xl'>
           <h1 className='text-lg font-medium text-blue-950 md:text-2xl'>
@@ -52,14 +54,16 @@ const HomePage = () => {
           Guides for your next vacation
         </h1>
         <div className='mt-14 grid place-items-center gap-y-10 sm:grid-cols-2 md:grid-cols-4'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {data.map((item) => (
+            <Card
+              key={item._id}
+              title={item.title}
+              coverImage={item.coverImage}
+              description={item.description}
+              destinationSlug={item.destinationSlug}
+              packageSlug={item.packageSlug}
+            />
+          ))}
         </div>
       </div>
       <div className='mt-20 pb-10 pt-10'>
