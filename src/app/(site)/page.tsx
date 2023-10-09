@@ -60,6 +60,8 @@ const HomePage = async () => {
               title={item.title}
               coverImage={item.coverImage}
               description={item.description}
+              destinationSlug={item.destinationSlug}
+              packageSlug={item.packageSlug}
             />
           ))}
         </div>

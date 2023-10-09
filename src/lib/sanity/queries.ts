@@ -35,7 +35,8 @@ export const cardQuery = groq`
     _id,
     title,
     description,
-    "slug":slug.current,
+    "destinationSlug":destination[0] -> slug.current,
+    "packageSlug":slug.current,
     coverImage {
       alt,
       asset -> {

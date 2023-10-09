@@ -1,36 +1,33 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import type { Cards } from '@lib/types';
 
-type CardProps = {
-  title: string;
-  // slug: string;
-  description: string;
-  coverImage: {
-    alt: string;
-    asset: {
-      url: string;
-      lqip: string;
-    };
-  };
-};
-
-const Card: React.FC<CardProps> = ({ title, coverImage, description }) => {
+const Card = ({
+  title,
+  coverImage,
+  description,
+  destinationSlug,
+  packageSlug
+}: Omit<Cards, '_id'>) => {
   return (
-    <div className='h-full w-64 overflow-hidden rounded-2xl shadow-lg'>
-      <div className=' relative h-32 w-full'>
-        <Image
-          src={coverImage.asset.url}
-          alt={coverImage.alt}
-          fill
-          placeholder='blur'
-          blurDataURL={coverImage.asset.lqip}
-        />
-        )
+    <Link href={`holidays/${destinationSlug}/${packageSlug}`}>
+      <div className='h-full w-64 overflow-hidden rounded-2xl shadow-lg'>
+        <div className=' relative h-32 w-full'>
+          <Image
+            src={coverImage.asset.url}
+            alt={coverImage.alt}
+            fill
+            placeholder='blur'
+            blurDataURL={coverImage.asset.lqip}
+          />
+          )
+        </div>
+        <div className='px-4 py-2'>
+          <div className='mb-2 text-xl font-bold'>{title}</div>
+          <p className='line-clamp-5 text-sm text-gray-700'>{description}</p>
+        </div>
       </div>
-      <div className='px-4 py-2'>
-        <div className='mb-2 text-xl font-bold'>{title}</div>
-        <p className='line-clamp-5 text-sm text-gray-700'>{description}</p>
-      </div>
-    </div>
+    </Link>
   );
 };
 

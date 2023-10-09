@@ -32,7 +32,8 @@ export type Cards = {
   _id: string;
   title: string;
   description: string;
-  slug: string;
+  destinationSlug: string;
+  packageSlug: string;
   coverImage: {
     alt: string;
     asset: {
