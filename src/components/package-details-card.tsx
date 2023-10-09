@@ -1,62 +1,35 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-import StarRatings from 'react-star-ratings';
-import { PiDotBold } from 'react-icons/pi';
-import type { StaticImageData } from 'next/image';
+import type { DestinationPackages } from '@lib/types';
 
-type PackageDetailsCardProps = {
-  title: string;
-  desc: string;
-  rating: number;
-  startingPrice: number;
-  img: StaticImageData;
-  id: string;
-  slug: string;
-};
-
-const PackageDetailsCard: React.FC<PackageDetailsCardProps> = ({
+const PackageDetailsCard = ({
   title,
-  desc,
-  rating,
-  startingPrice,
-  img,
-  id,
-  slug
-}) => {
+  destSlug,
+  slug,
+  description,
+  coverImage,
+  startingPrice
+}: Omit<DestinationPackages, '_id'> & { destSlug: string }) => {
   return (
-    <Link href={`/holidays/${slug}/${id}`}>
+    <Link href={`/holidays/${destSlug}/${slug}`}>
       <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>
         <div className='space-x-4 md:flex md:pr-2'>
-          <Image
-            src={img}
-            width={280}
-            height={280}
-            alt={title}
-            quality={95}
-            className='aspect-auto w-full rounded-l-lg'
-          />
+          <div className='relative h-full w-96 shrink-0'>
+            <Image
+              src={coverImage.asset.url}
+              alt={coverImage.alt}
+              fill
+              placeholder='blur'
+              blurDataURL={coverImage.asset.lqip}
+              className='rounded-l-lg'
+            />
+          </div>
           <div className='space-y-2 py-4'>
             <h1 className='text-lg font-medium text-gray-700'>{title}</h1>
-            <div className='flex items-center space-x-1'>
-              <StarRatings
-                rating={rating}
-                starRatedColor='gold'
-                starDimension='18px'
-                starSpacing='2px'
-                numberOfStars={5}
-                name='rating'
-              />
-              <PiDotBold className='w-7' />
-              <span className='font-medium text-yellow-500'>{rating}</span>
-            </div>
-            <p className='text-gray-600'>
-              {desc.length > 250 ? `${desc.substring(0, 250)}...` : desc}
-            </p>
+            <p className='line-clamp-5 text-gray-600'>{description}</p>
           </div>
         </div>
-        <div className='py-4 md:w-96 md:py-16 md:pt-[90px]'>
+        <div className='shrink-0 py-4 md:w-52 md:py-16 md:pt-[90px]'>
           <h3 className='text-center text-xl font-semibold text-cyan-700'>
             ₹ {startingPrice.toFixed(2)}
           </h3>

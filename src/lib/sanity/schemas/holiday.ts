@@ -95,8 +95,8 @@ export default defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'iternary',
-      title: 'Iternary',
+      name: 'itinerary',
+      title: 'Itinerary',
       type: 'array',
       of: [{ type: 'block' }],
       validation: (rule) => rule.required()
@@ -124,7 +124,7 @@ export default defineType({
           type: 'object',
           fields: [
             { name: 'type', type: 'string' },
-            { name: 'price', type: 'number' }
+            { name: 'rate', type: 'number' }
           ]
         })
       ],

@@ -39,7 +39,7 @@ export type Cards = {
   };
 };
 
-export type Destination = {
+export type Destinations = {
   _id: string;
   slug: string;
   name: string;
@@ -50,4 +50,48 @@ export type Destination = {
       lqip: string;
     };
   };
+};
+
+export type DestinationPackages = {
+  _id: string;
+  title: string;
+  slug: string;
+  coverImage: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  };
+  description: string;
+  startingPrice: number;
+};
+
+export type Package = {
+  title: string;
+  slug: string;
+  destinationName: string[];
+  description: string;
+  gallery: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  }[];
+  daysNights: {
+    days: number;
+    nights: number;
+  };
+  price: {
+    type: string;
+    rate: number;
+  }[];
+  itinerary: PortableTextBlock[];
+  inclusionExclusion: PortableTextBlock[];
+  termsConditions: PortableTextBlock[];
+  hotel: {
+    hotelName: string;
+    rating: number;
+  }[];
 };
