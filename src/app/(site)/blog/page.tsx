@@ -16,18 +16,19 @@ const BlogsPage = async () => {
           {data.map((item) => {
             return (
               <Link key={item._id} href={`blog/${item.slug}`}>
-                <div className='mb-3 max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
+                <div className='mb-3 max-w-sm rounded-xl border border-gray-200 bg-white shadow'>
+                  <div>
+                    <Image
+                      src={item.coverImage.asset.url}
+                      alt={item.coverImage.alt}
+                      width={2000}
+                      height={1000}
+                      className='w-full rounded-t-xl'
+                    />
+                  </div>
                   <div className='p-5'>
                     <div>
-                      <Image
-                        src={item.coverImage.asset.url}
-                        alt={item.coverImage.alt}
-                        width={1000}
-                        height={1000}
-                      />
-                    </div>
-                    <div>
-                      <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white '>
+                      <h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white '>
                         {item.title}
                       </h5>
                     </div>
