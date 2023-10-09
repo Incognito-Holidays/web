@@ -20,7 +20,6 @@ const Card = ({
             placeholder='blur'
             blurDataURL={coverImage.asset.lqip}
           />
-          )
         </div>
         <div className='px-4 py-2'>
           <div className='mb-2 text-xl font-bold'>{title}</div>
