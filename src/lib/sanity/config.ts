@@ -1,4 +1,4 @@
-import { defineConfig } from 'sanity';
+import { defineConfig, isDev } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
 import { projectId, dataset, apiVersion } from './api';
@@ -11,5 +11,8 @@ export default defineConfig({
   apiVersion,
   basePath: '/admin',
   schema: { types: schemaTypes },
-  plugins: [deskTool(), visionTool({ defaultApiVersion: apiVersion })]
+  plugins: [
+    deskTool(),
+    ...(isDev ? [visionTool({ defaultApiVersion: apiVersion })] : [])
+  ]
 });
