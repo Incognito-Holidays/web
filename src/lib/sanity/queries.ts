@@ -21,7 +21,6 @@ export const blogQuery = groq`
     title,
     subtitle,
     coverImage {
-      alt,
       asset -> {
         url,
         "lqip": metadata.lqip
@@ -36,10 +35,13 @@ export const cardQuery = groq`
     _id,
     title,
     description,
-    "slug": slug.current,
-    "image": image[0].asset -> {
-      url,
-      "lqip": metadata.lqip
+    "slug":slug.current,
+    coverImage {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip
+      }
     }
   }
 `;

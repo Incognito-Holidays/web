@@ -33,9 +33,12 @@ export type Cards = {
   title: string;
   description: string;
   slug: string;
-  image: {
-    url: string;
-    lqip: string;
+  coverImage: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
   };
 };
 
