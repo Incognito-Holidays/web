@@ -7,13 +7,13 @@ import Whychose from '@components/whychose';
 
 const HomePage = async () => {
   const data = await getAllCards();
+
   return (
     <main>
       <Hero />
       <div
-        className='absolute -bottom-16 left-1/2 z-10 w-[55rem] -translate-x-1/2 rounded-2xl border
-      bg-white p-12 shadow-lg
-      '
+        className='absolute -bottom-16 left-1/2 z-10 hidden w-[55rem] -translate-x-1/2 rounded-2xl
+      border bg-white p-12 shadow-lg'
       >
         <div className='mx-auto max-w-5xl'>
           <h1 className='text-lg font-medium text-blue-950 md:text-2xl'>
