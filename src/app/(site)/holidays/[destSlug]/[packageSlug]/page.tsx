@@ -1,18 +1,12 @@
 import Image from 'next/image';
-// import { Tab } from '@headlessui/react';
 import { GrLocation } from 'react-icons/gr';
 import { getPackage } from '@lib/functions/holidays';
 import Container from '@components/layout/container';
 import PackageDetails from '@components/package-details';
-// import Modal from '@components/modal';
+import BookNowButton from '@components/booknow-button';
 
 const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
   const data = await getPackage(params.packageSlug);
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // function classNames(...classes: string[]): string {
-  //   return classes.filter(Boolean).join(' ');
-  // }
 
   return (
     <main className='p-4 md:py-6'>
@@ -76,12 +70,7 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
             ))}
             <div>
               <div className='m-6'>
-                <button
-                  // onClick={(): void => setIsModalOpen(true)}
-                  className='h-10 w-full rounded-3xl bg-blue-500 text-white'
-                >
-                  BOOK NOW
-                </button>
+                <BookNowButton title={data.title} />
               </div>
             </div>
           </div>
@@ -98,12 +87,6 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
             />
           </div>
         </div>
-
-        {/* <Modal
-          isOpen={isModalOpen}
-          setIsOpen={setIsModalOpen}
-          selectedPackage='Beautiful Bali'
-        /> */}
       </Container>
     </main>
   );
