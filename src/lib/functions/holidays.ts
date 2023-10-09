@@ -10,7 +10,7 @@ import type { DestinationPackages, Destinations, Package } from '@lib/types';
 export function getAllDestinations() {
   return sanityFetch<Destinations[]>({
     query: destinationQuery,
-    tags: ['destinations']
+    tags: ['location']
   });
 }
 
@@ -18,7 +18,7 @@ export function getPackagesCountByDestination(slug: string) {
   return sanityFetch<number>({
     query: packagesCountByDestinationQuery,
     params: { slug },
-    tags: [`packagesCount:${slug}`]
+    tags: ['holiday']
   });
 }
 
@@ -26,7 +26,7 @@ export function getPackagesByDestination(slug: string) {
   return sanityFetch<DestinationPackages[]>({
     query: packagesByDestinationQuery,
     params: { slug },
-    tags: [`packages:${slug}`]
+    tags: ['loaction', 'holiday']
   });
 }
 
@@ -34,6 +34,6 @@ export function getPackage(slug: string) {
   return sanityFetch<Package>({
     query: packageQuery,
     params: { slug },
-    tags: [`package:${slug}`]
+    tags: [`holiday:${slug}`]
   });
 }

@@ -3,7 +3,7 @@ import { allBlogsQuery, blogQuery } from '@lib/sanity/queries';
 import type { Blog, Blogs } from '@lib/types';
 
 export function getAllBlogs() {
-  return sanityFetch<Blogs[]>({ query: allBlogsQuery, tags: ['blogs'] });
+  return sanityFetch<Blogs[]>({ query: allBlogsQuery, tags: ['blog'] });
 }
 
 export function getBlog(slug: string) {
