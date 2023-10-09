@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBlogs } from '@lib/functions/blog';
+import Container from '@components/layout/container';
 import { Button } from '@components/ui/button';
 
 const BlogsPage = async () => {
@@ -8,7 +9,7 @@ const BlogsPage = async () => {
 
   return (
     <main>
-      <div>
+      <Container>
         <h1 className='my-4 pl-5 text-left text-3xl font-semibold text-blue-950 md:text-2xl'>
           # Travel Blogs
         </h1>
@@ -40,7 +41,7 @@ const BlogsPage = async () => {
             );
           })}
         </div>
-      </div>
+      </Container>
     </main>
   );
 };
