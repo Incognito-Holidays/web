@@ -58,7 +58,7 @@ const HomePage = async () => {
             <Card
               key={item._id}
               title={item.title}
-              image={item.image}
+              coverImage={item.coverImage}
               description={item.description}
             />
           ))}
