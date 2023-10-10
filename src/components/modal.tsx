@@ -20,6 +20,26 @@ const Modal: React.FC<ModalProps> = ({
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const validateForm = () => {
+    if (name === '' && phone === '') {
+      alert('Please enter your name and phone number');
+      return false;
+    }
+    if (name === '') {
+      alert('Please enter your name');
+      return false;
+    }
+    if (phone === '') {
+      alert('Please enter your phone number');
+      return false;
+    }
+    if (phone.length !== 10) {
+      alert('Please enter a valid phone number');
+      return false;
+    }
+    return true;
+  };
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog onClose={setIsOpen} as='div' className='relative z-10'>
@@ -70,8 +90,8 @@ const Modal: React.FC<ModalProps> = ({
                             value={name}
                             onChange={(e): void => setName(e.target.value)}
                             placeholder='John Doe'
-                            required
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+                            required
                           />
                         </div>
                         <div>
@@ -87,8 +107,8 @@ const Modal: React.FC<ModalProps> = ({
                             value={phone}
                             onChange={(e): void => setPhone(e.target.value)}
                             placeholder='+91 XXXXX XXXXX'
-                            required
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+                            required
                           />
                         </div>
                         <div>
@@ -144,8 +164,12 @@ const Modal: React.FC<ModalProps> = ({
                 </div>
                 <div className='bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6'>
                   <button
-                    type='button'
+                    type='submit'
                     className='inline-flex w-full justify-center rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 sm:ml-3 sm:w-auto'
+                    onClick={() => {
+                      validateForm();
+                    }}
+
                     // onClick={(): void => setIsOpen(false)}
                   >
                     Submit
