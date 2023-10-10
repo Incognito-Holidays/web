@@ -2,45 +2,52 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { LuSearch } from 'react-icons/lu';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue
+} from './ui/select';
+import { Button } from './ui/button';
+import type { Search as SearchProps } from '@lib/types';
 
-const Search: React.FC = () => {
+const Search = ({ data }: { data: SearchProps[] }) => {
   const router = useRouter();
   const [holidayDest, setHolidayDest] = useState('');
 
   return (
-    <div className='absolute bottom-0 z-10 w-full bg-neutral-800 bg-opacity-70 px-4 py-2 sm:py-4 md:px-8 md:py-8'>
-      <div className='mx-auto max-w-5xl'>
-        <h1 className='text-lg font-medium text-white md:text-2xl'>
-          I want to Holiday in and around...
-        </h1>
-        <div className='mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-5'>
-          <select
-            className='h-10 w-full rounded-md border pl-2 text-gray-900 shadow-sm outline-none focus:border-blue-950 md:h-12'
-            onChange={(e): void => setHolidayDest(e.target.value)}
-          >
-            <option value='' className='text-sm'>
-              Choose Package
-            </option>
-            <option value='srilanka' className='text-sm'>
-              Srilanka Package
-            </option>
-            <option value='bali' className='text-sm'>
-              Bali Package
-            </option>
-            <option value='thailand' className='text-sm'>
-              Thailand Package
-            </option>
-            <option value='vietnam' className='text-sm'>
-              Vietnam Package
-            </option>
-          </select>
-          <button
-            className='w-full rounded border-blue-950 bg-cyan-500 px-4 py-2 font-bold text-white transition duration-200 hover:bg-blue-950 sm:w-fit'
-            onClick={(): void => router.push(`/holidays/${holidayDest}`)}
-          >
-            Search
-          </button>
-        </div>
+    <div className='-bottom-20 mx-4 mt-4 rounded-2xl border-2 bg-white p-8 shadow-lg md:absolute md:left-1/2 md:z-10 md:mx-0 md:mt-0 md:w-[48rem] md:-translate-x-1/2 lg:w-[55rem] lg:p-10'>
+      <h1 className='text-center text-lg font-medium md:text-2xl'>
+        I want to Holiday in and around...
+      </h1>
+      <div className='mt-6 flex items-center gap-4'>
+        <Select value={holidayDest} onValueChange={setHolidayDest}>
+          <SelectTrigger className='h-12'>
+            <SelectValue placeholder='Select package' />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Packages</SelectLabel>
+              {data.map((item) => (
+                <SelectItem key={item._id} value={item.slug}>
+                  {item.name}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <Button
+          size='lg'
+          onClick={() => router.push(`holidays/${holidayDest}`)}
+          className='flex h-12 items-center gap-1'
+        >
+          <LuSearch className='h-5 w-5' />
+          Search
+        </Button>
       </div>
     </div>
   );

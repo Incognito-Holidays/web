@@ -30,6 +30,14 @@ export const blogQuery = groq`
   }
 `;
 
+export const homePageSearchQuery = groq`
+  *[_type == "location"] {
+    _id,
+    name,
+    "slug": slug.current
+  }
+`;
+
 export const cardQuery = groq`
   * [_type == "holiday"] {
     _id,

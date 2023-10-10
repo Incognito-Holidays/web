@@ -28,6 +28,12 @@ export type Blog = {
   body: PortableTextBlock[];
 };
 
+export type Search = {
+  _id: string;
+  name: string;
+  slug: string;
+};
+
 export type Cards = {
   _id: string;
   title: string;
