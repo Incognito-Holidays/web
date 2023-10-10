@@ -1,7 +1,6 @@
 import { getAllCards } from '@lib/functions/card';
 import Hero from '@components/hero';
 import Card from '@components/card';
-import Categories from '@components/categories';
 import TravelBlogs from '@components/travel-blogs';
 import Whychose from '@components/whychose';
 
@@ -53,7 +52,7 @@ const HomePage = async () => {
         <h1 className='text-center text-3xl font-bold text-blue-950'>
           Guides for your next vacation
         </h1>
-        <div className='mt-14 grid place-items-center gap-y-10 sm:grid-cols-2 md:grid-cols-4'>
+        <div className='mt-14 grid place-items-center gap-y-10 pb-10 sm:grid-cols-2 md:grid-cols-4'>
           {data.map((item) => (
             <Card
               key={item._id}
@@ -65,9 +64,6 @@ const HomePage = async () => {
             />
           ))}
         </div>
-      </div>
-      <div className='mt-20 pb-10 pt-10'>
-        <Categories />
       </div>
       <TravelBlogs />
       <Whychose />
