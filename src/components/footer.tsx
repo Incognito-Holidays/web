@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
             <h5 className='mb-2 mt-0 text-lg'>
               Find us on these platforms, we respond within 1-2 business days.
             </h5>
-            <div className='mb-6 mt-6 flex gap-5 lg:mb-0'>
-              {/* <Link href={'/'}>
+            {/* <div className='mb-6 mt-6 flex gap-5 lg:mb-0'>
+               <Link href={'/'}>
                 <ImFacebook color='#ffff' />
               </Link>
               <Link href={'/'}>
@@ -19,9 +19,20 @@ const Footer: React.FC = () => {
               </Link>
               <Link href={'/'}>
                 <ImYoutube color='#ffff' />
-              </Link> */}
+              </Link> 
+            </div> */}
+            <div className='mt-6 text-lg'>
               <a href='/contact' className='font-bold hover:text-red-600'>
                 Contact Us
+              </a>
+            </div>
+            <div className='mb-6 mt-2 text-lg'>
+              <a
+                href='/admin'
+                target='_blank'
+                className='font-bold hover:text-red-600'
+              >
+                Admin
               </a>
             </div>
           </div>
@@ -60,14 +71,14 @@ const Footer: React.FC = () => {
             <h1>
               Copyright ©<span id='get-current-year'>2023</span> Incognito
               Holidays Private Limited. Site Developed & Maintained by
-              <span>
+              <span className='font-semibold'>
                 <a
-                  href='https://www.instagram.com/sigma3labs/'
+                  href='https://linktr.ee/sigma3labs'
                   target='blank'
                   className='cursor-pointer hover:text-red-600'
                 >
                   {' '}
-                  Sigma 3 Labs.
+                  Sigma3Labs.
                 </a>
               </span>
             </h1>
