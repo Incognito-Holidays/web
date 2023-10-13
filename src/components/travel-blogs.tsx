@@ -9,9 +9,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import g1 from '@public/assets/b1.jpg';
-import g2 from '@public/assets/b1.png';
+import g2 from '@public/assets/srilanka/sri1.jpg';
 import g3 from '@public/assets/b2.jpg';
-import g4 from '@public/assets/g4.jpg';
+import g4 from '@public/assets/v1.jpg';
 
 // import required modules
 

@@ -105,9 +105,6 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
             </div>
           </div>
         </Container>
-        <div className='mt-5'>
-          <Whychose />
-        </div>
       </main>
     </div>
   );
