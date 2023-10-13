@@ -5,6 +5,7 @@ import { getPackage } from '@lib/functions/holidays';
 import Container from '@components/layout/container';
 import PackageDetails from '@components/package-details';
 import BookNowButton from '@components/booknow-button';
+import Whychose from '@components/whychose';
 import NextBreadcrumb from '@components/breadcrumbs';
 
 const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
@@ -104,6 +105,9 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
             </div>
           </div>
         </Container>
+        <div className='mt-5'>
+          <Whychose />
+        </div>
       </main>
     </div>
   );
