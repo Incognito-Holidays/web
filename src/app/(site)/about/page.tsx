@@ -1,9 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
+import { LuChevronRight } from 'react-icons/lu';
+import NextBreadcrumb from '@components/breadcrumbs';
 import Whychose from '@components/whychose';
 
 const About: React.FC = () => {
   return (
     <div>
+      <NextBreadcrumb
+        homeElement={'Home'}
+        separator={
+          <span className='flex items-center'>
+            <LuChevronRight />
+          </span>
+        }
+        activeClasses='text-amber-500'
+        containerClasses='flex py-1'
+        listClasses='hover:underline mx-2 font-bold text-sm'
+        capitalizeLinks
+      />
       <div className="flex h-96 items-end bg-[url('/assets/p2.png')] bg-cover">
         <h1 className='text-bold w-full bg-neutral-800 bg-opacity-70 p-8 text-center text-6xl text-white'>
           About Us
