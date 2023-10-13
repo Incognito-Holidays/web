@@ -4,6 +4,7 @@ import { getPackage } from '@lib/functions/holidays';
 import Container from '@components/layout/container';
 import PackageDetails from '@components/package-details';
 import BookNowButton from '@components/booknow-button';
+import Whychose from '@components/whychose';
 
 const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
   const data = await getPackage(params.packageSlug);
@@ -88,6 +89,9 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
           </div>
         </div>
       </Container>
+      <div className='mt-5'>
+        <Whychose />
+      </div>
     </main>
   );
 };
