@@ -1,4 +1,10 @@
-import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
+import { Button } from './ui/button';
+import type {
+  Dispatch,
+  PropsWithChildren,
+  SetStateAction,
+  SyntheticEvent
+} from 'react';
 
 type FormPropsBase = PropsWithChildren & {
   title: string;
@@ -9,6 +15,8 @@ type FormPropsBase = PropsWithChildren & {
   setPhone: Dispatch<SetStateAction<string>>;
   email: string;
   setEmail: Dispatch<SetStateAction<string>>;
+  onFormSubmit: (e: SyntheticEvent) => Promise<void>;
+  loading: boolean;
 };
 
 type FormPropsWithMessage = FormPropsBase & {
@@ -27,7 +35,7 @@ type FormPropsWithoutMessage = FormPropsBase & {
 
 type FormProps = FormPropsWithMessage | FormPropsWithoutMessage;
 
-const Form: React.FC<FormProps> = ({
+const Form = ({
   children,
   title,
   description,
@@ -40,8 +48,10 @@ const Form: React.FC<FormProps> = ({
   showMessageBox,
   messageBoxLabel,
   message,
-  setMessage
-}) => {
+  setMessage,
+  onFormSubmit,
+  loading
+}: FormProps) => {
   return (
     <section className='bg-white'>
       <div className='mx-auto mb-6 mt-4 max-w-screen-md lg:mb-8'>
@@ -51,7 +61,7 @@ const Form: React.FC<FormProps> = ({
         <p className='mb-8 text-center font-light text-gray-500 sm:text-xl lg:mb-16'>
           {description}
         </p>
-        <form className='space-y-8'>
+        <form onSubmit={onFormSubmit} className='space-y-8'>
           <div>
             <label
               htmlFor='name'
@@ -63,7 +73,7 @@ const Form: React.FC<FormProps> = ({
               id='name'
               type='text'
               value={name}
-              onChange={(e): void => setName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               placeholder='John Doe'
               required
               className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
@@ -80,7 +90,7 @@ const Form: React.FC<FormProps> = ({
               id='phone'
               type='number'
               value={phone}
-              onChange={(e): void => setPhone(e.target.value)}
+              onChange={(e) => setPhone(e.target.value)}
               placeholder='+91 XXXXX XXXXX'
               required
               className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
@@ -97,8 +107,9 @@ const Form: React.FC<FormProps> = ({
               id='email'
               type='email'
               value={email}
-              onChange={(e): void => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder='name@example.com'
+              required
               className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
             />
           </div>
@@ -115,18 +126,19 @@ const Form: React.FC<FormProps> = ({
                 id='message'
                 rows={6}
                 value={message}
-                onChange={(e): void => setMessage(e.target.value)}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder='Your message'
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
               />
             </div>
           )}
-          <button
-            type='submit'
-            className='rounded-lg bg-cyan-600 px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-opacity-80 focus:outline-none focus:ring-4 focus:ring-cyan-300 sm:w-fit'
-          >
-            Send message
-          </button>
+          <Button type='submit' size='lg' disabled={loading}>
+            {loading ? (
+              <div className='h-5 w-5 animate-spin rounded-full border-b-2 border-white' />
+            ) : (
+              'Submit'
+            )}
+          </Button>
         </form>
       </div>
     </section>
