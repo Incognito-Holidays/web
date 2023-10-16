@@ -1,14 +1,15 @@
 'use client';
 
-import { LuChevronRight } from 'react-icons/lu';
 import { useState } from 'react';
 import Image from 'next/image';
+import { LuChevronRight } from 'react-icons/lu';
+import { toast } from 'react-hot-toast';
 import NextBreadcrumb from '@components/breadcrumbs';
 import Whychose from '@components/whychose';
 import Form from '@components/form';
 import pic1 from '@public/assets/bg-hotel.jpg';
 
-const HotelsPage: React.FC = () => {
+const HotelsPage = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -19,9 +20,45 @@ const HotelsPage: React.FC = () => {
   const [adults, setAdults] = useState('');
   const [children, setChildren] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleFormSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        subject: 'Hotel Booking Request',
+        message,
+        data: {
+          hotel: {
+            place,
+            checkIn,
+            checkOut,
+            rooms,
+            adults,
+            children
+          }
+        }
+      })
+    });
+    setLoading(false);
+    if (response.status === 200) {
+      toast.success('Request Submitted Successfully!');
+    } else {
+      toast.error('Something went wrong! Please try again');
+    }
+  };
 
   return (
-    <div>
+    <main>
       <NextBreadcrumb
         homeElement={'Home'}
         separator={
@@ -61,6 +98,8 @@ const HotelsPage: React.FC = () => {
           messageBoxLabel='Want to share something more? Let us know your Enquiry'
           message={message}
           setMessage={setMessage}
+          onFormSubmit={handleFormSubmit}
+          loading={loading}
         >
           <div className='flex flex-col gap-8 sm:flex-row sm:items-center'>
             <div className='grow'>
@@ -74,7 +113,7 @@ const HotelsPage: React.FC = () => {
                 id='place'
                 type='text'
                 value={place}
-                onChange={(e): void => setPlace(e.target.value)}
+                onChange={(e) => setPlace(e.target.value)}
                 placeholder='Select destination'
                 required
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
@@ -91,7 +130,7 @@ const HotelsPage: React.FC = () => {
                 id='checkIn'
                 type='date'
                 value={checkIn}
-                onChange={(e): void => setCheckIn(e.target.value)}
+                onChange={(e) => setCheckIn(e.target.value)}
                 required
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
               />
@@ -107,7 +146,7 @@ const HotelsPage: React.FC = () => {
                 id='checkOut'
                 type='date'
                 value={checkOut}
-                onChange={(e): void => setCheckOut(e.target.value)}
+                onChange={(e) => setCheckOut(e.target.value)}
                 required
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
               />
@@ -125,7 +164,7 @@ const HotelsPage: React.FC = () => {
                 id='rooms'
                 type='number'
                 value={rooms}
-                onChange={(e): void => setRooms(e.target.value)}
+                onChange={(e) => setRooms(e.target.value)}
                 placeholder='1'
                 required
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
@@ -142,7 +181,7 @@ const HotelsPage: React.FC = () => {
                 id='adults'
                 type='number'
                 value={adults}
-                onChange={(e): void => setAdults(e.target.value)}
+                onChange={(e) => setAdults(e.target.value)}
                 placeholder='1'
                 required
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
@@ -159,7 +198,7 @@ const HotelsPage: React.FC = () => {
                 id='children'
                 type='number'
                 value={children}
-                onChange={(e): void => setChildren(e.target.value)}
+                onChange={(e) => setChildren(e.target.value)}
                 placeholder='0'
                 className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
               />
@@ -168,7 +207,7 @@ const HotelsPage: React.FC = () => {
         </Form>
       </div>
       <Whychose />
-    </div>
+    </main>
   );
 };
 

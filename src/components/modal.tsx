@@ -1,7 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
+import { toast } from 'react-hot-toast';
+import { Button } from './ui/button';
 import type { Dispatch, SetStateAction } from 'react';
 
 type ModalProps = {
@@ -10,34 +10,43 @@ type ModalProps = {
   selectedPackage: string;
 };
 
-const Modal: React.FC<ModalProps> = ({
-  isOpen,
-  setIsOpen,
-  selectedPackage
-}) => {
+const Modal = ({ isOpen, setIsOpen, selectedPackage }: ModalProps) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const validateForm = () => {
-    if (name === '' && phone === '') {
-      alert('Please enter your name and phone number');
-      return false;
+  const handleFormSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        subject: 'Holiday Booking Request',
+        message,
+        data: {
+          holiday: {
+            selectedPackage,
+            selectedPackageUrl: window.location.href
+          }
+        }
+      })
+    });
+    setLoading(false);
+    if (response.status === 200) {
+      toast.success('Request Submitted Successfully!');
+      setIsOpen(false);
+    } else {
+      toast.error('Something went wrong! Please try again');
     }
-    if (name === '') {
-      alert('Please enter your name');
-      return false;
-    }
-    if (phone === '') {
-      alert('Please enter your phone number');
-      return false;
-    }
-    if (phone.length !== 10) {
-      alert('Please enter a valid phone number');
-      return false;
-    }
-    return true;
   };
 
   return (
@@ -73,10 +82,10 @@ const Modal: React.FC<ModalProps> = ({
                       as='h3'
                       className='text-center text-lg font-semibold leading-6 text-gray-900 sm:text-xl'
                     >
-                      Welcome, let's get started
+                      Welcome, let&apos;s get started
                     </Dialog.Title>
                     <div className='mt-6'>
-                      <form className='space-y-4'>
+                      <form onSubmit={handleFormSubmit} className='space-y-4'>
                         <div>
                           <label
                             htmlFor='name'
@@ -158,29 +167,24 @@ const Modal: React.FC<ModalProps> = ({
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
                           />
                         </div>
+                        <div className='flex flex-col gap-4 md:flex-row-reverse'>
+                          <Button type='submit' disabled={loading}>
+                            {loading ? (
+                              <div className='h-5 w-5 animate-spin rounded-full border-b-2 border-white' />
+                            ) : (
+                              'Submit'
+                            )}
+                          </Button>
+                          <Button
+                            variant='outline'
+                            onClick={() => setIsOpen(false)}
+                          >
+                            Cancel
+                          </Button>
+                        </div>
                       </form>
                     </div>
                   </div>
-                </div>
-                <div className='bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6'>
-                  <button
-                    type='submit'
-                    className='inline-flex w-full justify-center rounded-md bg-cyan-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-cyan-500 sm:ml-3 sm:w-auto'
-                    onClick={() => {
-                      validateForm();
-                    }}
-
-                    // onClick={(): void => setIsOpen(false)}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    type='button'
-                    onClick={(): void => setIsOpen(false)}
-                    className='mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto'
-                  >
-                    Cancel
-                  </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

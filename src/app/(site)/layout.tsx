@@ -1,5 +1,6 @@
 import '@styles/global.css';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 import Header from '@components/header';
 import Footer from '@components/footer';
 import type { Metadata } from 'next';
@@ -19,6 +20,7 @@ const SiteRootLayout: React.FC<PropsWithChildren> = ({ children }) => {
         <Header />
         {children}
         <Footer />
+        <Toaster position='bottom-right' />
       </body>
     </html>
   );
