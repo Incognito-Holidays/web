@@ -4,7 +4,6 @@ import 'swiper/css';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import Container from './layout/container';
 
 const Hero = () => {
   const slideData = [
@@ -36,32 +35,29 @@ const Hero = () => {
   ];
 
   return (
-    <div className='px-4'>
-      <Container>
-        <Swiper
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false
-          }}
-          loop
-          modules={[Autoplay]}
-          className='rounded-2xl'
-        >
-          {slideData.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <div className='relative h-80 md:h-[28rem]'>
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  priority
-                  className='object-cover object-center'
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
+    <div>
+      <Swiper
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false
+        }}
+        loop
+        modules={[Autoplay]}
+      >
+        {slideData.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className='relative h-80 md:h-[28rem]'>
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority
+                className='object-cover object-center'
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

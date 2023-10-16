@@ -1,7 +1,9 @@
 'use client';
 
+import { LuChevronRight } from 'react-icons/lu';
 import Image from 'next/image';
 import { useState } from 'react';
+import NextBreadcrumb from '@components/breadcrumbs';
 import Whychose from '@components/whychose';
 import Form from '@components/form';
 import pic1 from '@public/assets/bg-train.jpg';
@@ -17,6 +19,18 @@ const TrainsPage: React.FC = () => {
 
   return (
     <div>
+      <NextBreadcrumb
+        homeElement={'Home'}
+        separator={
+          <span className='flex items-center'>
+            <LuChevronRight />
+          </span>
+        }
+        activeClasses='text-amber-500'
+        containerClasses='flex py-1'
+        listClasses='hover:underline mx-2 font-bold text-sm'
+        capitalizeLinks
+      />
       <div>
         <Image
           src={pic1}

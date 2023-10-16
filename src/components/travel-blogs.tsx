@@ -8,10 +8,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
-import g1 from '@public/assets/g1.jpg';
-import g2 from '@public/assets/g2.jpg';
-import g3 from '@public/assets/g3.jpg';
-import g4 from '@public/assets/g4.jpg';
+import g1 from '@public/assets/b1.jpg';
+import g2 from '@public/assets/srilanka/sri1.jpg';
+import g3 from '@public/assets/b2.jpg';
+import g4 from '@public/assets/v1.jpg';
 
 // import required modules
 
@@ -79,19 +79,17 @@ const TravelBlogs: React.FC = () => {
           {slideData.map((slide) => (
             <SwiperSlide key={slide.id} className='flex flex-auto gap-2 p-8'>
               <div className='max-w-sm rounded-lg border border-gray-200 bg-white shadow'>
-                <a href='#'>
-                  <Image
-                    src={slide.src}
-                    className='rounded-t-lg'
-                    alt={slide.alt}
-                  />
-                </a>
+                <Image
+                  src={slide.src}
+                  className='rounded-t-lg'
+                  alt={slide.alt}
+                />
+
                 <div className='p-5'>
-                  <a href='#'>
-                    <h5 className='mb-2 text-xl font-bold tracking-tight text-black '>
-                      {slide.heading}
-                    </h5>
-                  </a>
+                  <h5 className='mb-2 text-xl font-bold tracking-tight text-black '>
+                    {slide.heading}
+                  </h5>
+
                   <p className='mb-3 text-sm font-normal text-gray-900'>
                     {slide.desc.substring(0, 205)}...
                   </p>

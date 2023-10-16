@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 const Whychose: React.FC = () => {
   return (
-    <div className='bg-violet-200 '>
+    <div className='bg-violet-200'>
       <div className='pl-16 pr-16 pt-6 text-center text-3xl font-bold text-cyan-700 '>
         Why Incognito Holidays?
       </div>

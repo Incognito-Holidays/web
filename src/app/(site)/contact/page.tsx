@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { LuChevronRight } from 'react-icons/lu';
 import Form from '@components/form';
 import Whychose from '@components/whychose';
+import NextBreadcrumb from '@components/breadcrumbs';
 
 const ContactPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -13,6 +15,18 @@ const ContactPage: React.FC = () => {
 
   return (
     <div>
+      <NextBreadcrumb
+        homeElement={'Home'}
+        separator={
+          <span className='flex items-center'>
+            <LuChevronRight />
+          </span>
+        }
+        activeClasses='text-amber-500'
+        containerClasses='flex py-1'
+        listClasses='hover:underline mx-2 font-bold text-sm'
+        capitalizeLinks
+      />
       <div className='grid grid-cols-1 lg:grid-cols-2'>
         <div className='p-6'>
           <h1 className='text-4xl font-bold'>Contact us</h1>
