@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { LuChevronRight } from 'react-icons/lu';
+import Link from 'next/link';
+import { GrFacebook, GrLinkedin, GrInstagram } from 'react-icons/gr';
 import Container from '@components/layout/container';
 import Form from '@components/form';
 import Whychose from '@components/whychose';
@@ -120,11 +122,30 @@ const ContactPage = () => {
               <h2 className='text-lg font-semibold text-green-500'>
                 Connect With Us:
               </h2>
-              <p className='text-justify'>
+              <div className='text-justify'>
                 By following us on social media, you can stay up to date with
-                our most recent travel deals and offers. We are accessible on
-                Twitter, Instagram, and Facebook.
-              </p>
+                our most recent travel deals and offers.
+                <div className='mb-6 mt-6 flex cursor-pointer gap-5 lg:mb-0'>
+                  <Link
+                    href='https://www.facebook.com/IncognitoHolidays'
+                    target='blank'
+                  >
+                    <GrFacebook size='1.6rem' color='blue' />
+                  </Link>
+                  <Link
+                    href='https://www.linkedin.com/in/incognito-holidays-2a6769296/'
+                    target='blank'
+                  >
+                    <GrLinkedin size='1.6rem' color='blue' />
+                  </Link>
+                  <Link
+                    href='https://www.instagram.com/incognitoholidays/'
+                    target='_blank'
+                  >
+                    <GrInstagram size='1.6rem' color='red' />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
           <div>
