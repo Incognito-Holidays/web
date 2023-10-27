@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { GrFacebook, GrLinkedin, GrInstagram } from 'react-icons/gr';
+
 const Footer: React.FC = () => {
   return (
     <footer className='relative bg-blue-950 pb-5 pt-8 text-white'>
@@ -10,18 +13,27 @@ const Footer: React.FC = () => {
             <h5 className='mb-2 mt-0 text-lg'>
               Find us on these platforms, we respond within 1-2 business days.
             </h5>
-            {/* <div className='mb-6 mt-6 flex gap-5 lg:mb-0'>
-               <Link href={'/'}>
-                <ImFacebook color='#ffff' />
+            <div className='mb-6 mt-6 flex cursor-pointer gap-5 lg:mb-0'>
+              <Link
+                href='https://www.facebook.com/IncognitoHolidays'
+                target='blank'
+              >
+                <GrFacebook size='1.6rem' />
               </Link>
-              <Link href={'/'}>
-                <ImTwitter color='#ffff' />
+              <Link
+                href='https://www.linkedin.com/in/incognito-holidays-2a6769296/'
+                target='blank'
+              >
+                <GrLinkedin size='1.6rem' />
               </Link>
-              <Link href={'/'}>
-                <ImYoutube color='#ffff' />
-              </Link> 
-            </div> */}
-            <div className='mt-6 text-lg'>
+              <Link
+                href='https://www.instagram.com/incognitoholidays/'
+                target='_blank'
+              >
+                <GrInstagram size='1.6rem' />
+              </Link>
+            </div>
+            {/* <div className='mt-6 text-lg'>
               <a href='/contact' className='font-bold hover:text-red-600'>
                 Contact Us
               </a>
@@ -34,7 +46,7 @@ const Footer: React.FC = () => {
               >
                 Admin
               </a>
-            </div>
+            </div> */}
           </div>
           <div className='w-full px-3 lg:w-6/12'>
             <div className='items-top flex flex-wrap'>
@@ -42,11 +54,8 @@ const Footer: React.FC = () => {
                 <span className='mb-2 block text-sm font-semibold uppercase'>
                   Address (Main branch)
                 </span>
-                <p className='text-sm font-semibold'>
-                  New no 15 Old no 149, Montieth Road, Alsa Mall Complex, Shop
-                  No. T5, 3rd Floor, Egmore, Chennai-600008, Tamil Nadu.
-                </p>
-                <p className='mt-2 text-sm font-semibold'>
+                <p className='text-sm font-semibold'>Chennai, Tamil Nadu.</p>
+                <p className='mt-4 text-sm font-semibold'>
                   Email: chennai@incognitoholidays.com
                 </p>
               </div>
@@ -55,10 +64,9 @@ const Footer: React.FC = () => {
                   Address (Kolkata Branch)
                 </span>
                 <p className='text-sm font-semibold'>
-                  8 Ho Chi Minh Sarani, 3rd Floor, Suit no 28/6, Opposite to US
-                  Consulate, Kolkata.
+                  Ho Chi Minh Sarani, Kolkata.
                 </p>
-                <p className='mt-6 text-sm font-semibold'>
+                <p className='mt-4 text-sm font-semibold'>
                   Email: kolkata@incognitoholidays.com
                 </p>
               </div>
