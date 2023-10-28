@@ -10,7 +10,7 @@ import {
   Hr
 } from '@react-email/components';
 
-type EmailTemplateProps = {
+type AdminEmailTemplateProps = {
   name: string;
   phone: string;
   email: string;
@@ -44,13 +44,13 @@ type EmailTemplateProps = {
   };
 };
 
-const EmailTemplate = ({
+const AdminEmailTemplate = ({
   name,
   phone,
   email,
   message,
   data
-}: EmailTemplateProps) => {
+}: AdminEmailTemplateProps) => {
   return (
     <Html>
       <Head />
@@ -117,4 +117,4 @@ const EmailTemplate = ({
   );
 };
 
-export default EmailTemplate;
+export default AdminEmailTemplate;
