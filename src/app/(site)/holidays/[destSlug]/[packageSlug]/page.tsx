@@ -67,7 +67,7 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
                 <div className='flex justify-between'>
                   <p className='mt-4 text-2xl font-semibold'>
                     {data.daysNights.days} days - {data.daysNights.nights}{' '}
-                    nigths
+                    nights
                   </p>
                   <button className='h-8 rounded-bl-lg rounded-tr-lg bg-blue-500 p-2 text-sm text-white'>
                     Popular
