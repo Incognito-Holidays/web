@@ -1,74 +1,70 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import Image from 'next/image';
+import expertise from '@public/assets/Expertise icon/customer.png';
+import custom_serv from '@public/assets/Personalized service icon/customer-service.png';
+import competitive_price from '@public/assets/Competitive price icon/price.png';
+import convenience from '@public/assets/Convenience icon/experience.png';
+
 const Whychose: React.FC = () => {
   return (
     <div className='bg-violet-200'>
-      <div className='pl-16 pr-16 pt-6 text-center text-3xl font-bold text-cyan-700 '>
+      <div className='pb-7 pl-16 pr-16 pt-6 text-center text-3xl font-bold text-cyan-700 '>
         Why Incognito Holidays?
       </div>
-      <div className='grid h-full gap-4 rounded-lg text-center sm:grid-cols-2 md:grid-cols-4 lg:p-10'>
-        <div>
-          <a
-            href='#'
-            className='block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
-          >
-            <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-red-500 dark:text-white'>
-              Convenience
-            </h5>
-            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
-              Your travel agency can handle all aspects of your trip planning,
-              from booking your flights and accommodations to arranging for
-              ground transportation and activities. This can save you a lot of
-              time and hassle, especially if you're planning a complex trip.
-            </p>
-          </a>
+      <div className='container mx-auto flex max-w-5xl flex-wrap items-start justify-center gap-12 pb-7 md:justify-between'>
+        <div className='grid justify-items-center gap-4 text-center md:flex-1'>
+          <div className='  '>
+            <Image
+              src={convenience}
+              width={100}
+              height={100}
+              alt='demo'
+            ></Image>
+          </div>
+          <h3 className='text-xl font-bold'>Convenience</h3>
+          <p className='line-clamp-3'>
+            Our travel agency can handle all aspects of your trip planning.
+          </p>
         </div>
-        <div>
-          <a
-            href='#'
-            className='block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
-          >
-            <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-yellow-500 dark:text-white'>
-              Expertise
-            </h5>
-            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
-              Your travel agents are experts in the travel industry and have a
-              deep knowledge of a wide range of destinations. They have years of
-              experience planning trips to all corners of the globe, and they
-              know the best places to go, what to see, and how to get there.
-            </p>
-          </a>
+        <div className='grid justify-items-center gap-4 text-center md:flex-1'>
+          <div>
+            <Image src={expertise} width={100} height={100} alt='demo'></Image>
+          </div>
+          <h3 className='text-xl font-bold'>Expertise</h3>
+          <p className='line-clamp-3'>
+            Our travel agents are experts in the travel industry.
+          </p>
         </div>
-        <div>
-          <a
-            href='#'
-            className='block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
-          >
-            <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-green-500 dark:text-white'>
-              Competitive prices
-            </h5>
-            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
-              Your travel agency may be able to get you better deals on flights,
-              hotels, and other travel arrangements than you could find on your
-              own. This is because they have relationships with a variety of
-              travel suppliers and can negotiate bulk discounts.
-            </p>
-          </a>
+        <div className='grid justify-items-center gap-4 text-center md:flex-1'>
+          <div>
+            <Image
+              src={competitive_price}
+              width={100}
+              height={100}
+              alt='demo'
+            ></Image>
+          </div>
+          <h3 className='text-xl font-bold'>Competitive prices</h3>
+          <p className='line-clamp-3'>
+            {' '}
+            Our travel agency may be able to get you better deals.
+          </p>
         </div>
-        <div>
-          <a
-            href='#'
-            className='block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700'
-          >
-            <h5 className='mb-2 text-center text-xl font-bold tracking-tight text-blue-500 dark:text-white'>
-              Personalized service
-            </h5>
-            <p className='line-clamp-6 text-center font-normal text-gray-700 hover:line-clamp-none dark:text-gray-400'>
-              We take the time to get to know you and your travel needs, and we
-              create a custom itinerary that's perfect for you. We'll handle all
-              the details, from booking your flights and accommodations to
-              arranging your transfers and activities.
-            </p>
-          </a>
+        <div className='grid justify-items-center gap-4 text-center md:flex-1'>
+          <div>
+            <Image
+              src={custom_serv}
+              width={100}
+              height={100}
+              alt='demo'
+            ></Image>
+          </div>
+          <h3 className='text-xl font-bold'>Customized service</h3>
+          <p className='line-clamp-3'>
+            {' '}
+            We create a custom itinerary that's perfect for you.
+          </p>
         </div>
       </div>
     </div>

@@ -78,13 +78,10 @@ const HotelsPage = () => {
           quality={95}
           width={1200}
           height={500}
-          className=' h-[30rem] w-full  object-cover object-center'
+          className=' h-[20rem] w-full object-cover  object-center md:h-[30rem]'
         />
       </div>
-      <div
-        className='relative -bottom-16 -top-24 left-1/2 z-10 w-[55rem] -translate-x-1/2
-      rounded-2xl border bg-white p-2 shadow-lg '
-      >
+      <div className='-top-14 z-10 rounded-2xl border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800 md:relative md:-bottom-16 md:-top-24 md:left-1/2 md:w-[55rem] md:-translate-x-1/2'>
         <Form
           title='Contact For Hotel Booking'
           description='Contact us for booking hotel'
