@@ -22,7 +22,7 @@ const Card = ({
           />
         </div>
         <div className='px-4 py-2'>
-          <div className='mb-2 text-xl font-bold'>{title}</div>
+          <div className='mb-2 line-clamp-1 text-xl font-bold'>{title}</div>
           <p className='line-clamp-5 text-sm text-gray-700'>{description}</p>
         </div>
       </div>
