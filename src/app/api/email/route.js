@@ -16,6 +16,7 @@ export async function POST(req) {
     await resend.emails.send({
       from: 'Incognito Holidays <noreply@incognitoholidays.com>',
       to: 'enquiry@incognitoholidays.com',
+      reply_to: email,
       subject: subject,
       react: AdminEmailTemplate({
         name,
@@ -28,7 +29,8 @@ export async function POST(req) {
 
     await resend.emails.send({
       from: 'Incognito Holidays <noreply@incognitoholidays.com>',
-      to: 'enquiry@incognitoholidays.com',
+      to: email,
+      reply_to: 'enquiry@incognitoholidays.com',
       subject: subject,
       react: CustomerEmailTemplate({
         name,
