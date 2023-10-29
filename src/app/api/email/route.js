@@ -4,7 +4,8 @@
 
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import EmailTemplate from '@components/email-template';
+import AdminEmailTemplate from '@components/email/admin-template';
+import CustomerEmailTemplate from '@components/email/customer-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -15,8 +16,23 @@ export async function POST(req) {
     await resend.emails.send({
       from: 'Incognito Holidays <noreply@incognitoholidays.com>',
       to: 'enquiry@incognitoholidays.com',
+      reply_to: email,
       subject: subject,
-      react: EmailTemplate({
+      react: AdminEmailTemplate({
+        name,
+        phone,
+        email,
+        message,
+        data
+      })
+    });
+
+    await resend.emails.send({
+      from: 'Incognito Holidays <noreply@incognitoholidays.com>',
+      to: email,
+      reply_to: 'enquiry@incognitoholidays.com',
+      subject: subject,
+      react: CustomerEmailTemplate({
         name,
         phone,
         email,
