@@ -14,14 +14,14 @@ const PackageDetailsCard = ({
     <Link href={`/holidays/${destSlug}/${slug}`}>
       <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>
         <div className='space-x-4 md:flex md:pr-2'>
-          <div className='relative h-full w-96 shrink-0'>
+          <div className='relative h-44 md:h-full md:w-96 md:shrink-0'>
             <Image
               src={coverImage.asset.url}
               alt={coverImage.alt}
               fill
               placeholder='blur'
               blurDataURL={coverImage.asset.lqip}
-              className='rounded-l-lg'
+              className='rounded-lg md:rounded-l-lg'
             />
           </div>
           <div className='space-y-2 py-4'>
