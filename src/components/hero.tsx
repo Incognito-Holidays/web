@@ -14,7 +14,7 @@ const Hero = () => {
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1584732200355-486a95263014?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'https://images.unsplash.com/photo-1620549146396-9024d914cd99?auto=format&fit=crop&q=80&w=1471&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'photo2'
     },
     {
