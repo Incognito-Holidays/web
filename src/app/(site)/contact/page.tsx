@@ -43,6 +43,11 @@ const ContactPage = () => {
     setLoading(false);
     if (response.status === 200) {
       toast.success('Request Submitted Successfully!');
+      setName('');
+      setPhone('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
     } else {
       toast.error('Something went wrong! Please try again');
     }
