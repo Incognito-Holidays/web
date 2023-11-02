@@ -47,6 +47,13 @@ const FlightsPage = () => {
     setLoading(false);
     if (response.status === 200) {
       toast.success('Request Submitted Successfully!');
+      setName('');
+      setPhone('');
+      setEmail('');
+      setOriginPlace('');
+      setDestinationPlace('');
+      setTravelDate('');
+      setMessage('');
     } else {
       toast.error('Something went wrong! Please try again');
     }

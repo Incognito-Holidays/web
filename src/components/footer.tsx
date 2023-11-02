@@ -3,7 +3,7 @@ import { GrFacebook, GrLinkedin, GrInstagram } from 'react-icons/gr';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='relative bg-blue-950 pb-5 pt-8 text-white'>
+    <footer className='relative bg-blue-950 pb-3 pt-5 text-white'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-wrap text-left lg:text-left'>
           <div className='w-full px-6 lg:w-6/12'>
@@ -49,36 +49,31 @@ const Footer: React.FC = () => {
             </div> */}
           </div>
           <div className='w-full px-3 lg:w-6/12'>
-            <div className='items-top flex flex-wrap'>
-              <div className='mb-4 ml-auto w-full px-4 lg:w-5/12'>
-                <span className='mb-2 block text-sm font-semibold uppercase'>
-                  Address (Main branch)
-                </span>
-                <p className='text-sm font-semibold'>Chennai, Tamil Nadu.</p>
-                <p className='mt-4 text-sm font-semibold'>
-                  Email: chennai@incognitoholidays.com
-                </p>
-              </div>
-              <div className='ml-auto w-full px-4 lg:w-5/12'>
-                <span className='mb-2 block text-sm font-semibold uppercase'>
-                  Address (Kolkata Branch)
-                </span>
-                <p className='text-sm font-semibold'>
-                  Ho Chi Minh Sarani, Kolkata.
-                </p>
-                <p className='mt-4 text-sm font-semibold'>
-                  Email: kolkata@incognitoholidays.com
-                </p>
-              </div>
+            {/* <div className='items-top flex flex-wrap'> */}
+            <div className='mb-2 ml-auto w-full px-4 lg:w-5/12'>
+              <span className='mb-1 block text-sm font-semibold uppercase'>
+                Chennai branch
+              </span>
+              <p className='mb-4 text-sm font-semibold'>
+                chennai@incognitoholidays.com
+              </p>
+              <span className='mb-1 block text-sm font-semibold uppercase'>
+                Kolkata Branch
+              </span>
+              <p className='text-sm font-semibold'>
+                kolkata@incognitoholidays.com
+              </p>
             </div>
+            {/* </div> */}
           </div>
         </div>
-        <hr className='border-blueGray-300 my-6' />
-        <div className='flex flex-wrap items-center justify-center md:justify-between'>
+        <hr className='my-3' />
+        <div className='mt-2 flex flex-wrap items-center justify-center md:justify-between'>
           <div className='mx-auto flex flex-col text-center'>
-            <h1>
+            <h1 className='text-sm'>
               Copyright ©<span id='get-current-year'>2023</span> Incognito
-              Holidays Private Limited. Site Developed & Maintained by
+              Leisure Holidays Private Limited
+              {/* Site Developed & Maintained by
               <span className='font-semibold'>
                 <a
                   href='https://linktr.ee/sigma3labs'
@@ -88,7 +83,7 @@ const Footer: React.FC = () => {
                   {' '}
                   Sigma3Labs.
                 </a>
-              </span>
+              </span> */}
             </h1>
           </div>
         </div>
