@@ -1,4 +1,5 @@
 import '@styles/global.css';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import Header from '@components/header';
@@ -14,9 +15,19 @@ export const metadata: Metadata = {
   description: 'Your travel companion'
 };
 
-const SiteRootLayout: React.FC<PropsWithChildren> = ({ children }) => {
+const SiteRootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang='en'>
+      <Script src='https://www.googletagmanager.com/gtag/js?id=G-Z6DY8YHM9W' />
+      <Script id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+      
+          gtag('config', 'G-Z6DY8YHM9W');
+        `}
+      </Script>
       <body className={inter.className}>
         <Header />
         {children}
