@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import Header from '@components/header';
 import Footer from '@components/footer';
+import Popup from '@components/popup';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
 
@@ -21,6 +22,7 @@ const SiteRootLayout: React.FC<PropsWithChildren> = ({ children }) => {
         {children}
         <Footer />
         <Toaster position='bottom-right' />
+        <Popup />
       </body>
     </html>
   );
