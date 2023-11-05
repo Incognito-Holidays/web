@@ -1787,9 +1787,9 @@
     "@types/react" "*"
 
 "@types/react-dom@^18.2.7":
-  version "18.2.7"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.7.tgz#67222a08c0a6ae0a0da33c3532348277c70abb63"
-  integrity sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==
+  version "18.2.14"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.14.tgz#c01ba40e5bb57fc1dc41569bb3ccdb19eab1c539"
+  integrity sha512-V835xgdSVmyQmI1KLV2BEIUgqEuinxp9O4G6g3FqO/SqLac049E53aysv0oEFD2kHfejeKU+ZqL2bcFWj9gLAQ==
   dependencies:
     "@types/react" "*"
 
@@ -1801,9 +1801,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18.2.18":
-  version "18.2.21"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.21.tgz#774c37fd01b522d0b91aed04811b58e4e0514ed9"
-  integrity sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==
+  version "18.2.35"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.35.tgz#bacdc6d139a4d6d47e5186e1a96952c65e1f3792"
+  integrity sha512-LG3xpFZ++rTndV+/XFyX5vUP7NI9yxyk+MQvBDq+CVs8I9DLSc3Ymwb1Vmw5YDoeNeHN4PDZa3HylMKJYT9PNQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1819,9 +1819,9 @@
     csstype "^3.0.2"
 
 "@types/scheduler@*":
-  version "0.16.3"
-  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
-  integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
+  version "0.16.5"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.5.tgz#4751153abbf8d6199babb345a52e1eb4167d64af"
+  integrity sha512-s/FPdYRmZR8SjLWGMCuax7r3qCWQw9QKHzXVukAuuIJkXkDRwp+Pu5LMIVFi0Fxbav35WURicYr8u1QsoybnQw==
 
 "@types/semver@^7.5.0":
   version "7.5.0"
