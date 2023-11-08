@@ -1,4 +1,4 @@
 import holiday from './holiday';
 import location from './location';
-
-export const schemaTypes = [holiday, location];
+import blog from './blog';
+export const schemaTypes = [holiday, location, blog];
