@@ -19,6 +19,17 @@ export default defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
+      name: 'type',
+      title: 'Type',
+      type: 'string',
+      options: {
+        list: ['domestic', 'international'],
+        layout: 'radio',
+        direction: 'horizontal'
+      },
+      validation: (rule) => rule.required()
+    }),
+    defineField({
       name: 'destination',
       title: 'Destination',
       type: 'array',
@@ -30,12 +41,18 @@ export default defineType({
       ],
       validation: (rule) => rule.min(1).required()
     }),
-    // defineField({
-    //   name: 'category',
-    //   title: 'Category',
-    //   type: 'string',
-    //   validation: (rule) => rule.required()
-    // }),
+    defineField({
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'reference',
+          to: [{ type: 'category' }]
+        })
+      ],
+      validation: (rule) => rule.required()
+    }),
     defineField({
       name: 'coverImage',
       title: 'Cover image',
