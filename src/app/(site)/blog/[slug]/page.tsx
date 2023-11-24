@@ -8,6 +8,17 @@ type BlogPageProps = {
   };
 };
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
+
 const BlogPage = async ({ params }: BlogPageProps) => {
   const { slug } = params;
   const data = await getBlog(slug);

@@ -4,6 +4,17 @@ import Container from '@components/layout/container';
 import PackagesCard from '@components/packages-card';
 import NextBreadcrumb from '@components/breadcrumbs';
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
+
 const HolidaysPage = async () => {
   const data = await getAllDestinations();
 

@@ -3,6 +3,17 @@ import { LuChevronRight } from 'react-icons/lu';
 import NextBreadcrumb from '@components/breadcrumbs';
 import Whychose from '@components/whychose';
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
+
 const About: React.FC = () => {
   return (
     <div>

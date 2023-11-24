@@ -7,6 +7,16 @@ import PackageDetails from '@components/package-details';
 import BookNowButton from '@components/booknow-button';
 import NextBreadcrumb from '@components/breadcrumbs';
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
 const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
   const data = await getPackage(params.packageSlug);
 
