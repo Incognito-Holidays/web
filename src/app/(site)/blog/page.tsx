@@ -4,6 +4,17 @@ import { getAllBlogs } from '@lib/functions/blog';
 import Container from '@components/layout/container';
 import { Button } from '@components/ui/button';
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
+
 const BlogsPage = async () => {
   const data = await getAllBlogs();
 
