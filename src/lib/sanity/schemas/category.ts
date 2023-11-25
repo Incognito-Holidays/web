@@ -1,8 +1,8 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'hotels',
-  title: 'Hotels',
+  name: 'category',
+  title: 'Category',
   type: 'document',
   fields: [
     defineField({
@@ -32,26 +32,6 @@ export default defineType({
         })
       ],
       validation: (rule) => rule.required()
-    }),
-    defineField({
-      name: 'logos',
-      title: 'Hotel Logos',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'image',
-          options: { hotspot: true },
-          fields: [
-            defineField({
-              name: 'alt',
-              title: 'Alt text',
-              type: 'string',
-              validation: (rule) => rule.required()
-            })
-          ],
-          validation: (rule) => rule.required()
-        })
-      ]
     })
   ]
 });

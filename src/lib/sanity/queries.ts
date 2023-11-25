@@ -18,6 +18,8 @@ export const allBlogsQuery = groq`
 
 export const blogQuery = groq`
   *[_type == 'blog' && slug.current == $slug][0] {
+    _createdAt,
+    _updatedAt,
     title,
     subtitle,
     coverImage {
@@ -120,7 +122,7 @@ export const packageQuery = groq`
 `;
 
 export const hoteldestinationQuery = groq`
-  * [_type == "hotel-location"] {
+  * [_type == "hotels"] {
     _id,
     "slug": slug.current,
     name,
@@ -134,7 +136,7 @@ export const hoteldestinationQuery = groq`
   }
 `;
 export const hotellogosQuery = groq`
-  * [_type == "hotel-location"  && slug.current == $slug][0] {
+  * [_type == "hotels"  && slug.current == $slug][0] {
     _id,
     "slug": slug.current,
     logos[] {

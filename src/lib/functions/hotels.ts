@@ -5,13 +5,13 @@ import type { HotelDestinations, HotelLogos } from '@lib/types';
 export function getAllHotelDestinations() {
   return sanityFetch<HotelDestinations[]>({
     query: hoteldestinationQuery,
-    tags: ['hotel-location']
+    tags: ['hotels']
   });
 }
 export function getAllHotelLogos(slug: string) {
   return sanityFetch<HotelLogos>({
     query: hotellogosQuery,
     params: { slug },
-    tags: ['hotel-logos']
+    tags: [`hotels:${slug}`]
   });
 }
