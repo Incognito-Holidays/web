@@ -118,3 +118,30 @@ export const packageQuery = groq`
     }
   }
 `;
+
+export const hoteldestinationQuery = groq`
+  * [_type == "hotel-location"] {
+    _id,
+    "slug": slug.current,
+    name,
+    image {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip
+      }
+    }
+  }
+`;
+export const hotellogosQuery = groq`
+  * [_type == "hotel-location"  && slug.current == $slug][0] {
+    _id,
+    "slug": slug.current,
+    logos[] {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip
+      }
+    }
+}`;

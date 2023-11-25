@@ -105,3 +105,27 @@ export type Package = {
     rating: number;
   }[];
 };
+
+export type HotelDestinations = {
+  _id: string;
+  slug: string;
+  name: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  };
+};
+export type HotelLogos = {
+  _id: string;
+  slug: string;
+  logos: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  }[];
+};
