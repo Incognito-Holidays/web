@@ -18,6 +18,8 @@ export const allBlogsQuery = groq`
 
 export const blogQuery = groq`
   *[_type == 'blog' && slug.current == $slug][0] {
+    _createdAt,
+    _updatedAt,
     title,
     subtitle,
     coverImage {

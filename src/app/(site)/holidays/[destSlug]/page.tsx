@@ -8,6 +8,16 @@ import Container from '@components/layout/container';
 import PackageDetailsCard from '@components/package-details-card';
 import NextBreadcrumb from '@components/breadcrumbs';
 
+type Props = {
+  params: { slug: string };
+};
+export const generateMetadata = ({ params }: Props) => {
+  return {
+    title: params.slug,
+    description: 'Package Page',
+    url: `/${params.slug}`
+  };
+};
 const PackagesPage = async ({ params }: { params: { destSlug: string } }) => {
   const [count, data] = await Promise.all([
     getPackagesCountByDestination(params.destSlug),
