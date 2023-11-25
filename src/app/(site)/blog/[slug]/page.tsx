@@ -11,11 +11,14 @@ type BlogPageProps = {
 type Props = {
   params: { slug: string };
 };
-export const generateMetadata = ({ params }: Props) => {
+export const generateMetadata = async ({ params }: Props) => {
+  const data = await getBlog(params.slug);
   return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
+    title: data.title,
+    description: data.subtitle,
+    alternates: {
+      canonical: `/blog/${params.slug}`
+    }
   };
 };
 

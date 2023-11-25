@@ -14,7 +14,9 @@ export const generateMetadata = ({ params }: Props) => {
   return {
     title: params.slug,
     description: 'Package Page',
-    url: `/${params.slug}`
+    alternates: {
+      canonical: `/blog/${params.slug}`
+    }
   };
 };
 const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
