@@ -41,18 +41,18 @@ export default defineType({
       ],
       validation: (rule) => rule.min(1).required()
     }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'reference',
-          to: [{ type: 'category' }]
-        })
-      ],
-      validation: (rule) => rule.required()
-    }),
+    // defineField({
+    //   name: 'categories',
+    //   title: 'Categories',
+    //   type: 'array',
+    //   of: [
+    //     defineArrayMember({
+    //       type: 'reference',
+    //       to: [{ type: 'category' }]
+    //     })
+    //   ],
+    //   validation: (rule) => rule.required()
+    // }),
     defineField({
       name: 'coverImage',
       title: 'Cover image',
