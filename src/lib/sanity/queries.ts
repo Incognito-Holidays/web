@@ -23,9 +23,15 @@ export const blogQuery = groq`
     title,
     subtitle,
     coverImage {
+      alt,
       asset -> {
         url,
-        "lqip": metadata.lqip
+        "lqip": metadata.lqip,
+        "metadata": {
+          "type": mimeType,
+          "height": metadata.dimensions.height,
+          "width": metadata.dimensions.width
+        }
       }
     },
     body
@@ -72,6 +78,24 @@ export const destinationQuery = groq`
   }
 `;
 
+export const destinationBySlugQuery = groq`
+  *[_type == "location" && $slug == slug.current][0] {
+    name,
+    image {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip,
+        "metadata": {
+          "type": mimeType,
+          "height": metadata.dimensions.height,
+          "width": metadata.dimensions.width
+        }
+      }
+    }
+  }
+`;
+
 export const packagesCountByDestinationQuery = groq`
   count(*[_type == "holiday" && $slug in destination[]->slug.current])
 `;
@@ -90,20 +114,25 @@ export const packagesByDestinationQuery = groq`
     },
     description,
     "startingPrice": price[0].rate
-}
+  }
 `;
 
 export const packageQuery = groq`
   *[_type == "holiday" && slug.current == $slug][0] {
     title,
-    "slug": slug.current,
+    "destSlug": destination[0]->slug.current,
     "destinationName": destination[]->name,
     description,
     gallery[] {
       alt,
       asset -> {
         url,
-        "lqip": metadata.lqip
+        "lqip": metadata.lqip,
+        "metadata": {
+          "type": mimeType,
+          "height": metadata.dimensions.height,
+          "width": metadata.dimensions.width
+        }
       }
     },
     daysNights,

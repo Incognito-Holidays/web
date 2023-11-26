@@ -16,6 +16,8 @@ export type Blogs = {
 };
 
 export type Blog = {
+  _createdAt: string;
+  _updatedAt: string;
   title: string;
   subtitle: string;
   coverImage: {
@@ -23,6 +25,11 @@ export type Blog = {
     asset: {
       url: string;
       lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
     };
   };
   body: PortableTextBlock[];
@@ -62,6 +69,22 @@ export type Destinations = {
   };
 };
 
+export type Destination = {
+  name: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
+    };
+  };
+};
+
 export type DestinationPackages = {
   _id: string;
   title: string;
@@ -79,7 +102,7 @@ export type DestinationPackages = {
 
 export type Package = {
   title: string;
-  slug: string;
+  destSlug: string;
   destinationName: string[];
   description: string;
   gallery: {
@@ -87,6 +110,11 @@ export type Package = {
     asset: {
       url: string;
       lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
     };
   }[];
   daysNights: {

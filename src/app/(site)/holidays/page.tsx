@@ -1,18 +1,21 @@
 import { LuChevronRight } from 'react-icons/lu';
 import { getAllDestinations } from '@lib/functions/holidays';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import PackagesCard from '@components/packages-card';
 import NextBreadcrumb from '@components/breadcrumbs';
+import type { Metadata } from 'next';
 
-type Props = {
-  params: { slug: string };
-};
-export const generateMetadata = ({ params }: Props) => {
-  return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
-  };
+export const metadata: Metadata = {
+  title: 'Holidays',
+  alternates: {
+    canonical: '/holidays'
+  },
+  openGraph: {
+    ...ogFields,
+    title: 'Holidays',
+    url: '/holidays'
+  }
 };
 
 const HolidaysPage = async () => {

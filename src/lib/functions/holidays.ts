@@ -1,16 +1,30 @@
 import { sanityFetch } from '@lib/sanity/fetch';
 import {
+  destinationBySlugQuery,
   destinationQuery,
   packageQuery,
   packagesByDestinationQuery,
   packagesCountByDestinationQuery
 } from '@lib/sanity/queries';
-import type { DestinationPackages, Destinations, Package } from '@lib/types';
+import type {
+  Destination,
+  DestinationPackages,
+  Destinations,
+  Package
+} from '@lib/types';
 
 export function getAllDestinations() {
   return sanityFetch<Destinations[]>({
     query: destinationQuery,
     tags: ['location']
+  });
+}
+
+export function getDestination(slug: string) {
+  return sanityFetch<Destination>({
+    query: destinationBySlugQuery,
+    params: { slug },
+    tags: [`location:${slug}`]
   });
 }
 

@@ -1,18 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBlogs } from '@lib/functions/blog';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import { Button } from '@components/ui/button';
+import type { Metadata } from 'next';
 
-type Props = {
-  params: { slug: string };
-};
-export const generateMetadata = ({ params }: Props) => {
-  return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
-  };
+export const metadata: Metadata = {
+  title: 'Blog',
+  alternates: {
+    canonical: '/blog'
+  },
+  openGraph: {
+    ...ogFields,
+    title: 'Blog',
+    url: '/blog'
+  }
 };
 
 const BlogsPage = async () => {

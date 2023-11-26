@@ -1,20 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
+
 import { LuChevronRight } from 'react-icons/lu';
+import { ogFields } from '@app/shared-metadata';
 import NextBreadcrumb from '@components/breadcrumbs';
 import Whychose from '@components/whychose';
+import type { Metadata } from 'next';
 
-type Props = {
-  params: { slug: string };
-};
-export const generateMetadata = ({ params }: Props) => {
-  return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
-  };
+export const metadata: Metadata = {
+  title: 'About',
+  alternates: {
+    canonical: '/about'
+  },
+  openGraph: {
+    ...ogFields,
+    title: 'About',
+    url: '/about'
+  }
 };
 
-const About: React.FC = () => {
+const AboutPage = () => {
   return (
     <div>
       <NextBreadcrumb
@@ -70,4 +74,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default AboutPage;
