@@ -145,5 +145,12 @@ export const hotellogosQuery = groq`
         url,
         "lqip": metadata.lqip
       }
+    },
+    slider[] {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip
+      }
     }
 }`;

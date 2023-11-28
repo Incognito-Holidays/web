@@ -121,6 +121,13 @@ export type HotelDestinations = {
 export type HotelLogos = {
   _id: string;
   slug: string;
+  slider: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  }[];
   logos: {
     alt: string;
     asset: {
