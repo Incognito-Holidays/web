@@ -68,6 +68,12 @@ export default defineType({
               title: 'Alt text',
               type: 'string',
               validation: (rule) => rule.required()
+            }),
+            defineField({
+              type: 'string',
+              title: 'Hotel Name',
+              name: 'hotelName',
+              validation: (rule) => rule.required()
             })
           ],
           validation: (rule) => rule.required()

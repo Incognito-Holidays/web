@@ -130,6 +130,7 @@ export type HotelLogos = {
   }[];
   logos: {
     alt: string;
+    hotelName: string;
     asset: {
       url: string;
       lqip: string;

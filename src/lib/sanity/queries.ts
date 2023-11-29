@@ -141,6 +141,7 @@ export const hotellogosQuery = groq`
     "slug": slug.current,
     logos[] {
       alt,
+      hotelName,
       asset -> {
         url,
         "lqip": metadata.lqip
