@@ -14,7 +14,7 @@ const HotelDetails = async ({ params }: { params: { slug: string } }) => {
         <div className='mb-6 mt-6'>
           <div className='grid grid-cols-2 place-items-center gap-1 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-6'>
             {data.logos.map((item) => (
-              <HotelLogo key={item.asset.lqip} data={item} />
+              <HotelLogo key={item.asset.lqip} place={data.name} data={item} />
             ))}
           </div>
         </div>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import HotelModal from './hotel-modal';
 
 type Props = {
+  place: string;
   data: {
     alt: string;
     hotelName: string;
@@ -15,7 +16,7 @@ type Props = {
   };
 };
 
-const HotelLogo = ({ data }: Props) => {
+const HotelLogo = ({ data, place }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -33,6 +34,7 @@ const HotelLogo = ({ data }: Props) => {
       <HotelModal
         isOpen={isModalOpen}
         setIsOpen={setIsModalOpen}
+        place={place}
         hotelName={data.hotelName}
       />
     </>

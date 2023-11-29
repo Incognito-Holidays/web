@@ -138,6 +138,7 @@ export const hoteldestinationQuery = groq`
 export const hotellogosQuery = groq`
   * [_type == "hotels"  && slug.current == $slug][0] {
     _id,
+    name,
     "slug": slug.current,
     logos[] {
       alt,

@@ -120,6 +120,7 @@ export type HotelDestinations = {
 };
 export type HotelLogos = {
   _id: string;
+  name: string;
   slug: string;
   slider: {
     alt: string;

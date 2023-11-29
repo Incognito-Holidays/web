@@ -24,7 +24,7 @@ const HotelsPage = async () => {
       <main className='p-4 md:py-6'>
         <Container>
           <h1 className='my-4 text-center text-xl font-semibold text-cyan-700 md:text-2xl'>
-            Find best hotels
+            Find Best Hotels
           </h1>
           <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
             {data.map((item) => (

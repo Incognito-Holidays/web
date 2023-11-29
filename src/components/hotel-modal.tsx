@@ -7,10 +7,11 @@ import type { Dispatch, SetStateAction } from 'react';
 type ModalProps = {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  place: string;
   hotelName: string;
 };
 
-const HotelModal = ({ isOpen, setIsOpen, hotelName }: ModalProps) => {
+const HotelModal = ({ isOpen, setIsOpen, place, hotelName }: ModalProps) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -39,6 +40,7 @@ const HotelModal = ({ isOpen, setIsOpen, hotelName }: ModalProps) => {
         message,
         data: {
           hotel: {
+            place,
             hotelName,
             checkIn,
             checkOut,
@@ -143,6 +145,23 @@ const HotelModal = ({ isOpen, setIsOpen, hotelName }: ModalProps) => {
                             onChange={(e): void => setEmail(e.target.value)}
                             placeholder='name@example.com'
                             className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm'
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor='place'
+                            className='mb-2 block text-sm font-medium text-gray-900'
+                          >
+                            Location
+                          </label>
+                          <input
+                            id='place'
+                            type='text'
+                            value={place}
+                            required
+                            readOnly
+                            className='block w-full cursor-not-allowed rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm'
                           />
                         </div>
                         <div>
