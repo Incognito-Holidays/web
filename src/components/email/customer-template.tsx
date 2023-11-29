@@ -32,6 +32,7 @@ type CustomerEmailTemplateProps = {
     };
     hotel?: {
       place: string;
+      hotelName: string;
       checkIn: string;
       checkOut: string;
       rooms: string;
@@ -131,6 +132,9 @@ const CustomerEmailTemplate = ({
               <div>
                 <Text>
                   <strong>Place:</strong> {data.hotel.place}
+                </Text>
+                <Text>
+                  <strong>Hotel Name:</strong> {data.hotel.hotelName}
                 </Text>
                 <Text>
                   <strong>Check-In date:</strong> {data.hotel.checkIn}
