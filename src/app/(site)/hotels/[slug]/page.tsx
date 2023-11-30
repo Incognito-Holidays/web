@@ -1,12 +1,12 @@
 import 'swiper/css';
+import { LuChevronRight } from 'react-icons/lu';
 import { getAllHotelLogos } from '@lib/functions/hotels';
 import { ogFields } from '@app/shared-metadata';
 import HotelSwiper from '@components/hotel-swiper';
 import Container from '@components/layout/container';
 import HotelLogo from '@components/hotel-logo';
-import type { Metadata } from 'next';
 import NextBreadcrumb from '@components/breadcrumbs';
-import { LuChevronRight } from 'react-icons/lu';
+import type { Metadata } from 'next';
 
 type Props = {
   params: { slug: string };
