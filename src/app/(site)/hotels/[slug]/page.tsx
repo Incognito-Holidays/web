@@ -5,6 +5,8 @@ import HotelSwiper from '@components/hotel-swiper';
 import Container from '@components/layout/container';
 import HotelLogo from '@components/hotel-logo';
 import type { Metadata } from 'next';
+import NextBreadcrumb from '@components/breadcrumbs';
+import { LuChevronRight } from 'react-icons/lu';
 
 type Props = {
   params: { slug: string };
@@ -40,6 +42,18 @@ const HotelDetails = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div>
+      <NextBreadcrumb
+        homeElement={'Home'}
+        separator={
+          <span className='flex items-center'>
+            <LuChevronRight />
+          </span>
+        }
+        activeClasses='text-amber-500'
+        containerClasses='flex py-1'
+        listClasses='hover:underline mx-2 font-bold text-sm'
+        capitalizeLinks
+      />
       <HotelSwiper slider={data.slider} />
       <Container>
         <div className='mb-6 mt-6'>
