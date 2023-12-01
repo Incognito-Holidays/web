@@ -1,8 +1,22 @@
 import { LuChevronRight } from 'react-icons/lu';
 import { getAllHotelDestinations } from '@lib/functions/hotels';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import NextBreadcrumb from '@components/breadcrumbs';
 import HotelsCard from '@components/hotels-card';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hotels',
+  alternates: {
+    canonical: '/hotels'
+  },
+  openGraph: {
+    ...ogFields,
+    title: 'Hotels',
+    url: '/hotels'
+  }
+};
 
 const HotelsPage = async () => {
   const data = await getAllHotelDestinations();

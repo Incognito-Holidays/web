@@ -170,6 +170,18 @@ export const hotellogosQuery = groq`
     _id,
     name,
     "slug": slug.current,
+    image {
+      alt,
+      asset -> {
+        url,
+        "lqip": metadata.lqip,
+        "metadata": {
+          "type": mimeType,
+          "height": metadata.dimensions.height,
+          "width": metadata.dimensions.width
+        }
+      }
+    },
     logos[] {
       alt,
       hotelName,

@@ -144,8 +144,7 @@ export default defineType({
             { name: 'rate', type: 'number' }
           ]
         })
-      ],
-      validation: (rule) => rule.required()
+      ]
     }),
     defineField({
       name: 'hotel',

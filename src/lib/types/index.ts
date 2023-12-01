@@ -151,6 +151,18 @@ export type HotelLogos = {
   _id: string;
   name: string;
   slug: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
+    };
+  };
   slider: {
     alt: string;
     asset: {
