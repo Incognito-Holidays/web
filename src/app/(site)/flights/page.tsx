@@ -72,7 +72,7 @@ const FlightsPage = () => {
             }
             activeClasses='text-amber-500'
             containerClasses='flex  py-1'
-            listClasses='hover:underline mx-2 font-bold text-lg text-center '
+            listClasses='hover:underline mx-2 font-bold text-sm'
             capitalizeLinks
           />
           <Image
