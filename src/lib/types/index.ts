@@ -146,6 +146,7 @@ export type HotelDestinations = {
     };
   };
 };
+
 export type HotelLogos = {
   _id: string;
   name: string;
@@ -165,4 +166,17 @@ export type HotelLogos = {
       lqip: string;
     };
   }[];
+};
+
+export type Sitemap = {
+  holiday: {
+    locations: string[];
+    packages: {
+      destination: {
+        package: string;
+      }[];
+    }[];
+  };
+  hotel: string[];
+  blog: string[];
 };

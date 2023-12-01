@@ -40,7 +40,7 @@ export function getPackagesByDestination(slug: string) {
   return sanityFetch<DestinationPackages[]>({
     query: packagesByDestinationQuery,
     params: { slug },
-    tags: ['loaction', 'holiday']
+    tags: ['location', 'holiday']
   });
 }
 

@@ -47,7 +47,7 @@ export const homePageSearchQuery = groq`
 `;
 
 export const cardQuery = groq`
-  * [_type == "holiday"] {
+  *[_type == "holiday"] {
     _id,
     title,
     description,
@@ -64,7 +64,7 @@ export const cardQuery = groq`
 `;
 
 export const destinationQuery = groq`
-  * [_type == "location"] {
+  *[_type == "location"] {
     _id,
     "slug": slug.current,
     name,
@@ -151,7 +151,7 @@ export const packageQuery = groq`
 `;
 
 export const hoteldestinationQuery = groq`
-  * [_type == "hotels"] {
+  *[_type == "hotels"] {
     _id,
     "slug": slug.current,
     name,
@@ -164,8 +164,9 @@ export const hoteldestinationQuery = groq`
     }
   }
 `;
+
 export const hotellogosQuery = groq`
-  * [_type == "hotels"  && slug.current == $slug][0] {
+  *[_type == "hotels" && slug.current == $slug][0] {
     _id,
     name,
     "slug": slug.current,
@@ -184,4 +185,16 @@ export const hotellogosQuery = groq`
         "lqip": metadata.lqip
       }
     }
-}`;
+  }
+`;
+
+export const sitemapQuery = groq`
+  {
+    "holiday": {
+      "locations": array::unique(*[_type == "holiday"].destination[]->slug.current),
+      "packages": *[_type == "holiday"]{destination[]->{"package": slug.current + '/' + ^.slug.current}} 
+    },
+    "hotel": *[_type == 'hotels'].slug.current,
+    "blog": *[_type == "blog"].slug.current
+  }
+`;
