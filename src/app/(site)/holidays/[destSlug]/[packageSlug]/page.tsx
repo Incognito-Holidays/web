@@ -2,24 +2,43 @@ import { LuChevronRight } from 'react-icons/lu';
 import Image from 'next/image';
 import { GrLocation } from 'react-icons/gr';
 import { getPackage } from '@lib/functions/holidays';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import PackageDetails from '@components/package-details';
 import BookNowButton from '@components/booknow-button';
 import NextBreadcrumb from '@components/breadcrumbs';
+import type { Metadata } from 'next';
 
 type Props = {
-  params: { slug: string };
+  params: { packageSlug: string };
 };
-export const generateMetadata = ({ params }: Props) => {
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const data = await getPackage(params.packageSlug);
+
   return {
-    title: params.slug,
-    description: 'Package Page',
+    title: `${data.title} Package`,
     alternates: {
-      canonical: `/blog/${params.slug}`
+      canonical: `/holidays/${data.destSlug}/${params.packageSlug}`
+    },
+    openGraph: {
+      ...ogFields,
+      title: `${data.title} Package`,
+      url: `/holidays/${data.destSlug}/${params.packageSlug}`,
+      images: [
+        {
+          url: data.gallery[0].asset.url,
+          alt: data.gallery[0].alt,
+          width: data.gallery[0].asset.metadata.width,
+          height: data.gallery[0].asset.metadata.height,
+          type: data.gallery[0].asset.metadata.type
+        }
+      ]
     }
   };
-};
-const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
+}
+
+const HolidayPackagePage = async ({ params }: Props) => {
   const data = await getPackage(params.packageSlug);
 
   return (
@@ -121,4 +140,4 @@ const PackagePage = async ({ params }: { params: { packageSlug: string } }) => {
   );
 };
 
-export default PackagePage;
+export default HolidayPackagePage;

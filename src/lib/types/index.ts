@@ -16,6 +16,8 @@ export type Blogs = {
 };
 
 export type Blog = {
+  _createdAt: string;
+  _updatedAt: string;
   title: string;
   subtitle: string;
   coverImage: {
@@ -23,6 +25,11 @@ export type Blog = {
     asset: {
       url: string;
       lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
     };
   };
   body: PortableTextBlock[];
@@ -37,6 +44,7 @@ export type Search = {
 export type Cards = {
   _id: string;
   title: string;
+  type: string;
   description: string;
   destinationSlug: string;
   packageSlug: string;
@@ -62,6 +70,22 @@ export type Destinations = {
   };
 };
 
+export type Destination = {
+  name: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
+    };
+  };
+};
+
 export type DestinationPackages = {
   _id: string;
   title: string;
@@ -79,7 +103,7 @@ export type DestinationPackages = {
 
 export type Package = {
   title: string;
-  slug: string;
+  destSlug: string;
   destinationName: string[];
   description: string;
   gallery: {
@@ -87,6 +111,11 @@ export type Package = {
     asset: {
       url: string;
       lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
     };
   }[];
   daysNights: {
@@ -104,4 +133,63 @@ export type Package = {
     hotelName: string;
     rating: number;
   }[];
+};
+
+export type HotelDestinations = {
+  _id: string;
+  slug: string;
+  name: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  };
+};
+
+export type HotelLogos = {
+  _id: string;
+  name: string;
+  slug: string;
+  image: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+      metadata: {
+        type: string;
+        height: number;
+        width: number;
+      };
+    };
+  };
+  slider: {
+    alt: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  }[];
+  logos: {
+    alt: string;
+    hotelName: string;
+    asset: {
+      url: string;
+      lqip: string;
+    };
+  }[];
+};
+
+export type Sitemap = {
+  holiday: {
+    locations: string[];
+    packages: {
+      destination: {
+        package: string;
+      }[];
+    }[];
+  };
+  hotel: string[];
+  blog: string[];
 };

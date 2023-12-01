@@ -1,24 +1,46 @@
 import { LuChevronRight } from 'react-icons/lu';
 import { AiOutlineLine } from 'react-icons/ai';
 import {
+  getDestination,
   getPackagesByDestination,
   getPackagesCountByDestination
 } from '@lib/functions/holidays';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import PackageDetailsCard from '@components/package-details-card';
 import NextBreadcrumb from '@components/breadcrumbs';
+import type { Metadata } from 'next';
 
 type Props = {
-  params: { slug: string };
+  params: { destSlug: string };
 };
-export const generateMetadata = ({ params }: Props) => {
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const data = await getDestination(params.destSlug);
+
   return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
+    title: `${data.name} tour packages`,
+    alternates: {
+      canonical: `/holidays/${params.destSlug}`
+    },
+    openGraph: {
+      ...ogFields,
+      title: `${data.name} tour packages`,
+      url: `/holidays/${params.destSlug}`,
+      images: [
+        {
+          url: data.image.asset.url,
+          alt: data.image.alt,
+          width: data.image.asset.metadata.width,
+          height: data.image.asset.metadata.height,
+          type: data.image.asset.metadata.type
+        }
+      ]
+    }
   };
-};
-const PackagesPage = async ({ params }: { params: { destSlug: string } }) => {
+}
+
+const HolidayPackagesPage = async ({ params }: Props) => {
   const [count, data] = await Promise.all([
     getPackagesCountByDestination(params.destSlug),
     getPackagesByDestination(params.destSlug)
@@ -67,4 +89,4 @@ const PackagesPage = async ({ params }: { params: { destSlug: string } }) => {
   );
 };
 
-export default PackagesPage;
+export default HolidayPackagesPage;

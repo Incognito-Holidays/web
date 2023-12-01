@@ -1,16 +1,20 @@
+/* eslint-disable react/jsx-key */
 import { getAllCards, getHomePageSearch } from '@lib/functions/home';
 import Hero from '@components/hero';
 import Search from '@components/search';
 import Container from '@components/layout/container';
-import Card from '@components/card';
 import TravelBlogs from '@components/travel-blogs';
 import Whychose from '@components/whychose';
+import Popup from '@components/popup';
+import PackageSwiper from '@components/PackageSwiper';
+import PackageSwiperDomestic from '@components/PackageSwiperDomestic';
 
 const HomePage = async () => {
   const [data, search] = await Promise.all([
     getAllCards(),
     getHomePageSearch()
   ]);
+  // console.log(data);
 
   return (
     <main>
@@ -21,24 +25,18 @@ const HomePage = async () => {
       <Container>
         <div className='mt-12 px-4 md:mt-36'>
           <h1 className='text-center text-3xl font-bold text-blue-950'>
-            Guides for your next vacation
+            International Holiday Packages
           </h1>
-          <div className='mt-10 grid place-items-center gap-8 pb-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            {data.map((item) => (
-              <Card
-                key={item._id}
-                title={item.title}
-                coverImage={item.coverImage}
-                description={item.description}
-                destinationSlug={item.destinationSlug}
-                packageSlug={item.packageSlug}
-              />
-            ))}
-          </div>
+          <PackageSwiper data={data} />
+          <h1 className='text-center text-3xl font-bold text-blue-950'>
+            India and Around Holiday Packages
+          </h1>
+          <PackageSwiperDomestic data={data} />
         </div>
         <TravelBlogs />
         <Whychose />
       </Container>
+      <Popup />
     </main>
   );
 };

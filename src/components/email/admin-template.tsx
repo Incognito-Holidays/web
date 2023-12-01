@@ -32,6 +32,7 @@ type AdminEmailTemplateProps = {
     };
     hotel?: {
       place: string;
+      hotelName: string;
       checkIn: string;
       checkOut: string;
       rooms: string;
@@ -92,6 +93,7 @@ const AdminEmailTemplate = ({
             {data.hotel && (
               <div>
                 <Text>Place: {data.hotel.place}</Text>
+                <Text>Hotel Name: {data.hotel.hotelName}</Text>
                 <Text>Check-In date: {data.hotel.checkIn}</Text>
                 <Text>Check-Out date: {data.hotel.checkOut}</Text>
                 <Text>Number of rooms: {data.hotel.rooms}</Text>

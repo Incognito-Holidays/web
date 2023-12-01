@@ -1,18 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { LuChevronRight } from 'react-icons/lu';
 import { getAllBlogs } from '@lib/functions/blog';
+import { ogFields } from '@app/shared-metadata';
 import Container from '@components/layout/container';
 import { Button } from '@components/ui/button';
+import NextBreadcrumb from '@components/breadcrumbs';
+import type { Metadata } from 'next';
 
-type Props = {
-  params: { slug: string };
-};
-export const generateMetadata = ({ params }: Props) => {
-  return {
-    title: params.slug,
-    description: 'Package Page',
-    url: `/${params.slug}`
-  };
+export const metadata: Metadata = {
+  title: 'Blog',
+  alternates: {
+    canonical: '/blog'
+  },
+  openGraph: {
+    ...ogFields,
+    title: 'Blog',
+    url: '/blog'
+  }
 };
 
 const BlogsPage = async () => {
@@ -23,6 +28,18 @@ const BlogsPage = async () => {
       <Container>
         <h1 className='my-4 pl-5 text-left text-3xl font-semibold text-blue-950 md:text-2xl'>
           # Travel Blogs
+          <NextBreadcrumb
+            homeElement={'Home'}
+            separator={
+              <span className='flex items-center'>
+                <LuChevronRight />
+              </span>
+            }
+            activeClasses='text-amber-500'
+            containerClasses='flex py-1'
+            listClasses='hover:underline mx-2 font-bold text-sm'
+            capitalizeLinks
+          />
         </h1>
         <div className='mt-8 grid place-items-center gap-4 gap-y-7 md:grid-cols-3 md:gap-y-10'>
           {data.map((item) => {
