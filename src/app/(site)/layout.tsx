@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import Header from '@components/header';
 import Footer from '@components/footer';
-import Popup from '@components/popup';
 import { ogFields } from './shared-metadata';
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
@@ -88,7 +87,6 @@ const SiteRootLayout = ({ children }: PropsWithChildren) => {
         <Header />
         {children}
         <Footer />
-        <Popup />
         <Toaster position='bottom-right' />
       </body>
     </html>

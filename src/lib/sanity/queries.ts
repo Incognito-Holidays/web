@@ -50,6 +50,7 @@ export const cardQuery = groq`
   *[_type == "holiday"] {
     _id,
     title,
+    type,
     description,
     "destinationSlug":destination[0] -> slug.current,
     "packageSlug":slug.current,
@@ -68,6 +69,7 @@ export const destinationQuery = groq`
     _id,
     "slug": slug.current,
     name,
+    type,
     image {
       alt,
       asset -> {
@@ -81,6 +83,7 @@ export const destinationQuery = groq`
 export const destinationBySlugQuery = groq`
   *[_type == "location" && $slug == slug.current][0] {
     name,
+    type,
     image {
       alt,
       asset -> {

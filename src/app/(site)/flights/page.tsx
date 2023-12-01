@@ -62,19 +62,19 @@ const FlightsPage = () => {
   return (
     <main>
       <Container>
-        <NextBreadcrumb
-          homeElement={'Home'}
-          separator={
-            <span className='flex items-center'>
-              <LuChevronRight />
-            </span>
-          }
-          activeClasses='text-amber-500'
-          containerClasses='flex py-1'
-          listClasses='hover:underline mx-2 font-bold text-sm'
-          capitalizeLinks
-        />
         <div>
+          <NextBreadcrumb
+            homeElement={'Home'}
+            separator={
+              <span className='flex items-center '>
+                <LuChevronRight />
+              </span>
+            }
+            activeClasses='text-amber-500'
+            containerClasses='flex  py-1'
+            listClasses='hover:underline mx-2 font-bold text-sm'
+            capitalizeLinks
+          />
           <Image
             src={pic1}
             alt='banner'
