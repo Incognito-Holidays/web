@@ -44,6 +44,7 @@ export type Search = {
 export type Cards = {
   _id: string;
   title: string;
+  type: string;
   description: string;
   destinationSlug: string;
   packageSlug: string;
