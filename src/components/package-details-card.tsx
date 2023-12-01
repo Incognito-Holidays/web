@@ -31,7 +31,7 @@ const PackageDetailsCard = ({
         </div>
         <div className='shrink-0 py-4 md:w-52 md:py-16 md:pt-[90px]'>
           <h3 className='text-center text-xl font-semibold text-cyan-700'>
-            ₹ {startingPrice.toFixed(2)}
+            ₹ {startingPrice}
           </h3>
           <p className='text-center text-sm text-gray-700'>
             Starting price per person
