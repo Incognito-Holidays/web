@@ -27,7 +27,7 @@ const HotelSwiper = ({ slider }: Props) => {
       >
         {slider.map((slide) => (
           <SwiperSlide key={slide.asset.lqip}>
-            <div className='relative h-48 md:h-[20rem]'>
+            <div className='relative h-64 md:h-[25rem]'>
               <Image
                 src={slide.asset.url}
                 alt={slide.alt}
