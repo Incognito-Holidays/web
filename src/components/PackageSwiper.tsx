@@ -47,7 +47,7 @@ const PackageSwiper = ({ data }: Props) => {
             slide.type === 'international' ? (
               <SwiperSlide
                 key={slide._id}
-                className='flex flex-auto gap-2 pb-4 '
+                className='flex flex-auto gap-6 pb-4'
               >
                 <Card
                   key={slide._id}

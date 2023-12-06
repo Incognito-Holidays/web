@@ -47,7 +47,7 @@ const PackageSwiperDomestic = ({ data }: Props) => {
             slide.type === 'domestic' ? (
               <SwiperSlide
                 key={slide._id}
-                className='flex flex-auto gap-2 pb-4 '
+                className='flex flex-auto gap-6 pb-4 '
               >
                 <Card
                   key={slide._id}

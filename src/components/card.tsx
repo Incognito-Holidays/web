@@ -11,7 +11,7 @@ const Card = ({
 }: Omit<Cards, '_id'>) => {
   return (
     <Link href={`holidays/${destinationSlug}/${packageSlug}`}>
-      <div className='h-full w-64 overflow-hidden rounded-2xl shadow-lg'>
+      <div className='mb-7 h-full w-64 overflow-hidden rounded-2xl shadow-lg'>
         <div className=' relative h-32 w-full'>
           <Image
             src={coverImage.asset.url}
