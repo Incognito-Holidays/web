@@ -1,4 +1,3 @@
-/* eslint-disable jsx-quotes */
 import '@styles/global.css';
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
@@ -84,16 +83,12 @@ const SiteRootLayout = ({ children }: PropsWithChildren) => {
           gtag('config', 'G-Z6DY8YHM9W');
         `}
       </Script>
+      <Script src='//code.tidio.co/rvoi05ejwrckmfmqplyxyq3b1fpl8l1h.js' />
       <body className={inter.className}>
         <Header />
         {children}
         <Footer />
         <Toaster position='bottom-right' />
-
-        <script
-          src='//code.tidio.co/rvoi05ejwrckmfmqplyxyq3b1fpl8l1h.js'
-          async
-        ></script>
       </body>
     </html>
   );
