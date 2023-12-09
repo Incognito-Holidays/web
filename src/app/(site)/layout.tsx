@@ -46,6 +46,10 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   creator: 'Sigma3 Labs',
   publisher: 'Sigma3 Labs',
+  robots: {
+    index: true,
+    follow: true
+  },
   assets: [
     'https://www.incognitoholidays.com/assets',
     'https://www.incognitoholidays.com/_next/static',
