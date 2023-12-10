@@ -16,7 +16,7 @@ type Props = {
 const PackageSwiperDomestic = ({ data }: Props) => {
   return (
     <div className=''>
-      <div className='m-10  p-4 '>
+      <div className='m-10'>
         <Swiper
           slidesPerView={1}
           pagination={{
