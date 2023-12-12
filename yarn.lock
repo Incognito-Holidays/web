@@ -1398,9 +1398,9 @@
     pkg-dir "^5.0.0"
 
 "@sanity/client@^6.4.12", "@sanity/client@^6.7.0":
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.8.0.tgz#c47528a6fac5b35c045bab91954bf6de82b2823c"
-  integrity sha512-SshNs8WfL3PxStBLqgq5FZJAmJO/Nj2IPynPYa+ze+h4SUZU6L/LyIj6848C91nHABICocuUJ3gwZRhK6YNNdw==
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-6.10.0.tgz#9f4161074afd1af1a01b6295be1032b62aaab0e7"
+  integrity sha512-TavtxGB6NWjro2BTGXSkzXNMKFZbS2il1ItV3IdRvO0luLqS31eIz37+5X4CmCC8hGFe6fDoCjnH/iJ81vKM7g==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@vercel/stega" "0.1.0"
