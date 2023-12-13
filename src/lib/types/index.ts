@@ -61,6 +61,7 @@ export type Destinations = {
   _id: string;
   slug: string;
   name: string;
+  type: string;
   image: {
     alt: string;
     asset: {

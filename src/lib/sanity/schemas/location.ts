@@ -19,6 +19,17 @@ export default defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
+      name: 'type',
+      title: 'Type',
+      type: 'string',
+      options: {
+        list: ['domestic', 'international'],
+        layout: 'radio',
+        direction: 'horizontal'
+      },
+      validation: (rule) => rule.required()
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

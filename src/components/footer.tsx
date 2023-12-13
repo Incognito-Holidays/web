@@ -60,8 +60,14 @@ const Footer: React.FC = () => {
               <span className='mb-1 block text-sm font-semibold uppercase'>
                 Kolkata Branch
               </span>
-              <p className='text-sm font-semibold'>
+              <p className=' mb-4 text-sm font-semibold'>
                 kolkata@incognitoholidays.com
+              </p>
+              <span className='mb-1 block text-sm font-semibold uppercase'>
+                Bangalore Branch
+              </span>
+              <p className='text-sm font-semibold'>
+                bangalore@incognitoholidays.com
               </p>
             </div>
             {/* </div> */}
