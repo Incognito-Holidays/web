@@ -19,9 +19,9 @@ const PackageSwiperDomestic = ({ data }: Props) => {
       <div className='m-10'>
         <Swiper
           slidesPerView={1}
-          pagination={{
-            clickable: true
-          }}
+          // pagination={{
+          //   clickable: true
+          // }}
           breakpoints={{
             640: {
               slidesPerView: 2,
