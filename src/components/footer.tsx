@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
             <h5 className='mb-2 mt-0 text-lg'>
               Find us on these platforms, we respond within 1-2 business days.
             </h5>
+            <h5 className='mb-2 mt-0 text-lg'>Call Us : +91-92309 91788</h5>
             <div className='mb-6 mt-6 flex cursor-pointer gap-5 lg:mb-0'>
               <Link
                 href='https://www.facebook.com/IncognitoHolidays'
