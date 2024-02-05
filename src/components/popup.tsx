@@ -25,9 +25,9 @@ const Popup = () => {
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogContent className='p-1'>
         <div className='relative'>
-          <Link href='/holidays'>
+          <Link href='/contact'>
             <Image
-              src='/assets/pop-up.jpg'
+              src='/assets/sundarbbanpopup.jpeg'
               alt='popup img'
               width={1080}
               height={1080}
