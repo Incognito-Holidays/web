@@ -97,7 +97,7 @@ const HolidayPackagePage = async ({ params }: Props) => {
               <div className='ml-6'>
                 <div className='flex justify-between'>
                   <p className='mt-4 text-2xl font-semibold'>
-                    {data.daysNights.nights} Nights {data.daysNights.days} Days 
+                    {data.daysNights.nights} Nights {data.daysNights.days} Days
                   </p>
                   <button className='h-8 rounded-bl-lg rounded-tr-lg bg-blue-500 p-2 text-sm text-white'>
                     Popular
