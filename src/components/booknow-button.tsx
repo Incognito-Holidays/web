@@ -14,7 +14,7 @@ const BookNowButton = ({ title }: Pick<Package, 'title'>) => {
         onClick={(): void => setIsModalOpen(true)}
         className='w-full rounded-full'
       >
-        BOOK NOW
+        Enquiry Now
       </Button>
 
       <Modal

@@ -54,7 +54,7 @@ const BlogPage = async ({ params }: Props) => {
             width={1200}
             height={500}
             placeholder='blur'
-            className='h-[30rem] w-full object-cover object-center'
+            className='relative h-80 md:h-[28rem]'
             blurDataURL={data.coverImage.asset.lqip}
           />
           <NextBreadcrumb

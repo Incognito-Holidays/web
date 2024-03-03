@@ -7,9 +7,9 @@ const PackageDetailsCard = ({
   destSlug,
   slug,
   description,
-  coverImage,
-  startingPrice
-}: Omit<DestinationPackages, '_id'> & { destSlug: string }) => {
+  coverImage
+} // startingPrice
+: Omit<DestinationPackages, '_id'> & { destSlug: string }) => {
   return (
     <Link href={`/holidays/${destSlug}/${slug}`}>
       <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>
@@ -30,13 +30,13 @@ const PackageDetailsCard = ({
           </div>
         </div>
         <div className='shrink-0 py-4 md:w-52 md:py-16 md:pt-[90px]'>
-          <h3 className='text-center text-xl font-semibold text-cyan-700'>
+          {/* <h3 className='text-center text-xl font-semibold text-cyan-700'>
             ₹ {startingPrice}
           </h3>
           <p className='text-center text-sm text-gray-700'>
             Starting price per person
-          </p>
-          <button className='mt-2 w-full rounded-lg bg-cyan-600 p-2 text-center text-white transition duration-200 hover:opacity-80 md:invisible md:group-hover:visible'>
+          </p> */}
+          <button className='mt-2 w-full rounded-lg bg-blue-600 p-2 text-center text-white transition duration-200 hover:opacity-80 '>
             View Details
           </button>
         </div>
