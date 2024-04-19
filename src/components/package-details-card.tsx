@@ -7,9 +7,8 @@ const PackageDetailsCard = ({
   destSlug,
   slug,
   description,
-  coverImage
-} // startingPrice
-: Omit<DestinationPackages, '_id'> & { destSlug: string }) => {
+  coverImage // startingPrice
+}: Omit<DestinationPackages, '_id'> & { destSlug: string }) => {
   return (
     <Link href={`/holidays/${destSlug}/${slug}`}>
       <div className='group divide-y-2 rounded-lg border shadow-md transition duration-200 md:flex md:divide-x-2 '>

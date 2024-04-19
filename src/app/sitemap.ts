@@ -1,6 +1,8 @@
 import { getSitemap } from '@lib/functions/sitemap';
 import type { MetadataRoute } from 'next';
 
+export const revalidate = 86400; // revalidate at most every day & when required
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base =
     process.env.VERCEL_ENV === 'production'

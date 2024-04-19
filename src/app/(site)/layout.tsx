@@ -2,6 +2,7 @@ import '@styles/global.css';
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
+import ProgressBar from '@components/layout/progress-bar';
 import Header from '@components/header';
 import Footer from '@components/footer';
 import { ogFields } from './shared-metadata';
@@ -89,9 +90,11 @@ const SiteRootLayout = ({ children }: PropsWithChildren) => {
       </Script>
       <Script src='//code.tidio.co/rvoi05ejwrckmfmqplyxyq3b1fpl8l1h.js' />
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ProgressBar>
+          <Header />
+          {children}
+          <Footer />
+        </ProgressBar>
         <Toaster position='bottom-right' />
       </body>
     </html>

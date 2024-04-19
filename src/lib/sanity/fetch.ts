@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { client } from './client';
-import { revalidateSecret } from './api';
+// import { revalidateSecret } from './api';
 import type { QueryParams } from '@sanity/client';
 
 const DEFAULT_PARAMS = {} as QueryParams;
@@ -17,7 +17,8 @@ export async function sanityFetch<QueryResponse>({
   tags: string[];
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, params, {
-    cache: revalidateSecret ? 'force-cache' : 'no-store',
+    // cache: revalidateSecret ? 'force-cache' : 'no-store',
+    cache: 'no-store',
     next: { tags }
   });
 }
