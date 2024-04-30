@@ -27,7 +27,7 @@ const Popup = () => {
         <div className='relative'>
           <Link href='/contact'>
             <Image
-              src='/assets/sundarbbanpopup.jpeg'
+              src='/assets/darjeeling_popup.jpg'
               alt='popup img'
               width={1080}
               height={1080}
