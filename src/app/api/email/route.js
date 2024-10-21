@@ -14,7 +14,7 @@ export async function POST(req) {
 
   try {
     await resend.emails.send({
-      from: 'Incognito Holidays <noreply@incognitoholidays.com>',
+      from: 'Incognito Holidays <noreply@mail.incognitoholidays.com>',
       to: process.env.EMAIL,
       reply_to: email,
       subject: subject,
@@ -28,7 +28,7 @@ export async function POST(req) {
     });
 
     await resend.emails.send({
-      from: 'Incognito Holidays <noreply@incognitoholidays.com>',
+      from: 'Incognito Holidays <noreply@mail.incognitoholidays.com>',
       to: email,
       reply_to: process.env.EMAIL,
       subject: subject,
